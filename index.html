@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -13,63 +13,63 @@
     gtag('config', 'UA-158813919-1');
   </script>
   <script type="text/javascript">
-    function toggle_visibility(id) {
-      event.preventDefault();
-      var e = document.getElementById(id);
-      if (e.style.display == 'none')
-        e.style.display = 'block';
-      else
-        e.style.display = 'none';
-    }
-
+    document.addEventListener('DOMContentLoaded', function () {
+      var abstractToggles = document.querySelectorAll('[data-abstract-toggle]');
+      abstractToggles.forEach(function (toggle) {
+        var targetId = toggle.getAttribute('aria-controls');
+        if (!targetId) {
+          return;
+        }
+        var target = document.getElementById(targetId);
+        if (!target) {
+          return;
+        }
+        target.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.addEventListener('click', function () {
+          var expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          target.hidden = expanded;
+        });
+      });
+    });
   </script>
 
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>Hanno Hilbig</title>
+  <meta name="description"
+    content="Assistant Professor of Political Science studying economic change, voter behavior, the green transition, and regional inequality.">
 
   <link rel="stylesheet" href="stylesheets/styles.css">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <link rel="stylesheet" href="stylesheets/shiro.css">
   <link rel="stylesheet" href="stylesheets/kube.css">
-  <script src="https://kit.fontawesome.com/9745af1226.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <script src="https://kit.fontawesome.com/9745af1226.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1>Hanno Hilbig</h1>
-      <img src="img/Pic_HH.jpeg">
-
-
-      <p></p>
-      <p class="view">Assistant Professor<br><a href="https://ps.ucdavis.edu/">Department of Political Science</a><br>
-        University of California, Davis<br><a href="mailto:hhilbig@ucdavis.edu">hhilbig@ucdavis.edu</a></p>
-      <p></p>
-
-      <p>
-        <a href="cv/HHilbig_CV.pdf"><b>Curriculum Vitae</b></a><br>
-        <a href="https://scholar.google.com/citations?user=JzQv9FMAAAAJ"><b>Google Scholar</b></a><br>
-        <a href="https://github.com/hhilbig"><b>GitHub</b></a><br>
-      </p>
-
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1>Hanno Hilbig</h1>
+        <p class="title">Assistant Professor<br><a href="https://ps.ucdavis.edu/">Department of Political
+            Science</a><br>
+          University of California, Davis<br><a href="mailto:hhilbig@ucdavis.edu">hhilbig@ucdavis.edu</a></p>
+        <div class="profile-links">
+          <a href="cv/HHilbig_CV.pdf">Curriculum Vitae</a>
+          <a href="https://scholar.google.com/citations?user=JzQv9FMAAAAJ">Google Scholar</a>
+          <a href="https://github.com/hhilbig">GitHub</a>
+        </div>
+      </div>
     </header>
 
 
 
 
-    <section>
-      <h3>
-        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>
-      </h3>
-
-
+    <main>
       <p>I am an Assistant Professor of Political Science at the University of California, Davis. My research
         investigates the
         relationship between economic change, voter behavior and policy responses in advanced democracies. I examine how
@@ -87,22 +87,47 @@
 
 
 
-      <p>
-
-
-
-
-      <div align="left">
-        <h3>Publications</h3>
-      </div>
-      <p>
+      <h3 id="publications">Publications</h3>
       <ol reversed>
         <li>
-          <b><a href="https://osf.io/preprints/osf/876dr">The Green Transition and Political Polarization Along
-              Occupational Lines</a></b>
-          (with Vincent Heddesheimer and Erik Voeten). Conditionally Accepted, <i>American Political Science Review.</i>
-          <i><a href="#" onclick="toggle_visibility('greentransition');">[Abstract]</a></i>
-          <div id="greentransition" style="display:none;"><br>
+          <b><a href="https://onlinelibrary.wiley.com/doi/10.1111/ajps.12939?af=R">Biased Party Nominations as a Source
+              of
+              Women's Electoral Underperformance</a></b>
+          (with Pia Raffler and Thomas Fujiwara). Forthcoming, <i>American Journal of Political Science.</i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="gender"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/osf/hgc2z">[Preprint]</a></i>
+          <div id="gender" class="abstract-content">
+            What accounts for differences in electoral success between male and female candidates? We argue that parties
+            systematically nominate female candidates to districts where the party is less popular, making it harder for
+            women
+            to get elected. Our empirical strategy uses the German mixed electoral system to create counterfactual
+            gender vote
+            gaps. These gaps represent the scenario where male and female candidates are nominated in districts where
+            their
+            respective parties have equal popularity. Using data on all candidates for the German Bundestag across
+            eleven
+            elections, we document that female underperformance, and its variation across parties and election years, is
+            explained almost entirely by women running in districts where their party is less popular. In contrast, we
+            find no
+            evidence that voter bias or candidate characteristics play a substantial role. Our argument highlights
+            gendered
+            party gatekeeping that increases in district strength as an important driver of female underrepresentation.
+          </div>
+          <br>
+          • <span class="media-links">[Media: <a
+              href="https://www.capradio.org/news/npr/story?storyid=g-s1-96043">NPR</a>]</span>
+        </li>
+
+        <li>
+          <b><a
+              href="https://www.cambridge.org/core/journals/american-political-science-review/article/green-transition-and-political-polarization-along-occupational-lines/5A563C0DBDC283E9111DBD980F1A52C9">The
+              Green Transition and Political Polarization Along Occupational Lines</a></b>
+          (with Vincent Heddesheimer and Erik Voeten). Forthcoming, <i>American Political Science Review.</i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="greentransition"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/osf/876dr">[Preprint]</a></i>
+          <div id="greentransition" class="abstract-content">
             Green transition policies set long-term targets to reduce carbon emissions and other pollutants, posing a
             threat
             to workers in polluting occupations and communities reliant on these occupations. Can far-right parties
@@ -121,44 +146,19 @@
             green
             transition.
           </div>
-          &nbsp;
         </li>
 
         <li>
-          <b><a href="https://osf.io/preprints/osf/hgc2z">Biased Party Nominations as a Source of Women's Electoral
-              Underperformance</a></b>
-          (with Pia Raffler and Thomas Fujiwara). Conditionally Accepted, <i>American Journal of Political Science.</i>
-          <i><a href="#" onclick="toggle_visibility('gender');">[Abstract]</a></i>
-          <div id="gender" style="display:none;"><br>
-            What accounts for differences in electoral success between male and female candidates? We argue that parties
-            systematically nominate female candidates to districts where the party is less popular, making it harder for
-            women
-            to get elected. Our empirical strategy uses the German mixed electoral system to create counterfactual
-            gender vote
-            gaps. These gaps represent the scenario where male and female candidates are nominated in districts where
-            their
-            respective parties have equal popularity. Using data on all candidates for the German Bundestag across
-            eleven
-            elections, we document that female underperformance, and its variation across parties and election years, is
-            explained almost entirely by women running in districts where their party is less popular. In contrast, we
-            find no
-            evidence that voter bias or candidate characteristics play a substantial role. Our argument highlights
-            gendered
-            party gatekeeping that increases in district strength as an important driver of female underrepresentation.
-          </div>
-          <br>
-          • <span style="font-size:90%;">Media: <a href="https://www.capradio.org/news/npr/story?storyid=g-s1-96043">NPR
-              (Planet Money roundup)</a></span>
-          &nbsp;
-        </li>
-
-        <li>
-          <b><a href="https://doi.org/10.31219/osf.io/vsjz8">The Gendered Persistence of Authoritarian
+          <b><a
+              href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/gendered-persistence-of-authoritarian-indoctrination/9FF7C98DA109B0A7E31521974A2B82FB">The
+              Gendered Persistence of Authoritarian
               Indoctrination</a></b>
           (with Nourhan A. Elsayed, Sascha Riaz, and Daniel Ziblatt). Forthcoming, <i>British Journal of Political
             Science.</i>
-          <i><a href="#" onclick="toggle_visibility('indoctrination');">[Abstract]</a></i>
-          <div id="indoctrination" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="indoctrination"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/osf/vsjz8">[Preprint]</a></i>
+          <div id="indoctrination" class="abstract-content">
             A large literature has studied the effects of socialization under authoritarianism on political attitudes.
             In this
             research note, we extend this literature by demonstrating striking gender disparities in the post-transition
@@ -177,7 +177,6 @@
             post-authoritarian
             "re-socialization" and gendered adaptability.
           </div>
-          &nbsp;
         </li>
 
         <li>
@@ -185,8 +184,9 @@
               application to reducing support for discriminatory policies</a></b>
           (with Matthew Blackwell, Adam Glynn, and Connor Phillips). Forthcoming, <i>Journal of the Royal
             Statistical Society: Series A.</i>
-          <i><a href="#" onclick="toggle_visibility('did');">[Abstract]</a></i>
-          <div id="did" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="did"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="did" class="abstract-content">
             Recent experimental studies in the social sciences have demonstrated that perspective-taking conversations
             are effective at reducing prejudicial attitudes and support for discriminatory policies. We ask if such
             interventions can directly affect policy views without changing prejudice. Unfortunately, the identification
@@ -201,15 +201,16 @@
             perspective-taking conversations when subjective feelings are neutral but not positive or negative, and this
             result is robust to moderate departures from parallel trends.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://journals.sagepub.com/eprint/WQAGDMF5BBDATHW9TD8S/full">Do Autocrats Respond to Citizen
               Demands? Petitions and Housing Construction in the GDR</a></b>
           (with Hans Lueders and Sascha Riaz). Forthcoming, <i>Comparative Political Studies.</i>
-          <i><a href="#" onclick="toggle_visibility('gdr');">[Abstract]</a></i>
-          <div id="gdr" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="gdr"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/osf/q74xj">[Preprint]</a></i>
+          <div id="gdr" class="abstract-content">
             Citizens in authoritarian regimes frequently communicate grievances to the government. While there is some
             evidence that governments respond to such petitions, little is known about the nature of this
             responsiveness: can
@@ -226,15 +227,16 @@
             non-democratic regimes and shows that responsiveness leads to tangible improvements in citizens'
             livelihoods.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://onlinelibrary.wiley.com/doi/10.1111/ajps.12939?af=R">How Budget Tradeoffs Undermine
               Electoral Incentives to Build Public Housing</a></b>
           (with Andreas Wiedemann). Forthcoming, <i>American Journal of Political Science.</i>
-          <i><a href="#" onclick="toggle_visibility('housing');">[Abstract]</a></i>
-          <div id="housing" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="housing"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/osf/cf8ut_v1">[Preprint]</a></i>
+          <div id="housing" class="abstract-content">
             Housing shortages and rising rents have increased demands for affordable housing. In this paper, we examine
             whether
             electoral constraints can undermine local politicians' incentives to build public housing. Empirically, we
@@ -255,15 +257,16 @@
             housing.
 
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/738581">Does Rent Control Turn Tenants Into
               NIMBYs?</a></b>
           (with Anselm Hager and Robert Vief). Forthcoming, <i>Journal of Politics.</i>
-          <i><a href="#" onclick="toggle_visibility('nimby');">[Abstract]</a></i>
-          <div id="nimby" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="nimby"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/kwjem">[Preprint]</a></i>
+          <div id="nimby" class="abstract-content">
             Affordable housing is a key challenge of the 21st century. A pivotal driver of growing housing prices is
             residents' opposition to construction, a phenomenon known as NIMBYism ("Not In My Backyard"). To make
             housing more
@@ -281,17 +284,18 @@
             Rent control alleviates these concerns by providing financial and residential security.
           </div>
           <br>
-          • <span style="font-size:90%;">Media: <a
+          • <span class="media-links">[Media: <a
               href="https://www.theatlantic.com/economy/archive/2025/11/mamdani-housing-rent-control/684790/">The
-              Atlantic</a></span>
-          &nbsp;
+              Atlantic</a>]</span>
         </li>
 
         <li>
           <b><a href="https://doi.org/10.1038/s41597-025-04811-5">GERDA: The German Election Database</a></b>
           (with Vincent Heddesheimer, Florian Sichart, and Andreas Wiedemann). 2025. <i>Scientific Data</i>, 12: 618.
-          <i><a href="#" onclick="toggle_visibility('gerda');">[Abstract]</a></i>
-          <div id="gerda" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="gerda"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/preprints/socarxiv/q28ex">[Preprint]</a></i>
+          <div id="gerda" class="abstract-content">
             Elections are the key mechanism through which voters hold elected officials accountable. The partisan
             composition of local, state, and federal governments, in turn, shapes policy choices and public goods
             provision. Yet studying representation, government responsiveness, and partisan politics across multiple
@@ -305,7 +309,6 @@
             partisan politics, policy responsiveness, and political representation at fine-grained geographic scales and
             over time.
           </div>
-          &nbsp;
         </li>
 
         <li>
@@ -313,8 +316,10 @@
               Multi-Party Systems</a></b>
           (with Fabio Ellger, Sascha Riaz, and Philipp Tillmann). 2024. <i>British Journal of Political Science</i>, 54
           (4): 1256-1275.
-          <i><a href="#" onclick="toggle_visibility('newspaper2');">[Abstract]</a></i>
-          <div id="newspaper2" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="newspaper2"
+              aria-expanded="true">[Abstract]</button></i>
+          <i><a href="https://osf.io/nhwxs">[Preprint]</a></i>
+          <div id="newspaper2" class="abstract-content">
             How does the decline of local news affect political polarization? We provide novel panel evidence on this
             question
             in a multi-party setting. In particular, we shed light on the link between newspaper exits, media
@@ -333,16 +338,16 @@
             the
             individual level.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://doi.org/10.1017/S0003055423000862">Wealth of Tongues: Why Peripheral Regions Vote for the
               Radical Right in Germany</a></b>
           (with Daniel Bischof and Daniel Ziblatt). 2024. <i>American Political Science Review</i>, 118 (3): 1480–1496.
-          <i><a href="#" onclick="toggle_visibility('dialect');">[Abstract]</a></i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="dialect"
+              aria-expanded="true">[Abstract]</button></i>
           <i><a href="https://osf.io/preprints/socarxiv/syr84/">[Preprint]</a></i>
-          <div id="dialect" style="display:none;"><br>
+          <div id="dialect" class="abstract-content">
             Why is support for the radical right higher in some geographic locations than others? This paper argues that
             what
             is frequently classified as the "rural" bases of radical right support in previous research is in part the
@@ -357,15 +362,15 @@
             from
             historically peripheral geographic communities are more likely to vote for the radical right today.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://journals.sagepub.com/doi/abs/10.1177/00104140231178733">Refugee Labor Market Access
               Increases Support for Migration</a></b>
           (with Anselm Hager and Sascha Riaz). 2024. <i>Comparative Political Studies</i>, 57 (5): 749–777.
-          <i><a href="#" onclick="toggle_visibility('labormarket');">[Abstract]</a></i>
-          <div id="labormarket" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="labormarket"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="labormarket" class="abstract-content">
             Does the economic integration of refugees affect public attitudes toward migration? We assess this pertinent
             question by examining a policy change in Germany, where the government significantly eased labor market
             access for
@@ -379,16 +384,16 @@
             federal elections. Additional survey analyses suggest that our results are driven by positive native-refugee
             interactions in the workplace.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/726917">Natural Disasters and Green Party
               Support</a></b>
           (with Sascha Riaz). 2024. <i>Journal of Politics</i>, 86 (1): 241-256.
-          <i><a href="#" onclick="toggle_visibility('flood');">[Abstract]</a></i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="flood"
+              aria-expanded="true">[Abstract]</button></i>
           <i><a href="https://osf.io/3k64w/">[Preprint]</a></i>
-          <div id="flood" style="display:none;"><br>
+          <div id="flood" class="abstract-content">
             A growing literature shows that extreme weather events induce pro-environment attitudes. We examine the
             political
             effects of a severe flood shortly before the 2021 German federal election. Drawing on about 600,000 survey
@@ -408,18 +413,18 @@
             disasters.
           </div>
           <br>
-          • <span style="font-size:90%;">Media: <a
+          • <span class="media-links">[Media: <a
               href="https://www.bloomberg.com/news/articles/2024-09-16/surviving-a-climate-disaster-isn-t-likely-to-change-how-you-vote">Bloomberg</a>
             · <a
-              href="https://www.handelsblatt.com/politik/deutschland/klimakrise-warum-hochwasser-den-gruenen-keine-neuen-stimmen-bringt/100069856.html">Handelsblatt</a></span>
-          &nbsp;
+              href="https://www.handelsblatt.com/politik/deutschland/klimakrise-warum-hochwasser-den-gruenen-keine-neuen-stimmen-bringt/100069856.html">Handelsblatt</a>]</span>
         </li>
 
         <li>
           <b><a href="https://muse.jhu.edu/pub/1/article/916342">Government Spending and Voting Behavior</a></b>
           (with Anselm Hager). 2024. <i>World Politics</i>, 76 (1): 88-124.
-          <i><a href="#" onclick="toggle_visibility('census');">[Abstract]</a></i>
-          <div id="census" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="census"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="census" class="abstract-content">
             Does government spending on public goods affect the vote choice of citizens? On the one hand, voters have
             been
             characterized as "fiscal conservatives" who may turn toward conservative parties when government spending
@@ -442,9 +447,10 @@
           <b><a href="https://www.tandfonline.com/doi/full/10.1080/1369183X.2023.2173159">Local News Monopolies Increase
               Misperceptions about Immigration</a></b>
           (with Sascha Riaz). 2023. <i>Journal of Ethnic and Migration Studies</i>, 49(17): 4536-4558.
-          <i><a href="#" onclick="toggle_visibility('misperceptions');">[Abstract]</a></i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="misperceptions"
+              aria-expanded="true">[Abstract]</button></i>
           <i><a href="https://osf.io/preprints/socarxiv/wyubh">[Preprint]</a></i>
-          <div id="misperceptions" style="display:none;"><br>
+          <div id="misperceptions" class="abstract-content">
             We examine how local news monopolies affect misperceptions about the size of the immigrant population in
             Germany.
             We propose a theoretical framework in which heterogeneous information from different local news outlets
@@ -464,16 +470,16 @@
             knowledge
             about critical policy issues.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://www.journals.uchicago.edu/doi/abs/10.1086/720307">Freedom of Movement Restrictions Inhibit
               the Psychological Integration of Refugees</a></b>
           (with Sascha Riaz). 2022. <i>Journal of Politics</i>, 84(4): 2288-2293.
-          <i><a href="#" onclick="toggle_visibility('movement');">[Abstract]</a></i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="movement"
+              aria-expanded="true">[Abstract]</button></i>
           <i><a href="https://osf.io/h2n3a/">[Preprint]</a></i>
-          <div id="movement" style="display:none;"><br>
+          <div id="movement" class="abstract-content">
             How do freedom of movement restrictions affect refugee integration? While a growing body of research studies
             the
             initial spatial allocation of refugees, there is little causal evidence on subsequent policies that restrict
@@ -489,7 +495,6 @@
             about
             the inclusiveness of the host society and thereby reduce the psychological integration of refugees.
           </div>
-          &nbsp;
         </li>
 
         <li>
@@ -497,9 +502,10 @@
               href="https://www.cambridge.org/core/journals/british-journal-of-political-science/article/locked-out-of-college-when-admissions-bureaucrats-do-and-do-not-discriminate/47318737B56F71B2C9F00C279812759C">Locked
               Out of College: When Admissions Bureaucrats Do and Do Not Discriminate</a></b>
           (with Jacob Brown). 2022. <i>British Journal of Political Science</i>, 52 (3): 1436-1446.
-          <i><a href="#" onclick="toggle_visibility('exfelons');">[Abstract]</a></i>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="exfelons"
+              aria-expanded="true">[Abstract]</button></i>
           <i><a href="papers/ExFelon.pdf">[Preprint]</a></i>
-          <div id="exfelons" style="display:none;"><br>
+          <div id="exfelons" class="abstract-content">
             How does a criminal record shape interactions with the State and society? We present evidence from a
             nationwide
             field experiment, showing that prospective applicants with criminal records are about five percentage points
@@ -520,15 +526,15 @@
             advocate
             endorsements decrease bureaucratic bias.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12516">Does Public Opinion Affect Political
               Speech?</a></b>
           (with Anselm Hager). 2020. <i>American Journal of Political Science</i>, 64 (4): 921-937.
-          <i><a href="#" onclick="toggle_visibility('merkel');">[Abstract]</a></i>
-          <div id="merkel" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="merkel"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="merkel" class="abstract-content">
             Does public opinion affect political speech? Of particular interest is whether public opinion affects (i)
             what
             topics politicians address and (ii) what positions they endorse. We present evidence from Germany where the
@@ -545,15 +551,15 @@
             opinion
             research alters politicians' substantive positions in the direction of majority opinion.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/ajps.12460">Do Inheritance Customs Affect
               Political and Social Inequality?</a></b>
           (with Anselm Hager). 2019. <i>American Journal of Political Science</i>, 63 (4): 758-773.
-          <i><a href="#" onclick="toggle_visibility('inheritance');">[Abstract]</a></i>
-          <div id="inheritance" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="inheritance"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="inheritance" class="abstract-content">
             Why are some societies more unequal than others? The French revolutionaries believed unequal inheritances
             among
             siblings to be responsible for the strict hierarchies of the ancien regime. To achieve equality, the
@@ -571,24 +577,20 @@
             the
             playing field by rewarding talent, not status.
           </div>
-          &nbsp;
         </li>
 
       </ol>
-      </p>
 
-      <div align="left">
-        <h3>Working Papers &#38; Work in Progress</h3>
-      </div>
-      <p>
+      <h3 id="working-papers">Working Papers &#38; Work in Progress</h3>
       <ol start="1">
 
         <li>
           <b><a href="https://osf.io/preprints/socarxiv/6h8cq">Place-Based Policies, Local Responses, and Electoral
               Behavior</a></b>
           (with Vincent Heddesheimer and Andreas Wiedemann).
-          <i><a href="#" onclick="toggle_visibility('placebased');">[Abstract]</a></i>
-          <div id="placebased" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="placebased"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="placebased" class="abstract-content">
             Place-based economic policies are increasingly seen as instruments to counter political discontent in
             economically-depressed regions. Do regional investment subsidies affect electoral behavior? We evaluate this
             question in the context of Germany's largest regional investment program. Our identification strategy
@@ -605,7 +607,6 @@
             findings suggest that political consequences of place-based policies—and austerity more broadly—cannot be
             understood without considering counteractions by local firms and governments.
           </div>
-          &nbsp;
         </li>
 
         <li>
@@ -622,8 +623,9 @@
           <b><a href="https://osf.io/preprints/osf/6s8tn_v4">Foreign Policy Debates Shape Refugees' Psychological
               Integration</a></b>
           (with Florian Sichart and Georgiy Syunyaev).
-          <i><a href="#" onclick="toggle_visibility('ukrainian');">[Abstract]</a></i>
-          <div id="ukrainian" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="ukrainian"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="ukrainian" class="abstract-content">
             Refugee integration is a central policy challenge. Expanding on prior research on policy debates targeting
             immigrants, we examine whether host country debates about military aid to refugees' homeland shape their
             psychological integration. In a survey experiment with 2,631 Ukrainian refugees in Germany, participants
@@ -636,15 +638,15 @@
             rather than its specific content, as a signal that host-country support is contested and potentially less
             secure.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://osf.io/preprints/osf/276kz_v2">Bureaucratic Inertia or Legal Responsiveness? College
               Admissions Officers' Behavior Before and After the Affirmative Action Ban</a></b>
           (with Jacob Brown and Hunter Rendleman).
-          <i><a href="#" onclick="toggle_visibility('bureaucratic');">[Abstract]</a></i>
-          <div id="bureaucratic" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="bureaucratic"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="bureaucratic" class="abstract-content">
             How do street-level bureaucrats respond when courts reshape public policy? The 2023 Supreme Court decision
             striking down affirmative action altered the legal framework around college admissions, prompting
             speculation about its implications for administrative behavior and minority representation on campus. Yet
@@ -656,15 +658,15 @@
             Court's decision. Across both studies, we find no evidence of racial bias, even when the ruling is salient.
             Together, these null results suggest limits to the judiciary's influence on bureaucratic behavior.
           </div>
-          &nbsp;
         </li>
 
         <li>
           <b><a href="https://wzb-ipi.github.io/corona/WD_paper.pdf">Political and Social Correlates of Covid-19
               Mortality</a></b>
           (with Constantin Manuel Bosancianu, Macartan Humphreys, Sampada KC, Nils Lieber, and Alex Scacco).
-          <i><a href="#" onclick="toggle_visibility('covid');">[Abstract]</a></i>
-          <div id="covid" style="display:none;"><br>
+          <i><button type="button" class="abstract-toggle" data-abstract-toggle aria-controls="covid"
+              aria-expanded="true">[Abstract]</button></i>
+          <div id="covid" class="abstract-content">
             Do political and social features of states help explain the evolving distribution of reported Covid-19
             deaths? We
             identify national-level political and social characteristics that past research suggests may help explain
@@ -687,16 +689,11 @@
             with potential implications for how the disease progresses in high-income versus low-income countries. These
             patterns may change over time with the evolution of the pandemic, however.
           </div>
-          &nbsp;
         </li>
 
       </ol>
-      </p>
 
-      <div align="left">
-        <h3>Public Engagement and Policy Reports</h3>
-      </div>
-      <p>
+      <h3 id="public-engagement">Public Engagement and Policy Reports</h3>
       <ol start="1">
         <li>
           <b><a
@@ -705,24 +702,10 @@
           (with L. Hen and M. Macaraeg). 2025. California Policy Lab, University of California.
         </li>
       </ol>
-      </p>
 
-    </section>
-    <footer>
-      <p><small> This website is based on the Github <a href="https://github.com/orderedlist/minimal">minimal theme</a>
-          and is inspired by the website of <a href="https://shirokuriwaki.com/">Shiro Kuriwaki</a>.
-        </small></p>
-    </footer>
+    </main>
   </div>
   <script src="javascripts/scale.fix.js"></script>
-
-  </div>
-  </footer>
-  </div>
-
-
-
-
 </body>
 
 </html>
