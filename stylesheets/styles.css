@@ -197,6 +197,11 @@ header.profile-header {
   position: relative;
 }
 
+.profile-links .separator {
+  color: var(--muted);
+  font-weight: 400;
+}
+
 main {
   margin-top: 20px;
 }
@@ -292,6 +297,10 @@ footer a {
 
   .profile-links a {
     width: 100%;
+  }
+
+  .profile-links .separator {
+    display: none;
   }
 }
 
