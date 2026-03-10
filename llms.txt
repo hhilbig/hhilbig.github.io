@@ -1,0 +1,80 @@
+# Hanno Hilbig
+
+> Assistant Professor of Political Science at UC Davis, studying how economic change, the green transition, regional inequality, and migration shape elections and political behavior.
+
+## Contact
+
+- Email: hhilbig@ucdavis.edu
+- Website: https://www.hannohilbig.com
+- Google Scholar: https://scholar.google.com/citations?user=2A9Hz2IAAAAJ
+- GitHub: https://github.com/hhilbig
+- LinkedIn: https://www.linkedin.com/in/hanno-hilbig
+
+## Research Interests
+
+Hanno's research examines how structural economic transformations affect political behavior, with a focus on European democracies. Core themes include the electoral consequences of the green transition (occupational exposure to decarbonization policies), housing markets and local public goods provision, regional inequality and periphery-center dynamics, and refugee and immigration policy. He uses causal inference methods (difference-in-differences, regression discontinuity, field experiments) with administrative and survey data, primarily from Germany.
+
+## Publications
+
+### Forthcoming / 2026
+
+- Biased Party Nominations as a Source of Women's Electoral Underperformance (with Pia Raffler and Thomas Fujiwara). American Journal of Political Science.
+- The Green Transition and Political Polarization Along Occupational Lines (with Vincent Heddesheimer and Erik Voeten). American Political Science Review.
+- The Gendered Persistence of Authoritarian Indoctrination (with Nourhan A. Elsayed, Sascha Riaz, and Daniel Ziblatt). British Journal of Political Science, 55: e124.
+- Estimating Controlled Direct Effects with Panel Data (with Matthew Blackwell, Adam Glynn, and Connor Phillips). Journal of the Royal Statistical Society: Series A.
+- Do Autocrats Respond to Citizen Demands? Petitions and Housing Construction in the GDR (with Hans Lueders and Sascha Riaz). Comparative Political Studies.
+- How Budget Tradeoffs Undermine Electoral Incentives to Build Public Housing (with Andreas Wiedemann). American Journal of Political Science, 70(1): 202-220.
+- Does Rent Control Turn Tenants Into NIMBYs? (with Anselm Hager and Robert Vief). Journal of Politics.
+
+### 2025
+
+- GERDA: The German Election Database (with Vincent Heddesheimer, Florian Sichart, and Andreas Wiedemann). Scientific Data, 12: 618.
+
+### 2024
+
+- Local Newspaper Decline and Political Polarization in Multi-Party Systems (with Fabio Ellger, Sascha Riaz, and Philipp Tillmann). British Journal of Political Science, 54(4): 1256-1275.
+- Wealth of Tongues: Why Peripheral Regions Vote for the Radical Right in Germany (with Daniel Bischof and Daniel Ziblatt). American Political Science Review, 118(3): 1480-1496.
+- Refugee Labor Market Access Increases Support for Migration (with Anselm Hager and Sascha Riaz). Comparative Political Studies, 57(5): 749-777.
+- Natural Disasters and Green Party Support (with Sascha Riaz). Journal of Politics, 86(1): 241-256.
+- Government Spending and Voting Behavior (with Anselm Hager). World Politics, 76(1): 88-124.
+
+### 2023
+
+- Local News Monopolies Increase Misperceptions about Immigration (with Sascha Riaz). Journal of Ethnic and Migration Studies, 49(17): 4536-4558.
+
+### 2022
+
+- Freedom of Movement Restrictions Inhibit the Psychological Integration of Refugees (with Sascha Riaz). Journal of Politics, 84(4): 2288-2293.
+- Locked Out of College: When Admissions Bureaucrats Do and Do Not Discriminate (with Jacob Brown). British Journal of Political Science, 52(3): 1436-1446.
+
+### 2020
+
+- Does Public Opinion Affect Political Speech? (with Anselm Hager). American Journal of Political Science, 64(4): 921-937.
+
+### 2019
+
+- Do Inheritance Customs Affect Political and Social Inequality? (with Anselm Hager). American Journal of Political Science, 63(4): 758-773.
+
+## Working Papers
+
+- Place-Based Policies, Local Responses, and Electoral Behavior (with Vincent Heddesheimer and Andreas Wiedemann)
+- Voter Responses to Climate Adaptation in High-Risk Communities (with Christian Baehr and Antonio Valentim)
+- Long-run Political Change after the Great Recession (with Vincent Heddesheimer)
+- Foreign Policy Debates Shape Refugees' Psychological Integration (with Florian Sichart and Georgiy Syunyaev)
+- Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban (with Jacob Brown and Hunter Rendleman)
+- Political and Social Correlates of Covid-19 Mortality (with Constantin Manuel Bosancianu, Macartan Humphreys, Sampada KC, Nils Lieber, and Alex Scacco)
+
+## Active Projects
+
+- Long-run political effects of the Great Recession (with Heddesheimer)
+- State climate adaptation policy after disasters
+- California insurance non-renewals and wildfires
+- GRW regional subsidies and elections (with Heddesheimer and Wiedemann)
+- CDU-AfD cooperation effects in East Germany
+- Energy price shocks and immigration attitudes (panel survey)
+- French municipal elections and employment
+
+## Datasets and Tools
+
+- GERDA (German Election Database): Panel dataset of local, state, and federal election results in Germany at the municipality level spanning three decades. Available at https://www.german-elections.com/
+- gerda R package: R package for accessing GERDA data, available on CRAN.
