@@ -56,6 +56,41 @@
   <link rel="stylesheet" href="stylesheets/kube.css">
   <script src="https://kit.fontawesome.com/9745af1226.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hanno Hilbig",
+    "givenName": "Hanno",
+    "familyName": "Hilbig",
+    "jobTitle": "Assistant Professor of Political Science",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of California, Davis",
+      "url": "https://ps.ucdavis.edu/"
+    },
+    "url": "https://www.hannohilbig.com",
+    "email": "hhilbig@ucdavis.edu",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=JzQv9FMAAAAJ",
+      "https://github.com/hhilbig",
+      "https://www.linkedin.com/in/hhilbig/"
+    ],
+    "alumniOf": [
+      {
+        "@type": "Organization",
+        "name": "Harvard University"
+      },
+      {
+        "@type": "Organization",
+        "name": "Princeton University"
+      }
+    ],
+    "knowsAbout": ["political economy", "housing policy", "voter behavior", "causal inference", "regional inequality", "green transition"]
+  }
+  </script>
 </head>
 
 <body>
@@ -576,6 +611,15 @@
       <ol start="1">
 
         <li>
+          <b><a href="https://osf.io/preprints/socarxiv/2g4x7">Voter Responses to Climate Adaptation in High-Risk Communities</a></b>
+          (with Christian Baehr and António Valentim). R&amp;R, <i>American Journal of Political Science.</i>
+          <i><a href="#" role="button" aria-expanded="false" aria-controls="adaptation" onclick="toggle_visibility('adaptation', event); return false;">[Abstract]</a></i>
+          <div id="adaptation" style="display:none;">
+            As climate impacts intensify, governments increasingly adopt adaptation policies, yet their electoral consequences remain poorly understood. We study electoral effects of moratoria on homeowners insurance nonrenewals after California wildfires. Using a difference-in-differences design exploiting eligibility rules, we find null effects on support for incumbents. To explain, we develop a framework of experience-based accountability, arguing that the electoral effect of adaptation is path-dependent: prior crisis experience sets the standard for what voters perceive as a sufficient policy. Consistent with this, we find modest electoral rewards where prior insurance disruption was limited, but none where it was chronic. Survey evidence indicates that, prior to the policy, residents of high-disruption areas already held more negative and crystallized views of the governor. We offer a framework for the politics of adaptation, showing that credit depends on perceived sufficiency: a standard set not only by the policy, but also by voters' prior experience with the crisis.
+          </div>
+        </li>
+
+        <li>
           <b><a href="https://osf.io/preprints/socarxiv/6h8cq">Place-Based Policies, Local Responses, and Electoral
               Behavior</a></b>
           (with Vincent Heddesheimer and Andreas Wiedemann).
@@ -596,15 +640,6 @@
             that local governments are responsive and care about their constituents, undermining populist appeals. Our
             findings suggest that political consequences of place-based policies—and austerity more broadly—cannot be
             understood without considering counteractions by local firms and governments.
-          </div>
-        </li>
-
-        <li>
-          <b><a href="https://osf.io/preprints/socarxiv/2g4x7">Voter Responses to Climate Adaptation in High-Risk Communities</a></b>
-          (with Christian Baehr and António Valentim).
-          <i><a href="#" role="button" aria-expanded="false" aria-controls="adaptation" onclick="toggle_visibility('adaptation', event); return false;">[Abstract]</a></i>
-          <div id="adaptation" style="display:none;">
-            As climate impacts intensify, governments increasingly adopt adaptation policies, yet their electoral consequences remain poorly understood. We study electoral effects of moratoria on homeowners insurance nonrenewals after California wildfires. Using a difference-in-differences design exploiting eligibility rules, we find null effects on support for incumbents. To explain, we develop a framework of experience-based accountability, arguing that the electoral effect of adaptation is path-dependent: prior crisis experience sets the standard for what voters perceive as a sufficient policy. Consistent with this, we find modest electoral rewards where prior insurance disruption was limited, but none where it was chronic. Survey evidence indicates that, prior to the policy, residents of high-disruption areas already held more negative and crystallized views of the governor. We offer a framework for the politics of adaptation, showing that credit depends on perceived sufficiency: a standard set not only by the policy, but also by voters' prior experience with the crisis.
           </div>
         </li>
 
@@ -694,7 +729,7 @@
       </ol>
 
     </main>
-    <footer>Last updated: February 2026</footer>
+    <footer>Last updated: April 2026</footer>
   </div>
   <script src="javascripts/scale.fix.js"></script>
 </body>
