@@ -5,6 +5,10 @@ CLAUDE.md
 .claude/
 nomination_additions.md
 
+# Paper status check report (output of /check-papers)
+paper_status_report.md
+scripts/__pycache__/
+
 # ignore some apps
 datatables/
 shiny/
