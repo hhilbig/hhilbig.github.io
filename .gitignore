@@ -3,6 +3,7 @@
 # Claude Code
 CLAUDE.md
 .claude/
+nomination_additions.md
 
 # ignore some apps
 datatables/
