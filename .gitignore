@@ -4,6 +4,8 @@
 CLAUDE.md
 .claude/
 nomination_additions.md
+# Award-nomination CV variant (contains personal data; keep local-only)
+cv/HHilbig_CV_nomination.*
 
 # Paper status check report (output of /check-papers)
 paper_status_report.md
