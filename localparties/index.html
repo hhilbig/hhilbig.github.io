@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDK4V4S60M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JDK4V4S60M');
+  </script>
+
+  <meta charset="utf-8">
+  <title>Local Party Websites in Germany - Dataset - Hanno Hilbig</title>
+  <meta name="description"
+    content="A chapter-year panel dataset of the web presence of 2,611 local German party organizations, 2015-2025, built from Wayback Machine archives. By Hanno Hilbig.">
+  <meta name="author" content="Hanno Hilbig">
+  <link rel="canonical" href="https://www.hannohilbig.com/localparties/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Local Party Websites in Germany - Dataset">
+  <meta property="og:description" content="A chapter-year panel of the observable web presence of local German party organizations (CDU, CSU, SPD, Grüne, Linke, AfD, FDP), 2015-2025.">
+  <meta property="og:url" content="https://www.hannohilbig.com/localparties/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Local Party Websites in Germany - Dataset">
+  <meta name="twitter:description" content="A chapter-year panel of the observable web presence of local German party organizations, 2015-2025.">
+
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* page-local additions on top of the site stylesheet */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); gap: 0.7rem; margin: 1.4rem 0; }
+    .stat { border: 1px solid var(--border); border-radius: 8px; padding: 0.7rem 0.85rem; }
+    .stat b { display: block; font-size: 1.35rem; letter-spacing: -0.02em; }
+    .stat span { color: var(--muted); font-size: 0.8rem; }
+    .figure { margin: 1.4rem 0; }
+    .figure img { border: 1px solid var(--border); border-radius: 6px; }
+    .figure figcaption { color: var(--muted); font-size: 0.88em; margin-top: 0.4rem; }
+    .table-scroll { overflow-x: auto; }
+    .table-scroll table { white-space: nowrap; }
+    .note { border-left: 3px solid var(--link); padding: 0.6rem 1rem; margin: 1.1rem 0; background: #f7fafc; font-size: 0.94em; }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1>Local Party Websites in Germany</h1>
+        <p class="title">A chapter-year panel dataset, 2015&ndash;2025 &middot; Version 1.0.0<br>
+          <a href="../">Hanno Hilbig</a>, University of California, Davis</p>
+        <div class="profile-links">
+          <a href="DOWNLOAD_URL_PENDING_ZENODO">Download data</a>
+          <span class="separator">|</span>
+          <a href="data_report.pdf">Data report (PDF)</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/hhilbig/local-party-websites-germany/blob/main/release/CODEBOOK.md">Codebook</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/hhilbig/local-party-websites-germany">Code</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <p>What do local party organizations do and say? This dataset measures the
+        <strong>observable web presence</strong> of 2,611 local chapters (predominantly
+        county-level Kreisverbände) of the seven main German parties (CDU, CSU, SPD,
+        Grüne, Linke, AfD, FDP) in municipalities with at least 5,000 residents,
+        annually from 2015 to 2025. Each year of each chapter's website is
+        reconstructed from Internet Archive Wayback Machine snapshots, and structured
+        measures are extracted: leadership boards and their composition, issue
+        emphasis, digital and mobilization infrastructure, and a classified news
+        layer. The public release ships chapter-year aggregates and coverage metadata
+        only: no personal data, no reproduced website text.</p>
+
+      <div class="stats">
+        <div class="stat"><b>2,611</b><span>local chapters</span></div>
+        <div class="stat"><b>28,721</b><span>chapter-years</span></div>
+        <div class="stat"><b>7</b><span>parties</span></div>
+        <div class="stat"><b>~1.03M</b><span>archived pages</span></div>
+        <div class="stat"><b>269,548</b><span>classified news articles</span></div>
+        <div class="stat"><b>288/288</b><span>human-validated records</span></div>
+      </div>
+
+      <h2>What the data measure</h2>
+      <ul>
+        <li><b>Organizational presence</b>: whether a leadership board, officials,
+          issue content, and a local office address are listed.</li>
+        <li><b>Board composition</b>: size, inferred gender shares, chair presence
+          and gender, turnover, and professionalization proxies.</li>
+        <li><b>Issue emphasis</b>: about 25 issue-topic families (crosswalked to the
+          Comparative Agendas Project), topic diversity, and per-family salience.</li>
+        <li><b>Digital presence</b>: chapter-specific Facebook, Instagram, X/Twitter,
+          YouTube, Telegram, and TikTok accounts (national party accounts excluded).</li>
+        <li><b>Mobilization infrastructure</b>: donation, join, newsletter, program,
+          events, and volunteer link flags (the Gibson&ndash;Ward party-website
+          functions).</li>
+        <li><b>News content</b>: deduplicated article counts plus shares by policy
+          topic, article function (press release, event, position statement,
+          campaign, council work), and geographic focus (local / regional /
+          national).</li>
+      </ul>
+
+      <figure class="figure">
+        <img src="news_campaign_share_by_year.png"
+             alt="Bar chart: share of local party news articles classified as campaign content by year, peaking in German federal and European election years.">
+        <figcaption>Built-in validity check: the share of news articles classified
+          as election campaigning tracks the German electoral calendar (BTW =
+          federal election, EP = European election). The classifier does not know
+          the year.</figcaption>
+      </figure>
+
+      <h2>Coverage</h2>
+      <p>Of 25,245 analysis-scope chapter-years, 16,866 (66.8%) are
+        researcher-usable; each panel row carries a coverage classification
+        (<code>coverage_basis</code>, bucket, tier) so the denominator is
+        reproducible. Roughly 28% of chapter-years have no same-year archived
+        snapshot, which is largely irreducible. Coverage rises over time and varies
+        by party, so analyses should condition on the coverage columns; the data
+        report discusses selection into observability at length.</p>
+
+      <figure class="figure">
+        <img src="coverage_by_party_year.png"
+             alt="Usable structured coverage by party and year, rising from about 35 percent in 2015 to 73 percent in 2025 with clear party differences.">
+        <figcaption>Usable structured coverage by party and year.</figcaption>
+      </figure>
+
+      <h2>Method and validation</h2>
+      <p>The sampling frame is constructed top-down (2,394 party &times; Kreis cells
+        from the official municipality register) before any website discovery, so
+        coverage is measured against a fixed denominator. All content extraction
+        and classification ran on a locally hosted open-weight language model with
+        schema-constrained decoding; no scraped page content was sent to commercial
+        cloud APIs. Every model-generated layer was validated by a human coder
+        against source-page excerpts: 288 of 288 reviewed records across four
+        stratified samples agreed with the extraction. Details, including known
+        limitations (selection into observability, archival bias, survivorship),
+        are in the <a href="data_report.pdf">data report</a>.</p>
+
+      <h2>Data and documentation</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>File</th><th>Grain</th><th>Rows</th></tr></thead>
+          <tbody>
+            <tr><td><code>chapter_roster.csv</code></td><td>chapter</td><td>2,611</td></tr>
+            <tr><td><code>chapter_year_panel.csv</code></td><td>chapter-year</td><td>28,721</td></tr>
+            <tr><td><code>chapter_year_panel_enriched.csv</code></td><td>chapter-year</td><td>28,721</td></tr>
+            <tr><td><code>chapter_year_topic.csv</code></td><td>chapter-year-family</td><td>25,832</td></tr>
+            <tr><td><code>chapter_year_news.csv</code></td><td>chapter-year</td><td>13,883</td></tr>
+            <tr><td><code>chapter_year_news_topic.csv</code></td><td>chapter-year-family</td><td>85,238</td></tr>
+            <tr><td><code>chapter_year_provenance.csv</code></td><td>chapter-year</td><td>28,721</td></tr>
+            <tr><td><code>topic_family_cap_crosswalk.csv</code></td><td>family</td><td>26</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The deposit bundle also contains the codebook, the data report, coverage
+        and missingness diagnostics, validation summaries, and minimal R and Python
+        load scripts. Person-level records and reproduced page text are withheld
+        for data-protection reasons and available to researchers on request under a
+        use agreement. Data and documentation are CC-BY-4.0; code is MIT.</p>
+
+      <div class="note"><b>Before analysis:</b> read <code>ags</code> /
+        <code>kreis_id</code> as strings (leading zeros); filter to
+        <code>analysis_scope_included = 1</code> plus <code>coverage_basis =
+        'full'</code> (conservative) or any non-blank <code>coverage_basis</code>;
+        issue fields measure salience, not position.</div>
+
+      <h2>Citation</h2>
+      <pre>Hilbig, Hanno (2026). Local Party Websites in Germany:
+A Chapter-Year Panel, 2015-2025. Version 1.0.0.
+DOI pending Zenodo deposit.</pre>
+
+      <footer>
+        Built from official party directories, the Destatis Gemeindeverzeichnis,
+        and the Internet Archive Wayback Machine. Questions and issues:
+        <a href="https://github.com/hhilbig/local-party-websites-germany/issues">GitHub Issues</a>
+        or <a href="mailto:hhilbig@ucdavis.edu">hhilbig@ucdavis.edu</a>.
+        <br><a href="../">&larr; back to hannohilbig.com</a>
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.hannohilbig.com/localparties/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.hannohilbig.com/cv/HHilbig_CV.pdf</loc>
     <priority>0.5</priority>
   </url>
