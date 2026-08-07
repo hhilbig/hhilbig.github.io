@@ -63,107 +63,49 @@
     </header>
 
     <main>
-      <p>What do local party organizations do and say? CLARA measures the
-        observable web presence of 2,635 local chapters of the seven main
-        German parties (CDU, CSU, SPD, Grüne, Linke, AfD, FDP), annually from
-        2015 to 2025: 28,985 chapter-years in total. The unit of observation is
-        the county-level party association, the Kreisverband, of which each
-        party has one per county. Of the 2,635 chapters, 2,591 are
-        Kreisverbände, as are 2,316 of the 2,319 chapters in the recommended
-        analysis scope. The rest are city- or town-level chapters, which the
-        <code>org_level</code> column identifies. The public release contains
-        chapter-year aggregates and coverage metadata only: no personal data,
-        no reproduced website text.</p>
+      <p>What do local party organizations say, and what can we actually observe
+        about them? Chapters publish on their own websites, in their own formats,
+        and delete what they publish, so the record is thin and scattered. CLARA
+        reconstructs it. It covers 2,635 local chapters of the seven main
+        German parties, annually from 2015 to 2025, or 28,985 chapter-years. The
+        unit is the Kreisverband, the county-level association each party runs.</p>
 
-      <h2>How the data were collected</h2>
-      <p>The sampling frame is fixed before any website discovery: 2,394
-        party &times; county cells, one cell for each party that organizes in a
-        given county. The official municipality register, restricted to
-        municipalities with at least 5,000 residents, covers 399 Kreise
-        (counties). Each Kreis is crossed with the five parties that organize
-        everywhere, plus the CDU outside Bavaria and the CSU within it. Each
-        chapter is georeferenced to its seat municipality, the town the
-        association is based in, through the 8-digit municipality key
-        (<code>ags</code>), so the panel merges
-        with election and demographic data. While a Kreisverband organizes the
-        whole county, covariates attached to the seat municipality describe
-        only that town; merges that need county-wide covariates should use the
-        5-digit county key (<code>kreis_id</code>). A Kreisverband typically
-        contains subordinate town-level chapters (Ortsverbände, Stadtverbände),
-        which are not separate observations. Where a subordinate chapter's
-        pages sit under the Kreisverband's domain, collection stays inside each
-        chapter's own URL path, so those pages are not attributed to the
-        Kreisverband. Chapter discovery located a website for 98.8% of cells
-        (2,365 of 2,394) through official party directories, a national roster PDF,
-        systematic URL probing, search-engine queries whose results a language
-        model screened, and, for sites that had already gone offline, archived
-        copies of the party directories; the <code>url_source</code> column
-        records which of these found each chapter. No website could be found
-        for 27 cells (14 Linke, 6 FDP, 3 AfD, 2 SPD, 1 CDU, 1 Grüne), and 2
-        further chapters are known but have no usable URL.</p>
-      <p>Each chapter's website is then reconstructed year by year from
-        Internet Archive Wayback Machine snapshots, roughly 1.03 million
-        archived pages in total. A locally hosted open-weight language model
-        extracts structured records from these pages
-        (Qwen3-30B-A3B-Instruct-2507, FP8, served with vLLM), and
-        schema-constrained decoding restricts its output to the fields of the
-        target record. The page-function labels that route pages to extractors
-        combine URL rules with the same local model, and every model-derived
-        value in the release comes from the local
-        model. One measure is built without a model: where a chapter has no
-        archived about or contact page, its social-media accounts come from
-        scanning the stored page text for links to the six social-media
-        platforms the dataset covers, and the <code>social_source</code> column
-        marks those records. News pages are
-        deduplicated to one record per article (237,399 articles dated within
-        the panel window) and
-        classified by policy topic, article function, and geographic focus. The
-        <a href="data_report.pdf">data report</a> describes each step.</p>
+      <h2>How the data were built</h2>
+      <p>Each chapter's website is rebuilt year by year from Internet Archive
+        snapshots, about 1.03 million archived pages. A locally hosted open-weight
+        language model then reads those pages and extracts structured records.
+        No value in the release passes through a commercial model. News pages are
+        deduplicated to one record per article, 237,399 of them dated inside the
+        panel window, each classified by policy topic, article function, and
+        geographic focus. The <a href="data_report.pdf">data report</a> describes
+        the sampling frame, the discovery channels, and every extraction step.</p>
 
       <h2>What the data measure</h2>
       <ul>
-        <li><b>Organizational presence</b>: whether a leadership board, officials,
-          issue content, and a local office address are listed.</li>
+        <li><b>Organizational presence</b>: whether a board, officials, issue
+          content, and a local office address are listed.</li>
         <li><b>Board composition</b>: size, gender shares inferred from first
-          names, whether a chair is listed and that chair's gender, and proxies
-          for professionalization (the shares of officials
-          with an academic title, a listed email address, or a photo).</li>
-        <li><b>Issue emphasis</b>: 25 issue-topic families plus an unclassified
-          remainder, each family mapped to
-          a major topic code of the Comparative Agendas Project so the measures
-          line up with other agenda-coded data; how widely a chapter spreads its
-          content across families; and how much of that content falls in each
-          family.</li>
-        <li><b>Digital presence</b>: chapter-specific Facebook, Instagram, X/Twitter,
-          YouTube, Telegram, and TikTok accounts (national party accounts excluded).</li>
-        <li><b>Mobilization infrastructure</b>: flags for whether the site
-          offers a donation, membership, newsletter, program, events, or
-          volunteer pathway. These cover the information, participation, and
-          mobilization functions in Gibson and Ward's scheme for coding party
-          websites.</li>
-        <li><b>News content</b>: deduplicated article counts plus shares by policy
-          topic, article function (press release, event, position statement,
-          campaign, council work), and geographic focus (local / regional /
-          national).</li>
+          names, whether a chair is listed, and proxies for professionalization.</li>
+        <li><b>Issue emphasis</b>: 25 topic families, mapped to the Comparative
+          Agendas Project scheme so the measures line up with other agenda-coded
+          data.</li>
+        <li><b>Digital presence</b>: the chapter's own accounts on six social
+          platforms, with national party accounts excluded.</li>
+        <li><b>Mobilization infrastructure</b>: whether the site offers a
+          donation, membership, newsletter, program, events, or volunteer
+          pathway.</li>
+        <li><b>News content</b>: article counts and shares by topic, function,
+          and geographic focus.</li>
       </ul>
 
-      <h2>Caveats</h2>
-      <p><b>Coverage.</b> Of the 25,509 chapter-years in the recommended
-        analysis scope, 17,989 (70.5%) are researcher-usable, meaning at least
-        one measure was observed for them. Each panel row records what its
-        coverage rests on (<code>coverage_basis</code>, plus the finer
-        <code>release_coverage_bucket</code> and
-        <code>release_coverage_tier</code> labels), so a user can rebuild the
-        same denominator or impose a stricter one. Roughly 25% of chapter-years
-        have no same-year archived snapshot in the Internet Archive, so no
-        further collection can recover them. Where the archive does hold a page
-        of the type a measure needs, extraction coverage is 99.9% for
-        officials, 100% for contact and social measures, 99.7% for issue
-        positions, and 92.7% for news. Coverage rises over time and varies by
-        party, so analyses should condition on the coverage columns. The
-        deposit also includes an audit that assigns every missing value a cause
-        and estimates how much extractable content the archive holds but the
-        release does not capture.</p>
+      <h2>What to watch out for</h2>
+      <p><b>Coverage is uneven, and it is not random.</b> Of the 25,509 chapter-years in the recommended analysis
+        scope, 17,989 are researcher-usable. Roughly a quarter have no archived
+        snapshot from that year at all, and no further collection can recover
+        them: the Internet Archive never captured the site. Every row
+        records what its coverage rests on, so a denominator can be rebuilt or
+        made stricter. Where the archive does hold a page of the right type,
+        extraction almost always succeeds.</p>
 
       <figure class="figure">
         <img src="coverage_smallmult.png"
@@ -171,56 +113,28 @@
         <figcaption>Usable structured coverage by party and year.</figcaption>
       </figure>
 
-      <p><b>Collection and extraction.</b> Chapter discovery ran against the
-        live web in early 2026, so chapters whose sites went offline earlier
-        without replacement are missing entirely. The early panel years
-        therefore carry survivorship selection on top of archive availability: a
-        chapter had to survive to 2026 to enter the roster at all, and its site
-        had to have been archived in a given year for the chapter to be observed
-        that year. A chapter's news count depends on how often
-        the Internet Archive captured its site, not only on how much the chapter
-        posted. The board measures mix two groups of people, internal party
-        officers and elected council representatives; the
-        <code>officials_source</code> column reports which page type a
-        chapter-year's board came from, so analyses can condition on it. Gender
-        is inferred from first names, a procedure that is correct about 94% of
-        the time. The issue fields record which topics a chapter writes about,
-        not what stance it takes.</p>
+      <p><b>Two selection problems compound.</b> A chapter had to still be online
+        in early 2026 to enter the roster, and its site had to have been archived
+        in a given year to be observed that year. Chapters that went offline before
+        2026 are missing entirely, which affects the early years most. A news
+        count therefore reflects how often the Archive captured a site as much as
+        how much the chapter posted. Comparisons across chapters and multi-year
+        averages are the safest uses; year-to-year change within a chapter is
+        noisier than the panel structure suggests. The codebook is specific about
+        which columns to condition on.</p>
 
-      <p><b>Before analysis.</b> Read <code>ags</code> and
-        <code>kreis_id</code> as text rather than as numbers: both keys carry
-        leading zeros, which a numeric import silently strips.
-        <code>kreis_id</code> is the 5-digit county key and the recommended key
-        for merging county-level data; <code>ags</code> is the 8-digit key of
-        the chapter's seat municipality. To reproduce the analysis sample, keep
-        the rows with <code>analysis_scope_included = 1</code>, then pick a
-        coverage rule. The conservative choice,
-        <code>coverage_basis = 'full'</code>, keeps only the chapter-years that
-        meet the structured-coverage threshold; any non-blank
-        <code>coverage_basis</code> also keeps rows whose values were observed
-        on thinner or fallback pages.</p>
+      <h2>Does it measure what it claims to?</h2>
+      <p>A human coder checked extracted records against the pages they came
+        from, across five stratified samples; on a sample drawn from the released
+        records, 45 of 48 were confirmed. A second open-weight model, from a
+        different family than the extractor, independently judged a fresh sample
+        of released records against their source pages. Both checks are reported
+        in full in the deposit.</p>
 
-      <h2>Validation</h2>
-      <p>Three kinds of evidence bear on whether the extracted values are
-        right. First, a human coder reviewed extracted records against excerpts
-        of the pages they came from, across five stratified samples. The first
-        288 records reviewed all matched. On a
-        48-record sample drawn
-        from the released records themselves, 45 were confirmed, 1 was
-        incorrect, and 2 were undecidable from the excerpt. Second, an
-        independent locally hosted model from a different family than the
-        extractor (Mistral-Small-24B) judged a fresh 315-record sample of the
-        released records against their source pages. Of 769 judged non-empty
-        fields, 76.9% were rated supported and 2.9% contradicted; the rest did
-        not appear in the truncated, navigation-stripped excerpt the judge was
-        shown and are therefore neither confirmed nor refuted. The third kind
-        of evidence is face validity: the three figures below show that the
-        news labels move with real-world events the classifier is never told
-        about.</p>
-
-      <p>The share of articles labeled election campaigning rises and falls
-        with the electoral calendar, even though the classifier never sees the
-        year.</p>
+      <p>A third kind of evidence is face validity: the labels move with events
+        the classifier was never told about. It never sees the year, yet the share
+        of articles it labels election campaigning tracks the electoral
+        calendar.</p>
 
       <figure class="figure">
         <img src="news_campaign_share_by_year.png"
@@ -243,9 +157,9 @@
           maximum.</figcaption>
       </figure>
 
-      <p>Migration coverage also separates the parties in the expected
-        direction: the AfD devotes a larger share of its classified news topics
-        to migration than any other party, in every year of the panel.</p>
+      <p>And migration separates the parties in the expected direction: the AfD
+        devotes a larger share of its news topics to it than any other party, in
+        every year of the panel.</p>
 
       <figure class="figure">
         <img src="news_migration_by_party.png"
@@ -257,30 +171,18 @@
       </figure>
 
       <h2>Data and documentation</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>File</th><th>Grain</th><th>Rows</th></tr></thead>
-          <tbody>
-            <tr><td><code>chapter_roster.csv</code></td><td>chapter</td><td>2,635</td></tr>
-            <tr><td><code>chapter_year_panel.csv</code></td><td>chapter-year</td><td>28,985</td></tr>
-            <tr><td><code>chapter_year_panel_enriched.csv</code></td><td>chapter-year</td><td>28,985</td></tr>
-            <tr><td><code>chapter_year_topic.csv</code></td><td>chapter-year-family</td><td>39,671</td></tr>
-            <tr><td><code>chapter_year_news.csv</code></td><td>chapter-year</td><td>14,733</td></tr>
-            <tr><td><code>chapter_year_news_topic.csv</code></td><td>chapter-year-family</td><td>90,668</td></tr>
-            <tr><td><code>chapter_year_provenance.csv</code></td><td>chapter-year</td><td>28,985</td></tr>
-            <tr><td><code>topic_family_cap_crosswalk.csv</code></td><td>family</td><td>26</td></tr>
-            <tr><td><code>kreis_wahlkreis_crosswalk.csv</code></td><td>county-election-district</td><td>1,640</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>The deposit bundle also contains the codebook, the data report, coverage
-        and missingness diagnostics, validation summaries, and minimal R and Python
+      <p>The deposit holds the chapter-year panel and its enriched version, the
+        chapter roster, long-format topic and news files, a per-row provenance
+        file, and crosswalks to the Comparative Agendas scheme and to Bundestag
+        electoral districts. It also carries the codebook, the data report,
+        coverage diagnostics, validation summaries, and minimal R and Python
         load scripts. The core panel is mirrored here as
         <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB), but
-        the Harvard Dataverse deposit is the citable version. Person-level records and
-        reproduced page text are not part of the release: the records are
-        personal data under the GDPR, and the text may be protected by
-        copyright. A controlled-access version of that material is in preparation and is not ready yet. Data and
+        the Harvard Dataverse deposit is the citable version.</p>
+      <p>Person-level records and reproduced page text are not part of the
+        release: the records are personal data under the GDPR, and the parties
+        wrote the text, which may be under copyright. A controlled-access version
+        of that material is in preparation and is not ready yet. Data and
         documentation are CC-BY-4.0, and the pipeline code is available from the
         author on request.</p>
 
