@@ -63,23 +63,23 @@
     </header>
 
     <main>
-      <p>Local party organizations publish substantial amounts of material on
-        their websites, but there is no systematic historical record of this
-        material. Websites differ across chapters, and older content is frequently
-        removed. CLARA uses Internet Archive snapshots to construct an annual
-        panel of local party websites. It covers 2,635 local chapters of the seven
-        main German parties annually from 2015 to 2025, or 28,985 chapter-years.
-        The unit is the Kreisverband, the county-level association maintained by
-        each party.</p>
+      <p>Local party websites contain a large amount of information about local
+        organizations, but they are a difficult source for historical research.
+        Formats differ across chapters, pages disappear, and many sites were not
+        archived consistently. CLARA uses archived versions of these websites to
+        build an annual panel of 2,635 local chapters of the seven main German
+        parties from 2015 to 2025, for a total of 28,985 chapter-years. The unit
+        is the Kreisverband, the county-level organization of each party.</p>
 
       <h2>How the data were built</h2>
-      <p>Each chapter's website is reconstructed separately for each year using
-        Internet Archive snapshots. The underlying archive contains about 1.03
-        million pages. A locally hosted open-weight language model processes the
-        pages and extracts the structured variables. Commercial models were not
-        used to produce the released data. News pages are deduplicated to one
-        record per article. The resulting file contains 237,399 articles dated
-        between 2015 and 2025, with classifications for policy topic, article
+      <p>I reconstruct each chapter's website separately for each year using
+        Internet Archive snapshots. The archive used for the release contains
+        about 1.03 million pages. A locally hosted open-weight language model
+        extracts structured variables from these pages. Commercial models were
+        not used to produce the released data.</p>
+      <p>For news pages, duplicate archived versions are collapsed to one record
+        per article. The resulting file contains 237,399 articles dated between
+        2015 and 2025. Each article has classifications for policy topic, article
         function, and geographic focus. The
         <a href="data_report.pdf">data report</a> documents the sampling frame,
         website discovery, and extraction procedure.</p>
@@ -89,27 +89,26 @@
         <li><b>Organizational presence</b>: whether a board, officials, issue
           content, and a local office address are listed.</li>
         <li><b>Board composition</b>: size, gender shares inferred from first
-          names, whether a chair is listed, and proxies for professionalization.</li>
-        <li><b>Issue emphasis</b>: 25 topic families, mapped to the Comparative
-          Agendas Project scheme, to facilitate comparison with other agenda-coded
-          data.</li>
+          names, whether a chair is listed, and proxies for
+          professionalization.</li>
+        <li><b>Issue emphasis</b>: 25 topic families mapped to the Comparative
+          Agendas Project scheme.</li>
         <li><b>Digital presence</b>: the chapter's own accounts on six social
-          platforms, with national party accounts excluded.</li>
-        <li><b>Mobilization infrastructure</b>: whether the site offers a
-          donation, membership, newsletter, program, events, or volunteer
-          pathway.</li>
+          platforms, excluding national party accounts.</li>
+        <li><b>Mobilization infrastructure</b>: whether the site provides a way
+          to donate, join the party, subscribe to a newsletter, view a program or
+          events, or volunteer.</li>
         <li><b>News content</b>: article counts and shares by topic, function,
           and geographic focus.</li>
       </ul>
 
       <h2>Coverage and limitations</h2>
-      <p>Coverage is uneven and nonrandom. Of the 25,509 chapter-years in the
-        recommended analysis scope, 17,989 are researcher-usable. Roughly one
-        quarter have no Internet Archive snapshot from the relevant year. These
-        observations cannot be recovered because the site was not archived. The
-        dataset records the available source material for every chapter-year, and
-        these variables can be used to define alternative coverage requirements.
-        Conditional on an archived page of the relevant type being available,
+      <p>Coverage is not random. Of the 25,509 chapter-years in the recommended
+        analysis scope, 17,989 are researcher-usable. About one quarter have no
+        Internet Archive snapshot for the relevant year. Those observations
+        cannot be recovered because the site was not archived. The panel includes
+        source and coverage indicators that can be used to impose stricter
+        coverage requirements. When an archived page of the relevant type exists,
         extraction almost always succeeds.</p>
 
       <figure class="figure">
@@ -118,26 +117,30 @@
         <figcaption>Usable structured coverage by party and year.</figcaption>
       </figure>
 
-      <p>There are two additional sources of selection. First, a chapter had to
-        have an active website in early 2026 to enter the roster. Chapters whose
-        websites disappeared before then are therefore missing entirely,
-        particularly in the earlier years. Second, a website had to be captured by
-        the Internet Archive in a given year to be observed in that year. News
-        counts consequently depend both on posting activity and on archive
-        frequency. For this reason, comparisons across chapters and multi-year
-        averages are more reliable than annual within-chapter changes. The codebook
-        identifies the variables used to define coverage.</p>
+      <p>Selection enters at two points. The roster was assembled from chapters
+        with websites that were still online in early 2026. Chapters whose
+        websites disappeared before then are therefore absent from the dataset,
+        especially in the earlier years. Within the roster, a chapter can be
+        observed in a particular year only if the Internet Archive captured its
+        website in that year.</p>
+
+      <p>This matters particularly for news counts. A low count can mean that a
+        chapter posted little, that the Internet Archive captured little, or
+        both. I would therefore treat comparisons across chapters and multi-year
+        averages as more reliable than annual changes within a chapter. The
+        codebook identifies the variables that describe coverage.</p>
 
       <h2>Validation</h2>
-      <p>A human coder compared extracted records with their source pages in
-        five stratified samples. In the sample drawn from released records, 45 of
-        48 records were confirmed. A second open-weight model from a different
-        model family separately evaluated a new sample against the source pages.
-        The deposit reports the results of both checks.</p>
+      <p>I manually compared extracted records with their source pages in five
+        stratified samples. In the sample drawn directly from the released
+        records, 45 of 48 records were confirmed. As a separate check, a second
+        open-weight model from a different model family evaluated a new sample
+        against the source pages. The deposit reports the results of both
+        checks.</p>
 
-      <p>Aggregate patterns provide an additional check. The classifier does not
-        receive the year as an input, but the share of articles classified as
-        election campaigning increases in election years.</p>
+      <p>The classifier does not receive the year as an input. Nevertheless, the
+        share of articles classified as election campaigning rises in federal and
+        European election years.</p>
 
       <figure class="figure">
         <img src="news_campaign_share_by_year.png"
@@ -146,10 +149,10 @@
           by year (BTW = federal election, EP = European election).</figcaption>
       </figure>
 
-      <p>Topic classifications also vary with major events. Migration, climate,
-        health, and energy receive their highest or near-highest levels of
-        attention during the refugee crisis, the climate protests, the COVID-19
-        pandemic, and the energy crisis, respectively.</p>
+      <p>The topic series also correspond to major events. Migration, climate,
+        health, and energy reach their highest or near-highest levels of
+        attention around the refugee crisis, the 2019 climate protests, the
+        COVID-19 pandemic, and the 2022 energy crisis.</p>
 
       <figure class="figure">
         <img src="news_agenda_smallmult.png"
@@ -161,9 +164,9 @@
           maximum.</figcaption>
       </figure>
 
-      <p>Party differences are also visible in the topic classifications. In
-        every year from 2015 to 2025, migration accounts for a larger share of AfD
-        news topics than of any other party's news topics.</p>
+      <p>There are also clear differences across parties. In every year from 2015
+        to 2025, migration accounts for a larger share of AfD news topics than of
+        any other party's news topics.</p>
 
       <figure class="figure">
         <img src="news_migration_by_party.png"
@@ -175,20 +178,20 @@
       </figure>
 
       <h2>Data and documentation</h2>
-      <p>The deposit contains the chapter-year panel and its enriched version, the
-        chapter roster, long-format topic and news files, a per-row provenance
-        file, and crosswalks to the Comparative Agendas scheme and to Bundestag
-        electoral districts, along with the codebook, the data report, coverage
-        diagnostics, validation summaries, and minimal R and Python load
-        scripts. The core panel is mirrored here as
-        <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB), but
-        the Harvard Dataverse deposit is the citable version.</p>
-      <p>Person-level records and reproduced page text are not part of the
-        release: the records are personal data under the GDPR, and the parties
-        wrote the text, which may be under copyright. A controlled-access version
-        of this material is in preparation. Data and
-        documentation are CC-BY-4.0, and the pipeline code is available from the
-        author on request.</p>
+      <p>The Dataverse deposit contains the chapter-year panel and its enriched
+        version, the chapter roster, long-format topic and news files, a per-row
+        provenance file, and crosswalks to the Comparative Agendas scheme and
+        Bundestag electoral districts. It also contains the codebook, data
+        report, coverage diagnostics, validation summaries, and minimal R and
+        Python load scripts. The core panel is mirrored here as
+        <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB). The
+        Harvard Dataverse deposit is the citable version.</p>
+      <p>Person-level records and reproduced page text are excluded from the
+        public release. The records are personal data under the GDPR, and the
+        source text was written by the parties and may be protected by copyright.
+        A controlled-access version of this material is in preparation. Data and
+        documentation are CC-BY-4.0. Pipeline code is available from the author
+        on request.</p>
 
       <h2>Citation</h2>
       <pre>Hilbig, Hanno (2026). CLARA: Communication of Local German
