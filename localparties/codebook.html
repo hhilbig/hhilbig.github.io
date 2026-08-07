@@ -28,20 +28,18 @@
 Associations, Recorded Annually). CLARA records what local party
 chapters put on their own websites, so it is a panel of
 <strong>observable local party web presence</strong> rather than a
-census of local party activity, personnel, or issue positions. The unit
-of observation is the county-level party association, the Kreisverband,
-which is a party's association for one county (Kreis). Kreisverbände
-account for 2,591 of the 2,635 chapters and for 2,316 of the 2,319
-chapters in the recommended analysis scope, which is the
+census of local party activity, personnel, or issue positions.</p>
+<p>The unit of observation is the county-level party association, the
+Kreisverband, which is a party's association for one county (Kreis).
+Kreisverbände account for 2,591 of the 2,635 chapters and for 2,316 of
+the 2,319 chapters in the recommended analysis scope, which is the
 <code>analysis_scope_included</code> filter defined in the roster below.
 The small remainder are city- or town-level chapters, identified by
 <code>org_level</code>. A Kreisverband typically contains subordinate
 town-level chapters; those are not separate observations. Every
 substantive field is derived from website content, so a value exists
 only where the chapter had a website and the Wayback Machine archived it
-in that year. Condition analyses on <code>observability_status</code>,
-which is defined with the panel below (see also the data report and the
-coverage tables).</p>
+in that year.</p>
 <p>This release contains nine files, with identifiers stable across all
 of them:</p>
 <ul>
@@ -61,6 +59,8 @@ has archived news articles: the article count and the content-label
 shares.</li>
 <li><code>chapter_year_news_topic.csv</code> — long-format per-family
 article counts: one row per chapter-year and topic family.</li>
+<li><code>chapter_year_news_topic_geo.csv</code> — the same counts split
+by geographic focus, so topic and geography can be crossed.</li>
 <li><code>chapter_year_provenance.csv</code> — one row per chapter-year:
 non-sensitive source-level provenance (see below).</li>
 <li><code>topic_family_cap_crosswalk.csv</code> — maps each issue family
@@ -798,7 +798,7 @@ remedy.</p>
 <li><strong>Gender</strong> is inferred from first names by a classifier
 running on a locally hosted open-weight model
 (<code>Qwen/Qwen3-30B-A3B-Instruct-2507-FP8</code>, the model behind
-every model-generated layer in this release), with results cached so a
+every model-generated measure in this release), with results cached so a
 given name always receives the same label. Inferring gender from first
 names is a standard method (benchmarked at ~94% accuracy by Santamaría
 &amp; Mihaljević 2018), but it is a proxy: it errs on unisex names and
@@ -955,6 +955,53 @@ Issue-page topics come from static program content and change little
 within a chapter, whereas news topics move year to year, so this file is
 the one to use for issue-attention dynamics. Articles labeled
 <code>other</code> or <code>unclear</code> are excluded.</p>
+<h2
+id="chapter_year_news_topic_geocsv-long-format-news-topics-by-geographic-focus"><code>chapter_year_news_topic_geo.csv</code>
+(long format, news topics by geographic focus)</h2>
+<p>The same article counts as <code>chapter_year_news_topic.csv</code>,
+split by the geographic focus of each article (111,749 rows):
+<code>chapter_id</code>, <code>year</code>, <code>topic_family</code>,
+<code>geo_focus</code>, <code>n</code>, <code>cap_major_topic</code>.
+Topic family and geographic focus are labeled on the same article, so
+this file carries their joint distribution rather than two separate
+marginals, which is what makes questions about the scale at which a
+topic is discussed answerable.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>geo_focus</code></td>
+<td>Geographic focus of the article's content: <code>local</code>,
+<code>regional</code>, <code>national</code>, or
+<code>unclear</code>.</td>
+</tr>
+<tr class="even">
+<td><code>n</code></td>
+<td>Articles in this chapter-year with this topic family and this
+focus.</td>
+</tr>
+</tbody>
+</table>
+<p>Summing <code>n</code> over <code>geo_focus</code> within a
+chapter-year and topic family reproduces
+<code>chapter_year_news_topic.csv</code> exactly, so the two files
+cannot disagree. As in that file, articles labeled <code>other</code> or
+<code>unclear</code> on topic are excluded; <code>unclear</code> appears
+here only as a value of <code>geo_focus</code>, and it covers 0.2% of
+articles.</p>
+<p>Cells are small by construction: a chapter-year splits its articles
+across up to 25 topic families and four focus values, so most cells hold
+one or two articles. Aggregate to the party, year, or topic level before
+interpreting shares, and set a minimum article count. As an
+illustration, pooling to party × topic shows that parties differ far
+more about some topics than others: for economy the locally focused
+share runs from 30% (AfD) to 78% (CSU), while for community news every
+party sits between 96% and 98%.</p>
 <h2
 id="chapter_year_provenancecsv-one-row-per-chapter-year"><code>chapter_year_provenance.csv</code>
 (one row per chapter-year)</h2>
@@ -1120,7 +1167,8 @@ residents and therefore falls outside the frame, and Eisenach, which was
 a county in its own right for the 2017 and 2021 elections before being
 merged into the Wartburgkreis. Rows for counties outside the frame find
 no match when the file is joined to the panel.</p>
-</main>
+
+    </main>
   </div>
 </body>
 </html>
