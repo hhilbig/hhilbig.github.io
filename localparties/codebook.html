@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Codebook - CLARA - Hanno Hilbig</title>
+  <meta name="author" content="Hanno Hilbig">
+  <link rel="canonical" href="https://www.hannohilbig.com/localparties/codebook.html">
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .table-scroll { overflow-x: auto; }
+    table { font-size: 0.9em; }
+    td, th { padding: 0.3rem 0.6rem; vertical-align: top; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1>Codebook</h1>
+        <p class="title">CLARA: Communication of Local German Party Associations, 2015&ndash;2025 &middot; Version 1.0.0<br>
+          <a href="./">&larr; back to the dataset page</a></p>
+      </div>
+    </header>
+    <main>
+<h1 id="codebook">Codebook</h1>
+<p>This codebook documents CLARA (Communication of Local German Party
+Associations, Recorded Annually). CLARA records what local party
+chapters put on their own websites, so it is a panel of
+<strong>observable local party web presence</strong> rather than a
+census of local party activity, personnel, or issue positions. The unit
+of observation is the county-level party association, the Kreisverband,
+which is a party's association for one county (Kreis). Kreisverbände
+account for 2,591 of the 2,635 chapters and for 2,316 of the 2,319
+chapters in the recommended analysis scope, which is the
+<code>analysis_scope_included</code> filter defined in the roster below.
+The small remainder are city- or town-level chapters, identified by
+<code>org_level</code>. A Kreisverband typically contains subordinate
+town-level chapters; those are not separate observations. Every
+substantive field is derived from website content, so a value exists
+only where the chapter had a website and the Wayback Machine archived it
+in that year. Condition analyses on <code>observability_status</code>,
+which is defined with the panel below (see also the data report and the
+coverage tables).</p>
+<p>This release contains nine files, with identifiers stable across all
+of them:</p>
+<ul>
+<li><code>chapter_roster.csv</code> — one row per chapter (identity +
+geography).</li>
+<li><code>chapter_year_panel.csv</code> — one row per chapter-year:
+features with per-feature status columns for missingness-aware
+analysis.</li>
+<li><code>chapter_year_panel_enriched.csv</code> — the panel plus
+derived measures, web-activity measures, and issue-topic presence flags.
+It keeps the per-feature status columns and adds status columns for the
+derived measures.</li>
+<li><code>chapter_year_topic.csv</code> — long-format per-family
+issue-block counts, with a <code>cap_major_topic</code> column.</li>
+<li><code>chapter_year_news.csv</code> — one row per chapter-year that
+has archived news articles: the article count and the content-label
+shares.</li>
+<li><code>chapter_year_news_topic.csv</code> — long-format per-family
+article counts: one row per chapter-year and topic family.</li>
+<li><code>chapter_year_provenance.csv</code> — one row per chapter-year:
+non-sensitive source-level provenance (see below).</li>
+<li><code>topic_family_cap_crosswalk.csv</code> — maps each issue family
+to a Comparative Agendas Project (CAP) major topic.</li>
+<li><code>kreis_wahlkreis_crosswalk.csv</code> — maps each county to the
+Bundestag electoral districts it falls in, with population weights, for
+the 2017, 2021, and 2025 federal elections.</li>
+</ul>
+<h2
+id="chapter_rostercsv-one-row-per-chapter"><code>chapter_roster.csv</code>
+(one row per chapter)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>chapter_id</code></td>
+<td>integer</td>
+<td>Stable chapter identifier. Primary key; joins to the panel.</td>
+</tr>
+<tr class="even">
+<td><code>party</code></td>
+<td>string</td>
+<td>One of CDU, CSU, SPD, GRUENE, LINKE, AFD, FDP.</td>
+</tr>
+<tr class="odd">
+<td><code>org_level</code></td>
+<td>string</td>
+<td>Organizational level: <code>kreisverband</code>, the county-level
+association (2,591 of 2,635 chapters; 2,316 of 2,319 in the analysis
+scope); <code>ortsverband</code>, a town- or locality-level chapter
+(36); <code>stadtverband</code>, a city-level chapter (5);
+<code>bezirksverband</code>, a district association covering several
+counties, one level above the Kreis (3).</td>
+</tr>
+<tr class="even">
+<td><code>org_name</code></td>
+<td>string</td>
+<td>The chapter name as it was discovered. Blank where the discovered
+value was a fragment of a URL or email address rather than a name.</td>
+</tr>
+<tr class="odd">
+<td><code>url</code></td>
+<td>string</td>
+<td>Chapter website URL used for crawling.</td>
+</tr>
+<tr class="even">
+<td><code>url_source</code></td>
+<td>string</td>
+<td>How the chapter's URL was found. <code>party_directory</code>
+(listed in an official party directory) and <code>url_probe</code> (a
+predictable domain pattern that resolved) are high trust.
+<code>spd_pdf_roster</code> comes from the SPD's own published roster of
+chapters. <code>serper_search</code>, a web search whose results a
+language model matched to the chapter, is lower trust.
+<code>archived_directory</code> (3 chapters) means the URL was recovered
+from archived Wayback copies of the official party directories, which is
+how sites already offline when discovery ran could still be found.
+Method details and per-channel counts are in the README.</td>
+</tr>
+<tr class="odd">
+<td><code>ags</code></td>
+<td>string</td>
+<td>The official 8-digit municipality key (Amtlicher Gemeindeschlüssel)
+of the chapter's <strong>seat municipality</strong>, the town the
+chapter is based in. Its digits run 2 for the federal state, 3 for the
+county, and 3 for the municipality, so <code>kreis_id</code> is its
+first five digits. Use <code>ags</code> for the seat town itself, either
+to place the chapter on a map or to merge town-level covariates. For
+anything measured at the county level, merge on <code>kreis_id</code>
+instead, because the chapter organizes the whole county rather than the
+seat town. <strong>Read as string</strong>: it is zero-padded and loses
+its leading zero (Länder 01–09, ~80% of chapters) under default integer
+inference.</td>
+</tr>
+<tr class="even">
+<td><code>municipality</code></td>
+<td>string</td>
+<td>Name of the seat municipality. This is the one town matched to the
+chapter, not the set of municipalities in the county the chapter
+covers.</td>
+</tr>
+<tr class="odd">
+<td><code>kreis</code></td>
+<td>string</td>
+<td>County (Kreis) name. Do not join on it: county and city names
+collide, since a Landkreis and a city can carry the same name. Use
+<code>kreis_id</code> for joins.</td>
+</tr>
+<tr class="even">
+<td><code>kreis_id</code></td>
+<td>string</td>
+<td>The 5-digit county key (Kreisschlüssel), equal to the first five
+digits of <code>ags</code>. Because chapters are county-level
+associations, this is the recommended merge key for county-level
+covariates such as election results, demographics, or unemployment. Read
+as string; like <code>ags</code> it is zero-padded.</td>
+</tr>
+<tr class="odd">
+<td><code>bundesland</code></td>
+<td>string</td>
+<td>Federal state.</td>
+</tr>
+<tr class="even">
+<td><code>population</code></td>
+<td>integer</td>
+<td>Population of the seat municipality (Destatis). For a kreisverband
+chapter this is not the population the chapter organizes: the chapter
+covers the whole county, and the seat town is one municipality inside
+it. Merge county-level population on <code>kreis_id</code> when the
+analysis needs the county figure.</td>
+</tr>
+<tr class="odd">
+<td><code>is_quarantined</code></td>
+<td>0/1</td>
+<td>1 if the chapter failed a roster-integrity check: it sits outside
+the target roster (e.g. a state- or region-level association rather than
+a county one), carries a malformed name, or has an unusable URL. 225
+chapters.</td>
+</tr>
+<tr class="even">
+<td><code>analysis_scope_included</code></td>
+<td>0/1</td>
+<td>The recommended analytic filter. It is 1 when the chapter belongs to
+the sampling frame and was not removed by the quality screening recorded
+in <code>is_quarantined</code>. The sampling frame is the set of 2,394
+party × Kreis cells described in the README: 399 Kreise from the
+Destatis Gemeindeverzeichnis (built from municipalities with population
+≥ 5,000), crossed with AfD, FDP, Grüne, Linke, and SPD everywhere, CDU
+outside Bavaria, and CSU in Bavaria.</td>
+</tr>
+<tr class="odd">
+<td><code>n_usable_years</code></td>
+<td>integer</td>
+<td>How many of the chapter's years have
+<code>observability_status = extractable_and_usable</code>. Ranges 0–11,
+since the panel spans the eleven years 2015–2025.</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="chapter_year_panelcsv-one-row-per-chapter--year"><code>chapter_year_panel.csv</code>
+(one row per chapter × year)</h2>
+<p>The panel is rectangular: every one of the 2,635 chapters has a row
+in every year from 2015 to 2025, including years in which nothing was
+observed. A missing chapter-year in an analysis is therefore always a
+filter you applied rather than a row the release omits. Identifiers and
+geography (<code>chapter_id</code>, <code>party</code>,
+<code>org_level</code>, <code>org_name</code>, <code>ags</code>,
+<code>municipality</code>, <code>kreis</code>, <code>kreis_id</code>,
+<code>bundesland</code>, <code>population</code>) repeat the roster
+values on every row, so the panel can be used without joining the
+roster. That includes <code>kreis_id</code>, the recommended merge key
+for county-level covariates.</p>
+<h3 id="observability">Observability</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>observability_status</code></td>
+<td>Whether the chapter-year is usable and, if not, at which step it
+failed. Values include <code>extractable_and_usable</code> (enough
+archived content was fetched and parsed to trust the features),
+<code>no_archive_coverage</code> (no Wayback snapshot of the site exists
+from that year), <code>crawl_succeeded_but_no_extractable_pages</code>
+(snapshots were fetched, but none was a page type the extractor reads),
+<code>crawl_succeeded_but_below_usable_threshold</code> (pages were
+parsed but fell short of the minimum-content threshold),
+<code>crawl_not_attempted</code> (snapshots exist in the archive but
+were never fetched), and <code>no_known_website</code> (no URL was ever
+found for the chapter).</td>
+</tr>
+<tr class="even">
+<td><code>has_wayback_coverage</code></td>
+<td>1 if at least one Wayback snapshot of the chapter's site exists from
+the same year. This is an exact recode of
+<code>observability_status</code>, not separate information: it is 0 for
+exactly the two statuses <code>no_archive_coverage</code> and
+<code>no_known_website</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>usable_content_threshold_met</code></td>
+<td>1 if and only if <code>observability_status</code> is
+<code>extractable_and_usable</code>. Also an exact recode.</td>
+</tr>
+<tr class="even">
+<td><code>is_quarantined</code></td>
+<td>1 if the chapter failed the roster-integrity check. Defined at the
+chapter level, so it is constant across a chapter's eleven rows (see the
+roster).</td>
+</tr>
+<tr class="odd">
+<td><code>analysis_scope_included</code></td>
+<td>1 if the chapter is in the sampling frame and was not quarantined;
+the recommended analytic filter. Also chapter-level, so constant across
+a chapter's years.</td>
+</tr>
+</tbody>
+</table>
+<p>Because <code>has_wayback_coverage</code> and
+<code>usable_content_threshold_met</code> are recodes of
+<code>observability_status</code>, they carry no information it does not
+already carry. Do not enter them in a model as separate covariates
+alongside it.</p>
+<h3 id="release-coverage-taxonomy">Release coverage taxonomy</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>coverage_basis</code></td>
+<td>Whether the release treats the chapter-year as researcher-usable,
+and on what evidence. <code>full</code>: the chapter-year clears the
+structured-coverage threshold, meaning at least 3 same-year pages were
+successfully fetched and at least 1 of them is of a page type the
+extractor reads (a board, council-group, organizational-profile,
+contact, issue, or news page). <code>feature_level</code>: it does not
+clear that threshold, but individual feature values were still observed,
+either on pages that fell below it or on pages a fallback rule routed to
+the extractor. Blank: nothing researcher-usable was recovered, or the
+row lies outside the analysis scope
+(<code>analysis_scope_included = 0</code>), where this column is not
+populated. Together <code>full</code> and <code>feature_level</code>
+give the release denominator, 17,989 chapter-years, or 70.5% of the
+analysis scope.</td>
+</tr>
+<tr class="even">
+<td><code>release_coverage_bucket</code></td>
+<td>The finest coverage classification. It names the specific reason for
+a chapter-year's coverage status (e.g. <code>usable_coverage</code>,
+<code>no_archived_snapshot</code>,
+<code>feature_observed_below_global_threshold</code>,
+<code>archived_but_thin_content</code>). Every bucket is defined in
+<code>coverage_and_quality/coverage_taxonomy_summary.md</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>release_coverage_tier</code></td>
+<td>A coarser rollup of the buckets, used for tables and figures:
+<code>usable</code>, <code>limited_usable</code>,
+<code>weak_unlikely</code>, <code>missing_archive</code>,
+<code>archive_or_crawl_problem</code>, <code>missing_url</code>,
+<code>excluded</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>For most purposes, filter first on
+<code>analysis_scope_included = 1</code> and then pick one of two
+coverage rules. The conservative rule keeps only
+<code>coverage_basis = 'full'</code>. The inclusive rule keeps every
+non-blank <code>coverage_basis</code>, which is the full
+researcher-usable denominator. Running an analysis under both rules,
+with <code>coverage_basis</code> as the split, is a natural robustness
+check.</p>
+<h3 id="features-and-their-status-columns">Features and their status
+columns</h3>
+<p>Every feature <code>X</code> in this file comes with a companion
+column <code>X_status</code> explaining why the feature has the value it
+has. <code>observed_positive</code>: extraction ran and found a positive
+value. <code>observed_zero</code>: extraction ran and found none, so the
+zero is a measured zero rather than a blank.
+<code>coverage_available_not_extracted</code>: pages that could have
+carried the feature were archived, but they were never parsed, so the
+gap is in processing rather than in the archive.
+<code>missing_insufficient_coverage</code>: there was no usable archived
+coverage to extract from in the first place. A feature value is
+informative only under the first two statuses; under the other two the
+value is missing, not zero.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>board_listed</code></td>
+<td>0/1</td>
+<td>1 if the site lists a leadership board.</td>
+</tr>
+<tr class="even">
+<td><code>official_count</code></td>
+<td>integer</td>
+<td>Number of named officials extracted from the chapter's pages.</td>
+</tr>
+<tr class="odd">
+<td><code>issue_block_count</code></td>
+<td>integer</td>
+<td>Number of issue content blocks extracted. It counts blocks of
+content, not distinct topics, and no cap is applied per page, so a
+chapter with one long issues page can score high without covering many
+topics.</td>
+</tr>
+<tr class="even">
+<td><code>office_address_listed</code></td>
+<td>0/1</td>
+<td>1 if the site lists an address for a local party office.</td>
+</tr>
+<tr class="odd">
+<td><code>facebook_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific Facebook account is present (national party
+accounts excluded).</td>
+</tr>
+<tr class="even">
+<td><code>instagram_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific Instagram account is present (national party
+accounts excluded).</td>
+</tr>
+<tr class="odd">
+<td><code>twitter_x_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific X/Twitter account is present (national accounts
+excluded).</td>
+</tr>
+<tr class="even">
+<td><code>youtube_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific YouTube channel is present (national accounts
+excluded).</td>
+</tr>
+<tr class="odd">
+<td><code>telegram_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific Telegram channel is present (national accounts
+excluded).</td>
+</tr>
+<tr class="even">
+<td><code>tiktok_present</code></td>
+<td>0/1</td>
+<td>A chapter-specific TikTok account is present (national accounts
+excluded).</td>
+</tr>
+<tr class="odd">
+<td><code>n_social_platforms</code></td>
+<td>integer</td>
+<td>Count of chapter-specific platforms present among the six above
+(0–6).</td>
+</tr>
+<tr class="even">
+<td><code>social_source</code></td>
+<td>text</td>
+<td>Which of two detection paths measured the social platform flags for
+this chapter-year. <code>about_extraction</code>: a language model read
+the chapter's about or contact page. <code>page_scan</code>: no about or
+contact page was available, so the stored page markdown was scanned for
+platform URLs by a deterministic rule (see
+<code>coverage_and_quality/missingness_audit_addendum.md</code>). Null
+when social presence was not measured at all.</td>
+</tr>
+<tr class="odd">
+<td><code>news_count</code></td>
+<td>integer</td>
+<td>Deduplicated news articles assigned to this chapter-year (by
+publication-date year where a date could be extracted, by snapshot year
+otherwise). It reflects how densely the Wayback Machine archived the
+site as well as how much the chapter posted; see
+<code>chapter_year_news.csv</code> for label shares and
+<code>n_news_pages</code> (enriched panel) for the raw archived-page
+proxy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpreting-the-panel">Interpreting the panel</h3>
+<ul>
+<li>A chapter-year whose <code>observability_status</code> is
+<code>no_archive_coverage</code> has no observed features at all for
+that year, because no snapshot exists to observe. Its blank feature
+values are missing, not zeros, and coding them as zeros would record an
+archiving gap as an absence of party activity. Nothing further can be
+collected for these chapter-years: an archive that never captured the
+page cannot be revisited.</li>
+<li>For analyses that need feature values to be reliably observed,
+either filter to <code>usable_content_threshold_met = 1</code> or keep
+the wider sample and condition on the per-feature status columns.</li>
+</ul>
+<h2
+id="chapter_year_panel_enrichedcsv-core-features--derived-measures"><code>chapter_year_panel_enriched.csv</code>
+(core features + derived measures)</h2>
+<p>This file has one row per chapter × year, the same rows as
+<code>chapter_year_panel.csv</code>. It keeps the panel's columns,
+per-feature status columns included, apart from the redundant recode
+<code>has_wayback_coverage</code>, and adds derived measures computed
+from the underlying extracted records. Those derived measures carry four
+status columns of their own: <code>issues_present_status</code>,
+<code>chair_gender_status</code>,
+<code>chapter_head_gender_status</code>, and
+<code>web_activity_status</code>. Each is documented below alongside the
+measure it governs. This file is therefore the one to use for
+missingness-aware work on the derived measures, not just on the core
+features. Every value is an aggregate: no names, emails, or text appear
+anywhere in it. A measure is null when the records it is built from were
+not observed for that chapter-year.</p>
+<h3 id="board-composition-and-professionalization">Board composition and
+professionalization</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>n_female</code>, <code>n_male</code></td>
+<td>How many of the extracted officials had a first name classified as
+female / male.</td>
+</tr>
+<tr class="even">
+<td><code>female_share</code></td>
+<td><code>n_female / (n_female + n_male)</code>: the share of women
+among the officials whose gender could be classified. Officials whose
+name could not be classified drop out of both the numerator and the
+denominator.</td>
+</tr>
+<tr class="odd">
+<td><code>gender_coverage</code></td>
+<td>Share of the extracted officials whose gender could be classified at
+all. When this is low, <code>female_share</code> rests on a small and
+possibly selected part of the board, so read it cautiously.</td>
+</tr>
+<tr class="even">
+<td><code>chair_present</code></td>
+<td>1 if any official is categorized as chair (Vorsitzende/r).</td>
+</tr>
+<tr class="odd">
+<td><code>chair_female</code></td>
+<td>1 if a chair is female, 0 if a chair is present but not female, null
+if no chair.</td>
+</tr>
+<tr class="even">
+<td><code>chair_gender_status</code></td>
+<td>Why <code>chair_female</code> has the value it has.
+<code>officials_unobserved</code>: no officials were observed for the
+chapter-year. <code>no_chair_identified</code>: officials were observed
+but none was categorized as chair. <code>chair_gender_unresolved</code>:
+a chair was identified but no chair's gender could be classified.
+<code>observed</code>: a chair was identified and gendered.</td>
+</tr>
+<tr class="odd">
+<td><code>chapter_head_present</code></td>
+<td>The strict leadership measure. 1 if at least one person was
+identified as a current substantive head or co-head of this chapter
+itself. 0 if every extracted official was successfully classified and
+none of them heads this chapter. Null if at least one official could not
+be classified either way, so the answer is unresolved rather than
+negative. "Focal chapter" throughout means the chapter the row is about,
+as distinct from a parliamentary faction, an affiliated group, or a
+different organizational level.</td>
+</tr>
+<tr class="even">
+<td><code>chapter_head_female</code></td>
+<td>1 if any confirmed head of the focal chapter is female. 0 only when
+every confirmed head was resolved as male and no unresolved candidate
+could overturn that. Null otherwise, including when a head is confirmed
+but their gender could not be resolved.</td>
+</tr>
+<tr class="odd">
+<td><code>n_chapter_heads</code></td>
+<td>Number of confirmed current heads or co-heads of the focal
+chapter.</td>
+</tr>
+<tr class="even">
+<td><code>n_chapter_heads_unknown_gender</code></td>
+<td>How many of those confirmed heads have unresolved gender.</td>
+</tr>
+<tr class="odd">
+<td><code>n_unresolved_head_candidates</code></td>
+<td>Number of extracted officials for whom the classifier could not
+settle whether they head the focal chapter. A count above 0 is the
+reason <code>chapter_head_present</code> can be null.</td>
+</tr>
+<tr class="even">
+<td><code>chapter_head_gender_status</code></td>
+<td>Why <code>chapter_head_female</code> has the value it has.
+<code>officials_unobserved</code>: no officials were observed for the
+chapter-year. <code>head_identification_unresolved</code>: officials
+were observed, but it could not be settled which of them heads the
+chapter. <code>no_head_identified</code>: officials were resolved and
+none heads the chapter. <code>head_gender_unresolved</code>: a head was
+identified but their gender could not be classified.
+<code>observed</code>: a head was identified and gendered.</td>
+</tr>
+<tr class="odd">
+<td><code>academic_title_share</code></td>
+<td>Share of officials listed with a Dr. or Prof. title.</td>
+</tr>
+<tr class="even">
+<td><code>email_share</code></td>
+<td>Share of officials with a listed email.</td>
+</tr>
+<tr class="odd">
+<td><code>n_distinct_role_categories</code></td>
+<td>Number of distinct board functions named among the officials,
+counting specific functions only and ignoring generic "member" or
+"other" labels.</td>
+</tr>
+<tr class="even">
+<td><code>photo_share</code></td>
+<td>Share of listed officials whose entry includes a photo.</td>
+</tr>
+<tr class="odd">
+<td><code>n_candidates</code></td>
+<td>Number of officials categorized as electoral candidates (e.g. on
+candidate-list pages).</td>
+</tr>
+<tr class="even">
+<td><code>board_completeness</code></td>
+<td>1 if the board lists all three core functions (chair, treasurer,
+secretary), else 0. Larger boards clear this bar more easily, and it
+overlaps <code>chair_present</code> and
+<code>n_distinct_role_categories</code>, so do not treat the three as
+independent measures.</td>
+</tr>
+<tr class="odd">
+<td><code>officials_source</code></td>
+<td>Which kind of page supplied the board records:
+<code>party_office</code> (the chapter's internal officers),
+<code>representative</code> (elected council members or the party's
+Fraktion, its group in an elected council), <code>mixed</code>, or
+<code>other</code>. The two page types list different people, so
+condition board and gender measures on this column; see the caveats
+below.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="issue-emphasis">Issue emphasis</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>issues_present_status</code></td>
+<td>Whether issue content was observed for the chapter-year, using the
+same four values as the panel's feature statuses. The three columns
+below, and the issue-topic presence flags, are populated only under
+<code>observed_positive</code>. <code>observed_zero</code> means
+extraction ran and found no issue content, so the absence is measured
+rather than a gap in coverage.</td>
+</tr>
+<tr class="even">
+<td><code>n_topic_families</code></td>
+<td>Number of distinct policy families the chapter-year's issue blocks
+fall into (the block count itself is <code>issue_block_count</code> in
+the panel).</td>
+</tr>
+<tr class="odd">
+<td><code>dominant_topic_family</code></td>
+<td>The policy family holding the most issue blocks that year (e.g.
+environment, governance, education). It is a summary of
+<code>chapter_year_topic.csv</code> and adds no information beyond
+it.</td>
+</tr>
+<tr class="even">
+<td><code>topic_diversity</code></td>
+<td>Normalized entropy of the issue blocks across policy families,
+rescaled so 0 means every block sits in one family and 1 means they are
+spread evenly. Because the rescaling is relative to the families
+actually observed, two evenly split blocks already give 1.0; read it
+alongside <code>issue_block_count</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>These fields measure issue <strong>salience</strong>, meaning which
+topics a chapter writes about at all. They do not measure
+<strong>position</strong> or stance: whether a chapter is for or against
+something is not coded.</p>
+<p>The long file <code>chapter_year_topic.csv</code> (chapter_id, year,
+topic_family, n, cap_major_topic) gives the full per-family issue-block
+counts for all 26 families. Its <code>cap_major_topic</code> column maps
+each family to a Comparative Agendas Project (CAP) major topic (see
+<code>topic_family_cap_crosswalk.csv</code>) so the data can be used
+alongside CAP-coded sources. The mapping is best-fit, and a few families
+(tourism, sport, family) involve documented judgment calls.</p>
+<h3 id="issue-topic-presence-flags">Issue-topic presence flags</h3>
+<p>Wide 0/1 flags for the 15 most common policy families, derived from
+the same topic classification as the counts above.
+<code>topic_&lt;family&gt;_present</code> = 1 if the chapter-year has at
+least one issue block in that family, 0 if issue content was observed
+but none of it fell in that family, and null if no issue content was
+observed at all. Families: governance, economy, environment, education,
+mobility, social, urban_development, culture, finance, health,
+integration, housing, digital, security, elections. Per-family counts
+for these and the remaining families are in
+<code>chapter_year_topic.csv</code>.</p>
+<h3 id="web-activity-and-mobilization">Web activity and
+mobilization</h3>
+<p>These are structural signals read off the archived pages by
+deterministic rules, with no page text stored.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>web_activity_status</code></td>
+<td>Whether any archived source page was seen for the chapter-year.
+<code>observed</code>: at least one, so the columns below carry values.
+<code>no_source_page_observed</code>: none, so every column below is
+null.</td>
+</tr>
+<tr class="even">
+<td><code>n_pages_total</code></td>
+<td>Number of successfully archived pages captured for the
+chapter-year.</td>
+</tr>
+<tr class="odd">
+<td><code>n_distinct_page_types</code></td>
+<td>Number of distinct page functions among those pages (homepage, news,
+officials, and so on). It proxies how broad the site is.</td>
+</tr>
+<tr class="even">
+<td><code>n_news_pages</code></td>
+<td>Number of archived news-type pages. It proxies posting activity but
+also reflects Wayback archival density (correlated ~0.9 with
+<code>n_pages_total</code>); use it conditional on
+<code>observability_status</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>donation_link_present</code></td>
+<td>1 if any archived page exposes a donation pathway (e.g.
+"Spenden").</td>
+</tr>
+<tr class="even">
+<td><code>join_party_link_present</code></td>
+<td>1 if any archived page exposes a membership/join pathway (e.g.
+"Mitglied werden").</td>
+</tr>
+<tr class="odd">
+<td><code>newsletter_signup_present</code></td>
+<td>1 if any archived page references a newsletter.</td>
+</tr>
+<tr class="even">
+<td><code>contact_form_present</code></td>
+<td>1 if any archived page references a contact form.</td>
+</tr>
+<tr class="odd">
+<td><code>program_present</code></td>
+<td>1 if any archived page references a party/election program
+(Wahlprogramm, Grundsatzprogramm).</td>
+</tr>
+<tr class="even">
+<td><code>event_calendar_present</code></td>
+<td>1 if any archived page references an events section
+(Veranstaltungen/Veranstaltungskalender).</td>
+</tr>
+<tr class="odd">
+<td><code>volunteer_link_present</code></td>
+<td>1 if any archived page exposes a get-involved/volunteer pathway
+(Mitmachen, Ehrenamt).</td>
+</tr>
+</tbody>
+</table>
+<p>The seven link flags (<code>donation_</code>,
+<code>join_party_</code>, <code>newsletter_</code>,
+<code>contact_form_</code>, <code>program_</code>,
+<code>event_calendar_</code>, <code>volunteer_</code>) are keyword
+searches over the page markdown. Links of this kind usually sit in a
+site's persistent header or footer, so a positive flag means the pathway
+exists somewhere on the site, at the level of the site template. It does
+not mean the chapter was actively campaigning or fundraising that year.
+Positive rates are correspondingly high and vary by party. The
+<code>event_calendar_present</code> keywords exclude the ubiquitous
+"Termine", so that flag discriminates rather than saturating near 90%.
+These features operationalize the information-provision, participation,
+and mobilizing functions of Gibson &amp; Ward's (2000) party-website
+scheme. Flags are null where no page was archived for the chapter-year.
+Use them, along with <code>n_news_pages</code> and
+<code>n_pages_total</code>, conditional on
+<code>observability_status</code>.</p>
+<h3 id="year-to-year-reliability">Year-to-year reliability</h3>
+<p>Feature values are measured from whatever the Internet Archive
+captured of a site that year, and capture varies from year to year for
+the same chapter. This adds noise to comparisons of a chapter with
+itself over time, but not to comparisons across chapters. I measure it
+two ways, both computed only where a feature's status column marks the
+value as informative.</p>
+<p>For counts and shares I use the autocorrelation of first differences.
+A persistent quantity measured without error gives about 0, noise as
+large as the true annual changes gives about −0.33, and pure noise gives
+−0.5. The release values are −0.42 for <code>issue_block_count</code>,
+−0.42 for <code>official_count</code>, −0.31 for
+<code>n_social_platforms</code>, and −0.25 for <code>news_count</code>.
+Computed by party, the same statistic ranges from −0.18 to −0.50 for
+<code>issue_block_count</code>, so cross-party comparisons of
+within-chapter dynamics carry unequal amounts of noise.</p>
+<p>For binary flags I count how often a value differs from both its
+neighbors while the neighbors agree, divided by how often the value
+changes at all. Independent noise gives 0.5, a clean one-time adoption
+gives 0. The issue-topic presence flags run 0.40 to 0.44. The social
+platform flags run 0.12 to 0.31, so their changes are mostly real
+adoption. The flags in between behave as though roughly one chapter-year
+in ten is misclassified.</p>
+<p>Part of this noise is systematic rather than random. The year-to-year
+change in <code>issue_block_count</code> correlates 0.28 with the change
+in log page count, and <code>official_count</code> 0.17. In a chapter
+fixed-effects regression, adding log page count cuts the annual trend in
+<code>issue_block_count</code> by about three quarters, turns a flat
+trend in <code>official_count</code> into a declining one, and leaves
+<code>n_social_platforms</code> almost unchanged. Page counts partly
+reflect real activity, so this control can absorb signal along with
+noise. Report estimates with and without it and read the difference as a
+bound.</p>
+<p>Noise of this kind costs precision when a measure is the outcome and
+attenuates the coefficient when it is a regressor, with differencing
+making the attenuation worse. Averaging over multiple years helps
+<code>issue_block_count</code> and <code>n_social_platforms</code> but
+does little for <code>official_count</code>, so it is not a general
+remedy.</p>
+<h3 id="method-and-caveats">Method and caveats</h3>
+<ul>
+<li><strong>Gender</strong> is inferred from first names by a classifier
+running on a locally hosted open-weight model
+(<code>Qwen/Qwen3-30B-A3B-Instruct-2507-FP8</code>, the model behind
+every model-generated layer in this release), with results cached so a
+given name always receives the same label. Inferring gender from first
+names is a standard method (benchmarked at ~94% accuracy by Santamaría
+&amp; Mihaljević 2018), but it is a proxy: it errs on unisex names and
+on non-German or transliterated names, and it does not capture nonbinary
+identities. Checks on the released files are reassuring: the mean board
+female share orders as GRÜNE &gt; LINKE &gt; SPD &gt; CSU &gt; CDU &gt;
+FDP &gt; AfD. Still, treat any single chapter-year value as an estimate
+and condition on <code>gender_coverage</code>. Two mechanics deserve
+particular care. First, pages that print names as
+<code>Nachname, Vorname</code> can feed the surname to the classifier
+instead of the first name. Second, <code>female_share</code> is computed
+for boards of any size, with no minimum number of officials: on a board
+with one or two gender-classified officials the share can only take
+extreme values such as 0, 0.5, and 1, so it is very noisy there. Where
+the share carries analytic weight, restrict the sample to chapter-years
+with enough officials, using <code>official_count</code> for board size
+or <code>n_female + n_male</code> for the share's own denominator.</li>
+<li><strong>Topic family</strong> and <strong>role category</strong>
+likewise come from the local model, which assigns each item one label
+from a fixed list (issue families are listed in
+<code>config/issue_topic_crosswalk.csv</code>; roles are the standard
+board functions). For topic families, a 54-entry dictionary resolves the
+most common topic strings by exact match and the model classifies the
+remaining topics from the heading text alone; role categories are
+assigned by the model throughout. No per-topic ground-truth accuracy
+check was run, which makes this the largest unverified assumption behind
+every topic field. <code>dominant_topic_family</code> additionally skews
+toward chapters with fuller issue pages, since a chapter needs several
+blocks before one family can stand out.</li>
+<li><strong><code>officials_source</code></strong> records which page
+type supplied most of the board records. The extracted board pools three
+different groups of people: the chapter's internal party officers,
+electoral candidates, and elected representatives on the council or in
+the party's Fraktion. Condition board size, gender, and
+<code>board_completeness</code> on <code>officials_source</code>. A
+Fraktion roster, for example, has no treasurer or secretary to list and
+mixes in council members, so it scores low on
+<code>board_completeness</code> for a structural reason rather than a
+substantive one.</li>
+<li><strong><code>chair_female</code></strong> means "at least one chair
+is female," not "the chair is female." Chapters with a co-chair
+structure (Doppelspitze, two people sharing the chair) therefore get two
+chances to trigger the 1, and that structure is more common in GRÜNE and
+LINKE, so read the measure as an upper-bound signal.</li>
+<li><strong>The strict <code>chapter_head_*</code> fields</strong> are
+the research-facing leadership measure. They use focal party,
+organization level and name, role title, page type, and source URL to
+exclude faction chairs, affiliates, deputies, honorary and former
+chairs, other organizational levels, committees, and non-organizational
+spokespersons. The broad <code>chair_*</code> fields are left unchanged
+for reproducibility and comparison.</li>
+<li><strong>Archival density</strong> confounds the substantive
+measures. Whether content is observed at all tracks how many pages the
+archive happened to capture: chapter-years where content is observed
+average about 100 archived pages, while those where it is not average
+about 20. Usable coverage also rises over time, from about 35% in 2015
+to about 73% in 2025, and it differs across parties. A trend or a party
+gap in any feature can therefore be a trend or gap in archiving.
+Condition longitudinal and cross-party comparisons on
+<code>observability_status</code> rather than only noting it.</li>
+<li><strong><code>photo_share</code></strong> operationalizes
+<strong>personalization</strong> of the chapter's web presence in the
+sense used in the German candidate-website literature (Zittel &amp;
+Schweitzer): how far the site presents identifiable individuals rather
+than only the organization.</li>
+<li><strong>Social-presence flags</strong> exclude national party
+accounts (e.g. facebook.com/CSU) via a handle filter. CSU has the
+<em>lowest</em> observed rate on every platform despite high page
+coverage. That is a joint product of the filter and CSU's heavy use of
+party-provided national templates, both of which suppress
+chapter-specific handles rather than inflate them, so low CSU social
+rates are expected and not an artifact to correct. A flag means a link
+was present on an archived snapshot, not that the account was active
+that year, since dead links persist in footers.</li>
+<li><strong><code>n_social_platforms</code></strong> is the
+deterministic sum of the six platform flags. Entering it alongside those
+flags produces perfect collinearity, and its variation is dominated by
+Facebook and Instagram, the two common platforms.</li>
+</ul>
+<h3 id="relation-to-standard-coding-schemes">Relation to standard coding
+schemes</h3>
+<p>The feature set maps onto established website- and text-coding
+frameworks. Gibson &amp; Ward's (2000) five party-website functions
+(information provision, resource generation, networking, participation,
+campaigning) correspond to the program/contact, donation/join,
+social-link, event/volunteer, and news/activity fields. Issue families
+crosswalk to Comparative Agendas Project (CAP) major topics via
+<code>topic_family_cap_crosswalk.csv</code>. Issue fields measure
+salience, not position.</p>
+<h2
+id="chapter_year_newscsv-one-row-per-chapter-year-with-archived-articles"><code>chapter_year_news.csv</code>
+(one row per chapter-year with archived articles)</h2>
+<p>News volume and content-label shares per chapter-year, built from the
+deduplicated article records. Every article was classified by the same
+locally hosted open-weight model into a topic family, an article type,
+and a geographic focus; the human validation of those labels is reported
+in the quality section of the README. The file holds one row per
+chapter-year with at least one archived article, 14,733 rows in all. A
+chapter-year absent from this file had no article to summarize.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>news_count</code></td>
+<td>Deduplicated articles assigned to this chapter-year (same value as
+the panel column).</td>
+</tr>
+<tr class="even">
+<td><code>n_dated</code></td>
+<td>Articles whose year comes from an extracted publication date (the
+rest use the snapshot year).</td>
+</tr>
+<tr class="odd">
+<td><code>n_labeled</code></td>
+<td>Articles with content labels (denominator for the share
+columns).</td>
+</tr>
+<tr class="even">
+<td><code>share_local</code> / <code>share_regional</code> /
+<code>share_national</code></td>
+<td>Share of labeled articles by the geographic focus of their content;
+the remainder to 1 is <code>unclear</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>share_press_release</code> / <code>share_event</code> /
+<code>share_position</code> / <code>share_campaign</code> /
+<code>share_council</code></td>
+<td>Share of labeled articles by function: press release, event
+announcement or report, programmatic position, election campaigning,
+council and Fraktion work. The remainder to 1 is
+<code>other</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>The share columns describe the composition of what a chapter posted
+and the archive captured, not how much it posted; a chapter-year with
+three archived articles can show a share of 1.0. Combine the shares with
+<code>news_count</code> whenever volume matters. The campaign share
+tracks the electoral calendar, peaking in 2017, 2019, 2021, 2024, and
+2025.</p>
+<h2
+id="chapter_year_news_topiccsv-long-format-news-topics"><code>chapter_year_news_topic.csv</code>
+(long format, news topics)</h2>
+<p>Per-family article counts per chapter-year (90,668 rows), mirroring
+<code>chapter_year_topic.csv</code> but built from classified news
+articles: <code>chapter_id</code>, <code>year</code>,
+<code>topic_family</code>, <code>n</code>, <code>cap_major_topic</code>.
+Issue-page topics come from static program content and change little
+within a chapter, whereas news topics move year to year, so this file is
+the one to use for issue-attention dynamics. Articles labeled
+<code>other</code> or <code>unclear</code> are excluded.</p>
+<h2
+id="chapter_year_provenancecsv-one-row-per-chapter-year"><code>chapter_year_provenance.csv</code>
+(one row per chapter-year)</h2>
+<p>Source-level provenance for each chapter-year, recorded so that any
+aggregate in the release can be audited without publishing page text or
+personal data. Keyed on <code>chapter_id</code> and
+<code>year</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>n_snapshots</code></td>
+<td>Wayback snapshots available for the chapter-year, counted from the
+CDX index, the Wayback Machine's catalog of archived URLs.</td>
+</tr>
+<tr class="even">
+<td><code>unique_digests</code></td>
+<td>Distinct content digests among those snapshots, that is, how many
+genuinely different versions of the pages the archive holds.</td>
+</tr>
+<tr class="odd">
+<td><code>capture_first</code>, <code>capture_last</code></td>
+<td>Earliest/latest Wayback capture timestamps (YYYYMMDDhhmmss); read as
+strings.</td>
+</tr>
+<tr class="even">
+<td><code>capture_year</code></td>
+<td>The panel year.</td>
+</tr>
+<tr class="odd">
+<td><code>n_source_pages</code></td>
+<td>Successfully archived pages with content (equals
+<code>n_pages_total</code> in the enriched panel).</td>
+</tr>
+<tr class="even">
+<td><code>n_distinct_page_types</code></td>
+<td>Distinct page functions among them.</td>
+</tr>
+<tr class="odd">
+<td><code>n_officials_pages</code>, <code>n_news_pages</code>,
+<code>n_issue_pages</code>, <code>n_about_contact_pages</code></td>
+<td>Successful pages by function.</td>
+</tr>
+<tr class="even">
+<td><code>selection_mode</code></td>
+<td>Which rule chose the snapshots to fetch for this chapter-year.
+<code>structural_priority</code> picks archived URLs by page function,
+taking structural pages such as officials and contact first, then issue
+and program pages, then news, then everything else, instead of applying
+one flat page cap. Blank: the chapter-year's pages were fetched in crawl
+rounds that applied a flat page cap, before this per-round record was
+kept.</td>
+</tr>
+<tr class="odd">
+<td><code>selected_total</code></td>
+<td>Snapshots selected for fetching under that rule.</td>
+</tr>
+<tr class="even">
+<td><code>url_cap_hit</code></td>
+<td>1 if the per-chapter-year URL cap bound the selection, meaning
+further archived URLs were available but not fetched.</td>
+</tr>
+<tr class="odd">
+<td><code>archive_hint_urls_added</code></td>
+<td>Extra archived URLs fetched beyond those discovered on the live
+site. These come from the archive itself and partly offset survivorship
+bias, since a page that disappeared before discovery ran can still be
+present in the archive.</td>
+</tr>
+<tr class="even">
+<td><code>n_extraction_attempts</code>,
+<code>n_extraction_ok</code></td>
+<td>Extraction attempts and successes over those pages.</td>
+</tr>
+</tbody>
+</table>
+<p>Use these to gauge how much source material underlies a
+chapter-year's measures and to condition on capture timing.</p>
+<h2
+id="kreis_wahlkreis_crosswalkcsv-one-row-per-county--election--district"><code>kreis_wahlkreis_crosswalk.csv</code>
+(one row per county × election × district)</h2>
+<p>Counties and Bundestag electoral districts (Wahlkreise) do not nest.
+For the 2025 election 293 counties lie entirely inside one district
+while 107 span two or more, and a district can equally cover several
+counties. District-level election results therefore cannot be joined
+onto the panel by county alone. This file supplies the weights that make
+the merge possible for the 2017, 2021, and 2025 federal elections. For
+each county and election it lists every district the county falls in,
+together with the share of the county's population living in the part of
+the county assigned to that district. Join on <code>kreis_id</code> and
+the election you need, then aggregate district results using
+<code>population_share</code> as the weight. The file has 1,640 rows and
+is unique on county, election year, and district.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>kreis_id</code></td>
+<td>string</td>
+<td>The 5-digit county key, matching <code>kreis_id</code> in the roster
+and in both panel files. Read as string; it is zero-padded.</td>
+</tr>
+<tr class="even">
+<td><code>election_year</code></td>
+<td>integer</td>
+<td>The federal election the assignment applies to: 2017, 2021, or 2025.
+District boundaries were redrawn between these elections, so a county's
+set of districts can differ from one election to the next; it does so
+for 250 of the 401 counties in the file.</td>
+</tr>
+<tr class="odd">
+<td><code>wahlkreis_nr</code></td>
+<td>integer</td>
+<td>Official number of the electoral district, 1 to 299.</td>
+</tr>
+<tr class="even">
+<td><code>wahlkreis_name</code></td>
+<td>string</td>
+<td>Official name of that district.</td>
+</tr>
+<tr class="odd">
+<td><code>population_share</code></td>
+<td>float</td>
+<td>Share of the county's population living in municipalities assigned
+to this district. Within a county and election year the shares sum to 1,
+up to rounding in the published values. This is the weight to use when
+aggregating district-level results to the county.</td>
+</tr>
+<tr class="even">
+<td><code>n_municipalities</code></td>
+<td>integer</td>
+<td>How many of the county's municipalities are assigned to this
+district.</td>
+</tr>
+</tbody>
+</table>
+<p>The assignments come from the Bundeswahlleiterin's official
+municipality-to-district lists for each election, combined with
+municipality populations taken from the edition of the Destatis
+municipality register closest to that election's territorial status.</p>
+<p>The weights come with two limits. First, where a single municipality
+is itself split across several districts, the published assignment gives
+no sub-municipal population figures, so that municipality's population
+is divided equally among the districts it touches. This affects 18 large
+cities, and for them <code>population_share</code> is an approximation
+rather than a measurement; in the file it shows up as exactly equal
+shares across a county's districts, as for Köln in 2025, which carries
+0.25 in each of its four districts. Second, the file covers every German
+county, which is a superset of the 399 counties in the sampling frame.
+It also carries Cochem-Zell, which has no municipality of at least 5,000
+residents and therefore falls outside the frame, and Eisenach, which was
+a county in its own right for the 2017 and 2021 elections before being
+merged into the Wartburgkreis. Rows for counties outside the frame find
+no match when the file is joined to the panel.</p>
+</main>
+  </div>
+</body>
+</html>
