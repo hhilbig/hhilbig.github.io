@@ -63,18 +63,20 @@
     </header>
 
     <main>
-      <p>What do local party organizations say, and what can we actually observe
-        about them? Chapters publish on their own websites, in their own formats,
-        and delete what they publish, so the record is thin and scattered. CLARA
-        reconstructs it. It covers 2,635 local chapters of the seven main
-        German parties, annually from 2015 to 2025, or 28,985 chapter-years. The
-        unit is the Kreisverband, the county-level association each party runs.</p>
+      <p>Local party organizations communicate extensively through their own
+        websites, but these records are difficult to observe systematically.
+        Chapters use different website formats, and content disappears as sites
+        are updated or taken offline, leaving a thin and scattered historical
+        record. CLARA reconstructs this record from archived websites. It covers
+        2,635 local chapters of the seven main German parties annually from 2015
+        to 2025, or 28,985 chapter-years. The unit is the Kreisverband, the
+        county-level association maintained by each party.</p>
 
       <h2>How the data were built</h2>
       <p>Each chapter's website is rebuilt year by year from Internet Archive
         snapshots, about 1.03 million archived pages. A locally hosted open-weight
-        language model then reads those pages and extracts structured records.
-        No value in the release passes through a commercial model. News pages are
+        language model then processes those pages and extracts structured records.
+        No released value was generated using a commercial model. News pages are
         deduplicated to one record per article, 237,399 of them dated inside the
         panel window, each classified by policy topic, article function, and
         geographic focus. The <a href="data_report.pdf">data report</a> describes
@@ -87,7 +89,7 @@
         <li><b>Board composition</b>: size, gender shares inferred from first
           names, whether a chair is listed, and proxies for professionalization.</li>
         <li><b>Issue emphasis</b>: 25 topic families, mapped to the Comparative
-          Agendas Project scheme so the measures line up with other agenda-coded
+          Agendas Project scheme, to facilitate comparison with other agenda-coded
           data.</li>
         <li><b>Digital presence</b>: the chapter's own accounts on six social
           platforms, with national party accounts excluded.</li>
@@ -98,14 +100,15 @@
           and geographic focus.</li>
       </ul>
 
-      <h2>What to watch out for</h2>
+      <h2>Coverage and limitations</h2>
       <p><b>Coverage is uneven, and it is not random.</b> Of the 25,509 chapter-years in the recommended analysis
         scope, 17,989 are researcher-usable. Roughly a quarter have no archived
-        snapshot from that year at all, and no further collection can recover
-        them: the Internet Archive never captured the site. Every row
-        records what its coverage rests on, so a denominator can be rebuilt or
-        made stricter. Where the archive does hold a page of the right type,
-        extraction almost always succeeds.</p>
+        snapshot from that year, and no further collection can recover them
+        because the Internet Archive never captured the site. Every row records
+        the sources underlying its coverage, allowing researchers to reconstruct
+        the denominator or impose stricter coverage criteria. Where the archive
+        contains a page of the relevant type, extraction almost always
+        succeeds.</p>
 
       <figure class="figure">
         <img src="coverage_smallmult.png"
@@ -118,23 +121,22 @@
         in a given year to be observed that year. Chapters that went offline before
         2026 are missing entirely, which affects the early years most. A news
         count therefore reflects how often the Archive captured a site as much as
-        how much the chapter posted. Comparisons across chapters and multi-year
-        averages are the safest uses; year-to-year change within a chapter is
+        how much the chapter posted. The data are better suited to comparisons across
+        chapters and multi-year averages; year-to-year change within a chapter is
         noisier than the panel structure suggests. The codebook is specific about
         which columns to condition on.</p>
 
-      <h2>Does it measure what it claims to?</h2>
-      <p>A human coder checked extracted records against the pages they came
-        from, across five stratified samples; on a sample drawn from the released
+      <h2>Validation</h2>
+      <p>A human coder checked extracted records against their source pages
+        across five stratified samples. In a sample drawn from the released
         records, 45 of 48 were confirmed. A second open-weight model, from a
-        different family than the extractor, independently judged a fresh sample
-        of released records against their source pages. Both checks are reported
-        in full in the deposit.</p>
+        different model family than the extractor, independently evaluated a
+        fresh sample of released records against their source pages. Both checks
+        are reported in full in the deposit.</p>
 
-      <p>A third kind of evidence is face validity: the labels move with events
-        the classifier was never told about. It never sees the year, yet the share
-        of articles it labels election campaigning tracks the electoral
-        calendar.</p>
+      <p>The data also show face validity. Election-campaigning classifications
+        track the electoral calendar even though year was not provided to the
+        classifier.</p>
 
       <figure class="figure">
         <img src="news_campaign_share_by_year.png"
@@ -143,9 +145,9 @@
           by year (BTW = federal election, EP = European election).</figcaption>
       </figure>
 
-      <p>Policy topics behave the same way. Attention to migration, climate,
-        health, and energy each peaks inside or at the edge of the period in
-        which that issue dominated German national debate.</p>
+      <p>Policy-topic classifications show similar temporal patterns. Attention
+        to migration, climate, health, and energy peaks during or near periods in
+        which each issue was especially salient in German national debate.</p>
 
       <figure class="figure">
         <img src="news_agenda_smallmult.png"
@@ -157,9 +159,9 @@
           maximum.</figcaption>
       </figure>
 
-      <p>And migration separates the parties in the expected direction: the AfD
-        devotes a larger share of its news topics to it than any other party, in
-        every year of the panel.</p>
+      <p>Migration also shows the expected cross-party pattern: in every year of
+        the panel, the AfD devotes a larger share of its news topics to migration
+        than any other party.</p>
 
       <figure class="figure">
         <img src="news_migration_by_party.png"
@@ -171,10 +173,10 @@
       </figure>
 
       <h2>Data and documentation</h2>
-      <p>The deposit holds the chapter-year panel and its enriched version, the
+      <p>The deposit contains the chapter-year panel and its enriched version, the
         chapter roster, long-format topic and news files, a per-row provenance
         file, and crosswalks to the Comparative Agendas scheme and to Bundestag
-        electoral districts. It also carries the codebook, the data report,
+        electoral districts. It also includes the codebook, the data report,
         coverage diagnostics, validation summaries, and minimal R and Python
         load scripts. The core panel is mirrored here as
         <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB), but
@@ -182,7 +184,7 @@
       <p>Person-level records and reproduced page text are not part of the
         release: the records are personal data under the GDPR, and the parties
         wrote the text, which may be under copyright. A controlled-access version
-        of that material is in preparation and is not ready yet. Data and
+        of this material is in preparation. Data and
         documentation are CC-BY-4.0, and the pipeline code is available from the
         author on request.</p>
 
