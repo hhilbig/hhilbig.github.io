@@ -63,7 +63,7 @@
     </header>
 
     <main>
-      <p>Local party websites contain a large amount of information about local
+      <p>Local party websites contain detailed information about local
         organizations, but they are a difficult source for historical research.
         Formats differ across chapters, pages disappear, and many sites were not
         archived consistently. CLARA uses archived versions of these websites to
@@ -73,14 +73,14 @@
 
       <h2>How the data were built</h2>
       <p>I reconstruct each chapter's website separately for each year using
-        Internet Archive snapshots. The archive used for the release contains
-        about 1.03 million pages. A locally hosted open-weight language model
-        extracts structured variables from these pages. Commercial models were
-        not used to produce the released data.</p>
+        Internet Archive snapshots. The release draws on about 1.03 million
+        archived pages. A locally hosted open-weight language model extracts
+        structured variables from these pages. No commercial model was used to
+        produce the released data.</p>
       <p>For news pages, duplicate archived versions are collapsed to one record
         per article. The resulting file contains 237,399 articles dated between
-        2015 and 2025. Each article has classifications for policy topic, article
-        function, and geographic focus. The
+        2015 and 2025. Each article is classified by policy topic, function,
+        and geographic focus. The
         <a href="data_report.pdf">data report</a> documents the sampling frame,
         website discovery, and extraction procedure.</p>
 
@@ -104,12 +104,11 @@
 
       <h2>Coverage and limitations</h2>
       <p>Coverage is not random. Of the 25,509 chapter-years in the recommended
-        analysis scope, 17,989 are researcher-usable. About one quarter have no
-        Internet Archive snapshot for the relevant year. Those observations
-        cannot be recovered because the site was not archived. The panel includes
-        source and coverage indicators that can be used to impose stricter
-        coverage requirements. When an archived page of the relevant type exists,
-        extraction almost always succeeds.</p>
+        analysis scope, 17,989 are usable. About one quarter have no Internet
+        Archive snapshot for the relevant year; those observations cannot be
+        recovered. The panel includes source and coverage indicators, so users
+        can impose stricter coverage requirements. When an archived page of the
+        relevant type exists, extraction almost always succeeds.</p>
 
       <figure class="figure">
         <img src="coverage_smallmult.png"
@@ -118,13 +117,13 @@
       </figure>
 
       <p>Selection enters at two points. The roster was assembled from chapters
-        with websites that were still online in early 2026. Chapters whose
-        websites disappeared before then are therefore absent from the dataset,
-        especially in the earlier years. Within the roster, a chapter can be
-        observed in a particular year only if the Internet Archive captured its
-        website in that year.</p>
+        whose websites were still online in early 2026, so chapters whose
+        websites disappeared before then are absent from the dataset,
+        especially in the earlier years. Within the roster, a chapter is
+        observed in a given year only if the Internet Archive captured its
+        website that year.</p>
 
-      <p>This matters particularly for news counts. A low count can mean that a
+      <p>These gaps matter most for news counts. A low count can mean that a
         chapter posted little, that the Internet Archive captured little, or
         both. I would therefore treat comparisons across chapters and multi-year
         averages as more reliable than annual changes within a chapter. The
@@ -150,7 +149,7 @@
           EP = European election).</figcaption>
       </figure>
 
-      <p>The topic series also correspond to major events. Migration, climate,
+      <p>The topic series also track major events. Migration, climate,
         health, and energy reach their highest or near-highest levels of
         attention around the refugee crisis, the 2019 climate protests, the
         COVID-19 pandemic, and the 2022 energy crisis.</p>
@@ -165,9 +164,9 @@
           maximum.</figcaption>
       </figure>
 
-      <p>There are also clear differences across parties. In every year from 2015
-        to 2025, migration accounts for a larger share of AfD news topics than of
-        any other party's news topics.</p>
+      <p>Parties differ as well. In every year from 2015 to 2025, migration
+        accounts for a larger share of AfD news topics than of any other
+        party's.</p>
 
       <figure class="figure">
         <img src="news_migration_by_party.png"
@@ -187,9 +186,9 @@
         Python load scripts. The core panel is mirrored here as
         <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB). The
         Harvard Dataverse deposit is the citable version.</p>
-      <p>Person-level records and reproduced page text are excluded from the
-        public release. The records are personal data under the GDPR, and the
-        source text was written by the parties and may be protected by copyright.
+      <p>The public release excludes person-level records and page text. The
+        records are personal data under the GDPR; the text was written by the
+        parties and may be protected by copyright.
         A controlled-access version of this material is in preparation. Data and
         documentation are CC-BY-4.0. Pipeline code is available from the author
         on request.</p>
