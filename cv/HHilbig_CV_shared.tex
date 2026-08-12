@@ -1,0 +1,362 @@
+\documentclass[letterpaper, 10pt]{article}
+
+% The public and job-market wrappers both compile this file. Define
+% \jobmarketversion in the wrapper to include job-market-only material.
+\newif\ifjobmarket
+\ifdefined\jobmarketversion
+  \jobmarkettrue
+\else
+  \jobmarketfalse
+\fi
+
+\usepackage{hyperref}
+\usepackage[letterpaper]{geometry}
+\usepackage{url}
+\usepackage{hanging}
+\usepackage{parskip}
+\ifjobmarket
+  \setlength{\parskip}{0.65ex plus 0.2ex minus 0.1ex}
+\else
+  \setlength{\parskip}{0.55ex plus 0.2ex minus 0.1ex}
+\fi
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{etaremune}
+
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Hanno Hilbig}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  pdfauthor = {\name},
+  pdfkeywords = {political science, political economy, comparative politics, quantitative methodology},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 10in},
+  left=1.0in,
+  top=1in,
+  bottom=0.9in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% change section font
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\sffamily\mdseries\Large}
+\subsectionfont{\sffamily\mdseries\itshape\large}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0em}
+  }
+}{
+  \end{list}
+}
+
+
+\begin{document}
+
+% Place name at left
+{\LARGE \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\begin{minipage}{0.45\linewidth}
+University of California, Davis \\
+Department of Political Science
+ \end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Email: & \href{mailto:hhilbig@ucdavis.edu}{\tt hhilbig@ucdavis.edu} \\
+    Website: & \href{https://www.hannohilbig.com}{\tt hannohilbig.com} \\
+    Google Scholar: & \href{https://scholar.google.com/citations?user=JzQv9FMAAAAJ}{\tt Google Scholar} \\
+    GitHub: & \href{https://github.com/hhilbig}{\tt github.com/hhilbig}
+    \end{tabular}
+\end{minipage}
+
+\singlespacing
+\ifjobmarket\else
+  \fontsize{9.5}{11.2}\selectfont
+\fi
+
+\section*{Employment}
+\begin{itemize}
+  \setlength\itemsep{0.3em}
+  \item Assistant Professor, University of California, Davis, 2023 -- Present \\\\[-1.8ex]
+	\hspace*{0.8cm} Department of Political Science \\\\[-1.8ex]
+  \hspace*{0.8cm} Affiliate Faculty, Designated Emphasis in Computational Social Science
+	\item Postdoctoral Fellow, Princeton University, 2022 -- 2023 \\\\[-1.8ex]
+	\hspace*{0.8cm} Center for the Study of Democratic Politics
+
+\end{itemize}
+\vspace*{-0.1cm}
+\section*{Education}
+
+
+
+\begin{itemize}
+  \setlength\itemsep{0em}
+	\item Ph.D., \emph{Government}, Harvard University, 2022
+	%\hspace*{0.8cm} Fields: Comparative Politics, Quantitative Methodology
+	%\item A.M., \textit{Statistics}, Harvard University,
+	%2018--2020 (expected)
+	\item M.S., \emph{Economics}, Humboldt-Universität zu Berlin, 2016
+  \item B.A., \emph{Economics} \& \emph{North American Studies}, Freie Universität Berlin, 2013
+\end{itemize}
+
+\vspace*{-0.1cm}
+\section*{Publications}
+\begin{etaremune}
+  \setlength\itemsep{0.18em}
+  \item \href{https://osf.io/preprints/osf/hgc2z}{Biased Party Nominations as a Source of Women's Electoral Underperformance} (with Pia Raffler and Thomas Fujiwara). Forthcoming, \textit{American Journal of Political Science}.\ifjobmarket \\
+  \textit{Media coverage:} \href{https://www.capradio.org/news/npr/story?storyid=g-s1-96043}{NPR}.\fi
+  \item \href{https://doi.org/10.1093/jrsssa/qnaf042}{Estimating Controlled Direct Effects with Panel Data: An Application to Reducing Support for Discriminatory Policies}. 2026. (with Matthew Blackwell, Adam Glynn and Connor Phillips). \textit{Journal of the Royal Statistical Society: Series A}, 189 (2): 1070-1089.
+  \item \href{https://doi.org/10.1177/00104140251342919}{Do Autocrats Respond to Citizen Demands? Petitions and Housing Construction in the GDR}. 2026. (with Hans Lueders and Sascha Riaz). \textit{Comparative Political Studies}, 59 (4): 703-738.
+  \item \href{https://onlinelibrary.wiley.com/doi/10.1111/ajps.12939?af=R}{How Budget Tradeoffs Undermine Electoral Incentives to Build Public Housing}. 2026. (with Andreas Wiedemann). \textit{American Journal of Political Science}, 70 (1): 202-220.
+  \item \href{https://doi.org/10.1017/S0003055425101226}{The Green Transition and Political Polarization Along Occupational Lines} (with Vincent Heddesheimer and Erik Voeten). 2025. \textit{American Political Science Review}, First View: 1--23.
+  \item \href{https://www.journals.uchicago.edu/doi/abs/10.1086/738581}{Does Rent Control Turn Tenants Into NIMBYs?} (with Anselm Hager and Robert Vief). 2025. \textit{Journal of Politics}, online ahead of print.\ifjobmarket \\
+  \textit{Media coverage:} \href{https://www.theatlantic.com/economy/archive/2025/11/mamdani-housing-rent-control/684790/}{The Atlantic}.\fi
+  \item \href{https://www.cambridge.org/core/journals/british-journal-of-political-science/article/gendered-persistence-of-authoritarian-indoctrination/9FF7C98DA109B0A7E31521974A2B82FB}{The Gendered Persistence of Authoritarian Indoctrination} (with Nourhan A. Elsayed, Sascha Riaz, and Daniel Ziblatt). 2025. \textit{British Journal of Political Science}, 55: e124.
+  \item \href{https://www.nature.com/articles/s41597-025-04811-5}{GERDA: The German Election Database}. 2025. (with Vincent Heddesheimer, Florian Sichart, and Andreas Wiedemann). \textit{Scientific Data}, 12: 618.
+  \item \href{https://doi.org/10.1017/S0007123424000243}{Local Newspaper Decline and Political Polarization in Multi-Party Systems}. 2024. (with Fabio Ellger, Sascha Riaz and Philipp Tillmann). \textit{British Journal of Political Science}, 54 (4): 1256-1275.
+  \item \href{https://doi.org/10.1017/S0003055423000862}{Wealth of Tongues: Why Peripheral Regions Vote for the Radical Right in Germany}. 2024. (with Daniel Bischof and Daniel Ziblatt). \textit{American Political Science Review}, 118 (3): 1480–1496.
+  \item \href{https://www.journals.uchicago.edu/doi/abs/10.1086/726917}{Natural Disasters and Green Party Support}. 2024. (with Sascha Riaz). \textit{Journal of Politics}, 86 (1): 241-256.\ifjobmarket \\
+  \textit{Media coverage:} \href{https://www.bloomberg.com/news/articles/2024-09-16/surviving-a-climate-disaster-isn-t-likely-to-change-how-you-vote}{Bloomberg} and \href{https://www.handelsblatt.com/politik/deutschland/klimakrise-warum-hochwasser-den-gruenen-keine-neuen-stimmen-bringt/100069856.html}{Handelsblatt}.\fi
+  \item \href{https://journals.sagepub.com/doi/abs/10.1177/00104140231178733}{Refugee Labor Market Access Increases Support for Immigration}. 2024. (with Anselm Hager and Sascha Riaz). \textit{Comparative Political Studies}, 57 (5): 749–777.
+  \item \href{https://muse.jhu.edu/pub/1/article/916342}{Government Spending and Voting Behavior}. 2024. (with Anselm Hager). \textit{World Politics}, 76 (1): 88-124.
+  \item \href{https://www.tandfonline.com/doi/full/10.1080/1369183X.2023.2173159}{Local News Monopolies Increase Misperceptions about Immigration.} 2023. (with Sascha Riaz). \textit{Journal of Ethnic and Migration Studies}, 49 (17): 4536-4558.
+  \item \href{https://www.journals.uchicago.edu/doi/10.1086/720307}{Freedom of Movement Restrictions Inhibit the Psychological Integration of Refugees}. 2022. (with Sascha Riaz). \textit{Journal of Politics}, 84 (4): 2288-2293.
+  \item \href{https://www.cambridge.org/core/journals/british-journal-of-political-science/article/locked-out-of-college-when-admissions-bureaucrats-do-and-do-not-discriminate/47318737B56F71B2C9F00C279812759C}{Locked Out of College: When Admissions Bureaucrats Do and Do Not Discriminate}. 2022. (with Jacob Brown). \textit{British Journal of Political Science}, 52 (3): 1436-1446.
+  \item \href{https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12516}{Does Public Opinion Affect Political Speech?} 2020. (with Anselm Hager). \textit{American Journal of Political Science}, 64 (4): 921-937.
+  \item \href{https://onlinelibrary.wiley.com/doi/pdf/10.1111/ajps.12460}{Do Inheritance Customs Affect Political and Social Inequality?} 2019. (with Anselm Hager). \textit{American Journal of Political Science}, 63 (4): 758-773.
+\end{etaremune}
+
+\vspace*{-0.2cm}
+\section*{Working Papers}
+	% Decision 2026-08-04: do not add the book project to the CV for now.
+	\begin{enumerate}
+			\setlength\itemsep{0.15em}
+			\item \href{https://osf.io/preprints/socarxiv/2g4x7}{Voter Responses to Climate Adaptation in High-Risk Communities} (with Christian Baehr and António Valentim). R\&R, \textit{American Journal of Political Science}.
+			\item \href{https://osf.io/preprints/socarxiv/6h8cq}{Place-Based Policies, Local Responses, and Electoral Behavior} (with Vincent Heddesheimer and Andreas Wiedemann).
+			\item \href{https://osf.io/preprints/socarxiv/4zjac}{Long-run Political Change after the Great Recession} (with Vincent Heddesheimer).
+			\item \href{https://osf.io/preprints/osf/6s8tn_v4}{Foreign Policy Debates Shape Refugees' Psychological Integration} (with Florian Sichart and Georgiy Syunyaev).
+			\item \href{https://osf.io/preprints/osf/276kz_v2}{Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban} (with Jacob Brown and Hunter Rendleman).
+			\item Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkj\ae r). (draft available upon request)
+			\item Electoral Responses to Local Cooperations with Radical-Right Parties (with Philipp Heyna, Violeta I. Haas, and Tim Wappenhans). (draft available upon request)
+			\item Salient Shock, Imperceptible Impacts: Germans' Immigration Attitudes and the 2022--2023 Energy Price Spike (with Niloufar Davis, W. M. Halm, and Daniel J. Hopkins). (draft available upon request)
+			\ifjobmarket
+			\item Industrial Policy and the Politics of Delivery: Evidence from WWII War Plants. (draft available upon request)
+			\fi
+		\end{enumerate}
+
+  \vspace*{-0.2cm}
+  \section*{Public Engagement and Policy Reports}
+  \begin{enumerate}
+  \item \href{https://www.popularbydesign.org/p/why-do-mainstream-parties-lose-either}{Why Do Mainstream Parties Lose Either Way on Accommodating the Far Right?} 2026. Guest essay, \textit{Popular by Design}.
+	  \item \href{https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/Study_Can_Regional_Policy_Stabilize_Structural_Transformation.pdf}{Can Regional Policy Stabilize Structural Transformation? Evidence on the Political Effects of Regional Development Policy in Germany} (with V. Heddesheimer, D. Posch, and J. S\"udekum). 2026. Bertelsmann Foundation. \href{https://www.bertelsmann-stiftung.de/de/publikationen/publikation/did/regionalpolitik-als-stabilitaetsanker-im-strukturwandel}{German-language version}.\ifjobmarket \\
+	  \textit{Media coverage:} \href{https://www.spiegel.de/wirtschaft/foerderpolitik-in-deutschland-wie-subventionen-den-afd-zuspruch-daempfen-a-fd739e9b-8ce8-427b-aa33-bf86fbfd71bc}{Der Spiegel}, \href{https://www.faz.net/aktuell/wirtschaft/mit-gezielten-subventionen-gegen-die-afd-accg-200859446.html}{Frankfurter Allgemeine Zeitung}, \href{https://www.profil.at/dasfruehstueck/wie-100-euro-stimmen-fuer-afd-und-fpoe-verhindern-koennen/403162232}{profil}, and \href{https://www.socialeurope.eu/targeted-infrastructure-spending-slows-afd-gains-in-germanys-industrial-heartlands}{Social Europe}.\fi
+  \item \href{https://capolicylab.org/navigating-californias-wildfire-insurance-challenge-community-demographics-and-the-fair-plan/}{Navigating California's Wildfire Insurance Challenge: Community Demographics and the FAIR Plan} (with L. Hen and M. Macaraeg). 2025. California Policy Lab, University of California.
+  \end{enumerate}
+
+\vspace*{-0.1cm}
+\section*{Grants and Fellowships}
+\begin{itemize}
+  \item Society of Hellman Fellows Award, UC Davis, \$33,000, 2025--2026.
+  \ifjobmarket
+  \item Academic Senate Committee on Research Small Grants, UC Davis, \$2,000 each, 2024 and 2025.
+  \fi
+  \item Research Grant, Multidisciplinary Program in Inequality \& Social Policy, \$5,000, 2022.
+  \ifjobmarket
+  \item Harvard Mellon Urban Initiative Grant, \$1,900, 2022.
+  \fi
+  \item Graduate School of Arts and Sciences Emergency Grants, \$7,000, 2020 \& 2021.
+  \item Krupp Foundation Dissertation Research Fellowship \& Emergency Grant, \$16,300, 2019 \& 2021.
+  \item Research Stipend, Multidisciplinary Program in Inequality \& Social Policy, \$12,000, 2018.
+  \ifjobmarket
+  \item Institute for Quantitative Social Science Research Grant, \$2,800, 2018 \& 2020.
+  \item Harvard Center for American Political Studies Seed Grant, \$1,500, 2017 \& 2022 (with Jacob R. Brown).
+  \fi
+\end{itemize}
+
+\vspace*{-0.1cm}
+\section*{Invited Talks}
+
+\begin{itemize}
+  \item 2027: University College London; University of Gothenburg
+  \item 2026: University of Notre Dame; Vanderbilt University; University of Mannheim / MZES; Research Workshop in American Politics (RWAP), UC Berkeley; BESI Climate Seminar, Berkeley Economy \& Society Initiative
+  \item 2025: University of Southern California, University of Wisconsin-Madison
+  \item 2024: University of California, Berkeley, University of Texas at Austin
+  \item Before 2024: University of California, Davis (2023); LMU Munich (2022); Humboldt University Berlin (2020 \& 2022)
+\end{itemize}
+
+\vspace*{-0.1cm}
+\section*{Conference Presentations}
+
+\begin{itemize}
+  \item 2026: APSA, European Political Science Society (EPSS)
+  \item 2025: APSA, MPSA, EPSA, Toronto Political Behavior Workshop (University of Toronto), Representation in Divided Democracies Workshop (ETH Zurich), Money in Politics Conference (Copenhagen Business School)
+  \item 2024: APSA, EPSA, Political Economy of Europe APSA Pre-Conference, Copenhagen Housing Policy Workshop, Toronto Political Behavior Workshop (Montréal)
+  \item 2023: APSA, MPSA, EPSA, NEWEPS, UC Berkeley Housing Conference
+  \item Before 2023: APSA, MPSA, EPSA, NEWEPS, EuroWEPS, Asian PolMeth, Barcelona Politics \& History Conference, Nuffield Junior Workshop
+\end{itemize}
+
+\vspace*{-0.1cm}
+\section*{Teaching Experience}
+\ifjobmarket
+\textit{University of California, Davis}
+\begin{itemize}
+  \item Quantitative Research Methods (graduate), Fall 2023, Fall 2024, Fall 2025
+  \item Empirical Methods in Political Science (graduate), Winter 2024
+  \item Modeling Politics: Game Theory and Political Economy (graduate), Winter 2025
+  \item Political Economy (undergraduate), Winter 2024, Fall 2024, Winter 2025, Winter 2026
+  \item Urban Public Policy (undergraduate), Winter 2025
+  \item Advanced Quantitative Methods \& Data Science (undergraduate), Fall 2025
+\end{itemize}
+
+\textit{Invited teaching}
+\begin{itemize}
+  \item Invited guest, \textit{Writing a Great Article} (PhD course), Aarhus University, September 2026 (virtual)
+\end{itemize}
+\else
+Courses taught: Quantitative Research Methods; Empirical Methods in Political Science; Modeling Politics: Game Theory and Political Economy; Political Economy; Urban Public Policy; Advanced Quantitative Methods \& Data Science.
+\fi
+
+\ifjobmarket
+\vspace*{-0.1cm}
+\section*{Graduate and Undergraduate Advising}
+\begin{itemize}
+  \item Dissertation committees: Alex Cohen (completed 2026; Postdoctoral Scholar, Democracy Policy Lab, Goldman School of Public Policy, UC Berkeley), Haley Daarstad, Julian Haddad, and Daniel Scates
+  \item Undergraduate honors thesis advising: Brady Horton and Jenny Zhao
+\end{itemize}
+\fi
+
+\vspace*{-0.1cm}
+\section*{Software \& Data}
+\begin{itemize}
+  \ifjobmarket\else
+  \item \href{https://doi.org/10.7910/DVN/2KJSCO}{CLARA: Communication of Local German Party Associations, Recorded Annually (2015--2025)}. Chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles.
+  \fi
+  \item \href{https://www.german-elections.com}{GERDA dataset and data portal}, \textit{Scientific Data} 12:618 (2025). DOI: 10.1038/s41597-025-04811-5. \\[-0.2ex]
+  \hspace*{1.2em}\href{https://cran.r-project.org/package=gerda}{R package (CRAN)}, Maintainer. DOI: 10.32614/CRAN.package.gerda. \\[-0.2ex]
+  \hspace*{1.2em}\href{https://pypi.org/project/gerda/}{Python package (PyPI)}, Author and Maintainer, 2026.
+  \item \href{https://github.com/hhilbig/broadband}{German broadband coverage data}, municipality-level panel of broadband coverage from 2005--2021 standardized to 2021 municipal boundaries.
+\end{itemize}
+
+\ifjobmarket
+\vspace*{-0.1cm}
+\section*{University and Departmental Service}
+\begin{itemize}
+  \item Chair, Invited Speaker Series Committee, UC Davis, 2023--Present
+  \item Member, Comparative Politics Faculty Search Committee, UC Davis, 2025--2026
+  \item Member, TA Allocation Model Working Group, UC Davis, 2025--2026
+  \item Member, Political Methodology Subfield Committee, UC Davis, 2023--Present
+  \item Organizer, Graduate Publication Strategy Workshops, UC Davis, 2023 and 2026
+\end{itemize}
+\fi
+
+\vspace*{-0.1cm}
+\section*{Affiliations}
+\begin{itemize}
+  \item Faculty Affiliate, Global Migration Center, UC Davis, 2024--present
+  \item Faculty Affiliate, BESI Climate, Berkeley Economy \& Society Initiative, UC Berkeley, 2026--present
+  \item Visiting Researcher, Humboldt University Berlin, DYNAMICS Research Training Group, 2024--2026
+  \item Visiting Researcher, WZB Berlin Social Science Center, 2016--2024
+  \item PhD Research Fellow, Stone Program in Wealth Distribution, Inequality \& Social Policy, Harvard Kennedy School, 2019--2022
+  \ifjobmarket
+  \item Graduate Student Affiliate, Center for European Studies, Harvard University, 2018--2022
+  \item Graduate Student Affiliate, Institute for Quantitative Social Science, Harvard University, 2017--2022
+  \fi
+\end{itemize}
+
+
+% \\item Visiting Researcher, Institutions and Political Inequality Group, WZB Berlin, (2020--2022)
+
+\vspace*{-0.1cm}
+\section*{Professional Service}
+\begin{itemize}
+  \item Co-organizer, Junior Scholars Workshop, Transformations of Democracy Unit, WZB Berlin, 2023--Present
+  \item Co-organizer, Bay Area Workshop in Empirical Comparative Politics (EUREKA), 2025--Present
+  \ifjobmarket
+  \item Member, Best Dissertation Award Committee, APSA Migration and Citizenship Section, 2026
+  \item Member, Best Article Award Committee, APSA European Politics and Society Section, 2026
+  \fi
+  \ifjobmarket
+  \item Selected referee service: \textit{Proceedings of the National Academy of Sciences, American Political Science Review, American Journal of Political Science, Journal of Politics, British Journal of Political Science, Political Analysis, Political Science Research and Methods, Political Behavior, Quarterly Journal of Economics, American Economic Journal: Applied Economics, Comparative Political Studies, Journal of Ethnic and Migration Studies}
+  \else
+  \item Referee: \textit{American Political Science Review, American Journal of Political Science, Journal of Politics, British Journal of Political Science, Political Behavior, Quarterly Journal of Economics, American Economic Journal: Applied Economics, Comparative Political Studies}
+  \fi
+\end{itemize}
+
+\ifjobmarket
+\vspace*{-0.1cm}
+\section*{Languages}
+German (native), English (fluent), French (basic knowledge), Spanish (basic knowledge)
+\fi
+
+
+%\section*{Professional Association Memberships}
+%American Political Science Association, Midwest Political Science Association, European Political Science Association
+
+%\section*{Software and Programming Languages}
+%
+%R, Python, Stata, SQL
+%
+%\section*{Languages}
+%\begin{itemize}
+%  \setlength\itemsep{-0.4em}
+%\item {\bf Programming}
+%\subitem R, Python
+%\begin{itemize}
+%\item English (Fluent), German (Native), French (Basic Knowledge), Spanish (Basic Knowledge)
+%\end{itemize}
+
+\vspace*{-0.1cm}
+\section*{References}
+\ifjobmarket
+\begin{itemize}
+\item \hspace*{-0.8em}
+\begin{tabular}{l@{\extracolsep{20mm}}l}
+Pia Raffler & Daniel Ziblatt \\
+Assistant Professor of Government & Eaton Professor of the Science of Government \\
+Harvard University & Harvard University \\
+\href{mailto:praffler@gov.harvard.edu}{praffler@gov.harvard.edu} & \href{mailto:dziblatt@gov.harvard.edu}{dziblatt@gov.harvard.edu} \\[0.4em]
+Torben Iversen & Matthew Blackwell \\
+Harold Hitchings Burbank Professor of Political Economy & Staff Data Scientist\\
+Harvard University & Google, Inc.\\
+\href{mailto:iversen@fas.harvard.edu}{iversen@fas.harvard.edu} & \href{mailto:mblackwell@gov.harvard.edu}{mblackwell@gov.harvard.edu} \\
+\end{tabular}
+\end{itemize}
+\else
+Available upon request.
+\fi
+
+%\section*{Work Authorization}
+%US Green Card Holder
+
+\end{document}

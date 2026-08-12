@@ -7,6 +7,9 @@ nomination_additions.md
 # Award-nomination CV variant (contains personal data; keep local-only)
 cv/HHilbig_CV_nomination.*
 
+# Generated job-market CV (build locally with `make -C cv job-market`)
+cv/HHilbig_CV_job_market.pdf
+
 # Paper status check report (output of /check-papers)
 paper_status_report.md
 scripts/__pycache__/

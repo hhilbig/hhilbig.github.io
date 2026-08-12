@@ -62,7 +62,9 @@ Hanno's research examines how structural economic transformations affect politic
 - Long-run Political Change after the Great Recession (with Vincent Heddesheimer)
 - Foreign Policy Debates Shape Refugees' Psychological Integration (with Florian Sichart and Georgiy Syunyaev)
 - Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban (with Jacob Brown and Hunter Rendleman)
-- Political and Social Correlates of Covid-19 Mortality (with Constantin Manuel Bosancianu, Macartan Humphreys, Sampada KC, Nils Lieber, and Alex Scacco)
+- Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkjær)
+- Electoral Responses to Local Cooperations with Radical-Right Parties (with Philipp Heyna, Violeta I. Haas, and Tim Wappenhans)
+- Salient Shock, Imperceptible Impacts: Germans' Immigration Attitudes and the 2022-2023 Energy Price Spike (with Niloufar Davis, W. M. Halm, and Daniel J. Hopkins)
 
 ## Active Projects
 
@@ -74,7 +76,8 @@ Hanno's research examines how structural economic transformations affect politic
 - Energy price shocks and immigration attitudes (panel survey)
 - French municipal elections and employment
 
-## Datasets and Tools
+## Data
 
-- GERDA (German Election Database): Panel dataset of local, state, and federal election results in Germany at the municipality level spanning three decades. Available at https://www.german-elections.com/
-- gerda R package: R package for accessing GERDA data, available on CRAN.
+- CLARA: A chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles from 2015-2025. Available at https://www.hannohilbig.com/localparties/
+- GERDA (German Election Database): Harmonized German election results for municipalities, counties, and constituencies. Data: https://www.german-elections.com/; R package: https://github.com/hhilbig/gerda; Python package: https://github.com/hhilbig/gerda-py
+- German Municipal Broadband Availability: A municipality-level panel covering 2005-2021, standardized to 2021 boundaries. Available at https://github.com/hhilbig/broadband

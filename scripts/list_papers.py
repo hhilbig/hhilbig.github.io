@@ -4,7 +4,7 @@
 Default mode prints a JSON list to stdout (one object per <li>).
 
 With ``--check-order``, also verify that the Publications section in
-index.html and the Publications section in HHilbig_CV.tex are sorted in
+index.html and the Publications section in HHilbig_CV_shared.tex are sorted in
 descending year order, with "Forthcoming" entries grouped at the top.
 Exits 1 if either file is out of order.
 """
@@ -19,9 +19,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 INDEX = REPO / "index.html"
-CV_TEX = Path(
-    "/Users/hanno/Library/CloudStorage/Dropbox/Hanno/03_CV/CV_JobMarket/HHilbig_CV.tex"
-)
+CV_TEX = REPO / "cv" / "HHilbig_CV_shared.tex"
 
 SECTION_RE = re.compile(
     r'<h2 id="([^"]+)">([^<]+)</h2>\s*<ol[^>]*>(.*?)</ol>',
@@ -120,7 +118,7 @@ def check_publication_order_html() -> list[str]:
 
 
 def check_publication_order_cv() -> list[str]:
-    """Parse HHilbig_CV.tex publications section and verify order."""
+    """Parse the shared CV publications section and verify order."""
     if not CV_TEX.exists():
         return [f"CV not found at {CV_TEX}"]
     text = CV_TEX.read_text(encoding="utf-8")
@@ -133,7 +131,7 @@ def check_publication_order_cv() -> list[str]:
         return ["Could not locate \\section*{Publications} block in CV"]
     items = re.findall(r"\\item\s+(.*?)(?=\n\s*\\item|\Z)", m.group(1), re.DOTALL)
     pubs = [{"title": _cv_title(it), "citation": it} for it in items]
-    return _check_descending(pubs, source="HHilbig_CV.tex")
+    return _check_descending(pubs, source="HHilbig_CV_shared.tex")
 
 
 def _cv_title(item_body: str) -> str:
@@ -172,7 +170,7 @@ def main() -> int:
             for e in errors:
                 print(e, file=sys.stderr)
             return 1
-        print("Publications order OK in index.html and HHilbig_CV.tex.")
+        print("Publications order OK in index.html and HHilbig_CV_shared.tex.")
         return 0
 
     if not INDEX.exists():
