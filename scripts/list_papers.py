@@ -5,8 +5,9 @@ Default mode prints a JSON list to stdout (one object per <li>).
 
 With ``--check-order``, also verify that the Publications section in
 index.html and the Publications section in HHilbig_CV_shared.tex are sorted in
-descending year order, with "Forthcoming" entries grouped at the top.
-Exits 1 if either file is out of order.
+descending year order, with "Forthcoming" entries grouped at the top, and that
+linked working papers appear before unlinked papers. Exits 1 if any section is
+out of order.
 """
 from __future__ import annotations
 
@@ -117,6 +118,24 @@ def check_publication_order_html() -> list[str]:
     return _check_descending(pubs, source="index.html")
 
 
+def check_working_paper_link_order_html() -> list[str]:
+    """Require linked working papers to appear before unlinked papers."""
+    data = extract(INDEX.read_text(encoding="utf-8"))
+    papers = [p for p in data if p["section_id"] == "working-papers"]
+    first_unlinked = None
+    errors = []
+    for paper in papers:
+        if paper["primary_url"] is None:
+            if first_unlinked is None:
+                first_unlinked = paper
+        elif first_unlinked is not None:
+            errors.append(
+                f"index.html: linked working paper '{paper['title'][:60]}' "
+                f"appears after unlinked paper '{first_unlinked['title'][:60]}'."
+            )
+    return errors
+
+
 def check_publication_order_cv() -> list[str]:
     """Parse the shared CV publications section and verify order."""
     if not CV_TEX.exists():
@@ -160,17 +179,21 @@ def main() -> int:
     ap.add_argument(
         "--check-order",
         action="store_true",
-        help="Verify Publications are sorted descending by year in index.html and CV.",
+        help="Verify publication chronology and linked-first working-paper order.",
     )
     args = ap.parse_args()
 
     if args.check_order:
-        errors = check_publication_order_html() + check_publication_order_cv()
+        errors = (
+            check_publication_order_html()
+            + check_working_paper_link_order_html()
+            + check_publication_order_cv()
+        )
         if errors:
             for e in errors:
                 print(e, file=sys.stderr)
             return 1
-        print("Publications order OK in index.html and HHilbig_CV_shared.tex.")
+        print("Publication and working-paper order OK.")
         return 0
 
     if not INDEX.exists():
