@@ -78,6 +78,7 @@ Hanno's research examines how structural economic transformations affect politic
 
 ## Data
 
+- U.S. House (2018-2024) and Senate (2002-2024) Candidate Websites: Archived campaign-website text for 7,353 candidate-years and 799,058 Wayback Machine pages. Available at https://www.hannohilbig.com/candidatewebsites/
 - CLARA: A chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles from 2015-2025. Available at https://www.hannohilbig.com/localparties/
 - GERDA (German Election Database): Harmonized German election results for municipalities, counties, and constituencies. Data: https://www.german-elections.com/; R package: https://github.com/hhilbig/gerda; Python package: https://github.com/hhilbig/gerda-py
 - German Municipal Broadband Availability: A municipality-level panel covering 2005-2021, standardized to 2021 boundaries. Available at https://github.com/hhilbig/broadband

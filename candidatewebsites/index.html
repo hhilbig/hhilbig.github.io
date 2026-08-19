@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDK4V4S60M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JDK4V4S60M');
+  </script>
+
+  <meta charset="utf-8">
+  <title>U.S. House (2018–2024) and Senate (2002–2024) Candidate Websites | Hanno Hilbig</title>
+  <meta name="description"
+    content="A candidate-year panel of archived campaign website text for U.S. House and Senate candidates, 2002–2024. The dataset extends ICPSR 226001.">
+  <meta name="author" content="Hanno Hilbig">
+  <link rel="canonical" href="https://www.hannohilbig.com/candidatewebsites/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="U.S. House (2018–2024) and Senate (2002–2024) Candidate Websites">
+  <meta property="og:description" content="Archived campaign website text for U.S. House and Senate candidates, extending ICPSR 226001 through 2024 and adding Senate elections from 2002 onward.">
+  <meta property="og:url" content="https://www.hannohilbig.com/candidatewebsites/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="U.S. House (2018–2024) and Senate (2002–2024) Candidate Websites">
+  <meta name="twitter:description" content="Archived campaign website text for U.S. House and Senate candidates, 2002–2024.">
+
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* page-local additions on top of the site stylesheet */
+    .figure { margin: 1.4rem 0; }
+    .figure img { border: 1px solid var(--border); border-radius: 6px; }
+    .figure figcaption { color: var(--muted); font-size: 0.88em; margin-top: 0.4rem; }
+    .table-scroll { overflow-x: auto; }
+    .table-scroll table { white-space: nowrap; }
+    /* tables with a prose column need to wrap instead of scroll */
+    .table-prose table { white-space: normal; }
+    .table-prose td:first-child, .table-prose th:first-child { white-space: nowrap; }
+    .table-prose td:last-child, .table-prose th:last-child { white-space: nowrap; }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1>U.S. House (2018&ndash;2024) and Senate (2002&ndash;2024) Candidate Websites</h1>
+        <p class="title">Archived campaign website text<br>
+          A candidate-year panel &middot; Version 1.0 &middot;
+          <a href="../">Hanno Hilbig</a>, University of California, Davis</p>
+        <div class="profile-links">
+          <a href="https://doi.org/10.7910/DVN/BZ2JRS">Download data</a>
+          <span class="separator">|</span>
+          <a href="codebook.html">Codebook</a>
+          <span class="separator">|</span>
+          <a href="release_roster.csv">Roster</a>
+          <span class="separator">|</span>
+          <a href="diagnostics/diagnostics_manifest.json">Diagnostics manifest</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <p>I assembled 799,058 archived pages for 7,353 U.S. House and Senate
+        candidate-years. The dataset extends
+        <a href="https://doi.org/10.3886/E226001V1">ICPSR 226001</a>, adding
+        House candidates from 2018 through 2024 and Senate candidates from 2002
+        through 2024. The two datasets are designed to be appended by rows.</p>
+
+      <p>Campaign websites record candidates' positions in their own words.
+        Many disappear after an election; this release preserves the pages
+        captured by the Internet Archive.</p>
+
+      <h2>How the data were built</h2>
+      <p>I identify campaign websites from FEC records and Wikidata. I then
+        retrieve election-year captures from the Wayback Machine and follow
+        homepage links one level deep. I compute the coded variables with Di
+        Tella et al.'s replication code and text filter.</p>
+
+      <h2>What the data contain</h2>
+      <ul>
+        <li><b>Page-level text</b>, with its archived source URL.</li>
+        <li><b>A candidate-year panel</b>, using the longest snapshot.</li>
+        <li><b>ICPSR-compatible measures</b> of length, lexical diversity, word
+          rarity, and attention to 31 Manifesto Project topics. Topics measure
+          attention, not position.</li>
+        <li><b>FEC IDs</b> for every candidate-year and DIME IDs for 79 percent.</li>
+        <li><b>An attempt roster</b>, including failed captures.</li>
+      </ul>
+
+      <h2>Coverage and limitations</h2>
+      <p>Of 9,848 attempted candidate-years, 7,353, or 75 percent, yielded
+        archived text. Capture requires both a findable campaign website and an
+        election-year archive. The roster provides the denominator for coverage
+        analyses.</p>
+
+      <p>Against major-party general-election returns, House coverage is 69 to
+        76 percent from 2018 onward. Senate coverage rises from 17 percent in
+        2002 to about 70 percent after 2008. Vote-weighted coverage is about four
+        percentage points higher. Missing websites mainly belong to candidates
+        who received few votes.</p>
+
+      <figure class="figure">
+        <img src="coverage_by_office_year.png"
+             alt="Two panels, House and Senate, showing captured candidates as a percentage of general election ballot candidates from 2002 to 2024. In the House panel a grey line for Di Tella et al. runs from 44 percent in 2002 to 60 percent in 2016, and a dark blue line for this dataset runs from 75 percent in 2018 to 69 percent in 2024. In the Senate panel a dark blue line rises from 17 percent in 2002 to about 70 percent from 2008 onward. A dashed line in each colour shows the same share weighted by votes cast.">
+        <figcaption>Share of Democratic and Republican general-election
+          candidates with captured websites. Dashed lines weight candidates by
+          votes received.</figcaption>
+      </figure>
+
+      <p>Of the captured candidate-years, 3,032 match a general election ballot;
+        4,321 are other same-year FEC candidates. Capture rates are 84 and 69
+        percent, respectively. Use <code>on_ballot</code>,
+        <code>general_votes</code>, and the roster to define the relevant sample.</p>
+
+      <p>Four limitations matter. First, about 11 percent of candidate-years
+        contain little or no text; these observations remain in the data with a
+        <code>text_quality</code> flag. Second, post-election pages may reflect
+        changed or expired domains, so each measure also has a
+        <code>_preelec</code> version. Third, linked pages within a snapshot can
+        come from nearby dates. Finally, the median candidate-year spans 255
+        days. I would therefore treat pooled comparisons as more reliable than
+        within-candidate changes over time.</p>
+
+      <h2>Validation</h2>
+      <p>Before comparing the two collections, I apply the coding pipeline to Di
+        Tella et al.'s text. It reproduces their published measures:</p>
+
+      <div class="table-scroll table-prose">
+      <table>
+        <thead><tr><th>Measure</th><th>What it measures</th><th>Correlation</th></tr></thead>
+        <tbody>
+          <tr><td><code>n_char</code></td><td>Length of the cleaned text, in characters</td><td>1.00 (identical)</td></tr>
+          <tr><td><code>n_words</code></td><td>Length in words</td><td>1.00 (identical)</td></tr>
+          <tr><td>TTR</td><td>Vocabulary range: distinct words divided by total words</td><td>1.00</td></tr>
+          <tr><td>MATTR</td><td>The same in a 200-word moving window, so length does not drive it</td><td>1.00</td></tr>
+          <tr><td>entropy</td><td>How rare the candidate's words are in Google Books</td><td>1.00</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="muted" style="font-size:0.88em">Computed for 400
+        candidate-years. Character and word counts are identical; the remaining
+        correlations are at least 0.9991.</p>
+
+      <p>Median document length changes by seven percent at the boundary: from 1,678
+        characters in 2016 to 1,789 in 2018. Reproducing the original text filter
+        is essential; without it, length measures are about 50 percent higher.</p>
+
+      <figure class="figure">
+        <img src="boundary_continuity.png"
+             alt="Median characters per House general-election candidate-year from 2002 to 2024. The Di Tella et al. series reaches 1,678 in 2016; this dataset continues from 1,789 in 2018 to 2,082 in 2024.">
+        <figcaption>Median characters among Democratic and Republican House
+          general-election candidates. The source changes after 2016.</figcaption>
+      </figure>
+
+      <p>The topic measures recover familiar partisan differences: Democratic
+        candidates emphasize welfare, labour, equality, and education;
+        Republican candidates emphasize political authority, economic planning,
+        national way of life, and law and order.</p>
+
+      <figure class="figure">
+        <img src="topics_party_gap.png"
+             alt="Dot-and-range chart of sixteen topics ordered by the Democratic minus Republican gap in attention among House general-election candidates from 2018 to 2024. Welfare State, Labour Groups, Equality and Education lean Democratic; Political Authority, Economic Planning, National Way of Life and Law and Order lean Republican.">
+        <figcaption>Democratic minus Republican topic attention among House
+          general-election candidates, 2018&ndash;2024. Dots show the average;
+          lines show the range across elections.</figcaption>
+      </figure>
+
+      <p>The combined House series shows a widening difference in welfare-state
+        attention. Democratic candidates move from 8 percent in 2016 to about
+        17&ndash;18 percent after 2020; Republican candidates remain near 4&ndash;6
+        percent. The break between 2016 and 2018 marks the handoff between
+        datasets, so the figure describes the series rather than attributing the
+        change to a single event.</p>
+
+      <figure class="figure">
+        <img src="welfare_state_series.png"
+             alt="Welfare State topic attention among Democratic and Republican House general-election candidates from 2002 to 2024. Democratic attention rises sharply after 2018, while Republican attention remains between roughly 3 and 6 percent. A shaded band marks the handoff between datasets in 2016 and 2018.">
+        <figcaption>Welfare-state attention among Democratic and Republican House
+          general-election candidates. The source changes after 2016.</figcaption>
+      </figure>
+
+      <p>DIME CF-scores provide an external validation measure because they use
+        campaign-finance data rather than website text. Topic attention follows
+        the expected ordering when parties are pooled, but correlations are near
+        zero within each party. The topics distinguish parties; they are not
+        useful within-party ideology proxies.</p>
+
+      <figure class="figure">
+        <img src="external_validity_cfscore.png"
+             alt="Three panels of correlations between topic attention and DIME CF-scores, for ballot candidates pooled and separately for Democrats and Republicans. The pooled panel ranges from Welfare State at minus 0.33 to Free Market Economy at plus 0.22; both within-party panels are concentrated near zero.">
+        <figcaption>Correlation between topic attention and DIME CF-scores.
+          Higher CF-scores indicate more conservative candidates.</figcaption>
+      </figure>
+
+      <p>Scraping validation is narrower than coding validation. Among the 41
+        candidates found in both collections, extracted document length
+        correlates at 0.87 and lexical diversity at 0.22. Length is comparable
+        across the combined panel; lexical diversity is comparable only in its
+        overall distribution.</p>
+
+      <h2>Merging with the ICPSR data</h2>
+      <p>The two datasets cover different years. The ICPSR-compatible panel uses
+        matching fields and can be appended to the 5,267
+        candidate-years in ICPSR 226001, producing 12,620 candidate-years.</p>
+
+      <h2>Data and documentation</h2>
+      <p>The README, codebook, and manifest document the five data files.
+        CC BY 4.0 covers the compilation, coded variables, and documentation;
+        copyright in campaign text remains with its authors. Every text row
+        records its archived source URL. Rights-holders may request removal
+        through the Dataverse Contact Owner control.</p>
+
+      <h2>Citation</h2>
+      <pre>Hilbig, Hanno (2026). U.S. House (2018-2024) and Senate
+(2002-2024) Candidate Websites. Version 1.0. Harvard Dataverse.
+https://doi.org/10.7910/DVN/BZ2JRS</pre>
+      <p>Please also cite the original dataset this one extends:</p>
+      <pre>Di Tella, Rafael, Randy Kotti, Caroline Le Pennec and Vincent Pons
+(2025). Keep Your Enemies Closer: Strategic Platform Adjustments
+during U.S. and French Elections. openICPSR 226001.</pre>
+    </main>
+  </div>
+</body>
+
+</html>
