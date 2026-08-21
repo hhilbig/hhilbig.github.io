@@ -1,0 +1,35 @@
+{
+  "generated_at_utc": "2026-08-19T22:30:48.870865+00:00",
+  "release_manifest_sha256": "a4b4e564bd60eab89ff6391b53def93c0871cebfc170a7a96709087816bc871f",
+  "counts": {
+    "candidate_years": 7353,
+    "raw_rows": 799058,
+    "roster_rows": 9848,
+    "ballot_candidate_years": 3032
+  },
+  "outputs": {
+    "data/boundary_nchar.csv": "0890eaf749ba1cad35b81e0ad8687102348265c9a6248b94c86d3bc996c76cb4",
+    "data/cfscore_correlations.csv": "7b9b50429d8de2aa482b21226779f85e0aea1dc0d39878df93487bd2282af94c",
+    "data/coverage_by_office_year.csv": "c372405ffcd3dc2ca85d96c26a7bec151bc09d4ecfd98af98b26f3fda5365bfb",
+    "data/coverage_vs_ballot.csv": "15008148bdf45a723574a73da9c8a9a27a96a22052ebcd3c718808878879fa2c",
+    "data/topic_by_party.csv": "c1702cef45e5d633671d9ef5eba5c5c9d3891ee938fa0e05b83f9abd3b5bc55d",
+    "data/validation_pairs.csv": "cb6febe42dd7fb02fd294c60d9953a991132f5d13b024a90b79a64426df37afd",
+    "data/welfare_series.csv": "ff435e15bfe631e8fb6a68a593bc70a8e46a9c92abd261614026171e29255c20",
+    "figures/boundary_continuity.pdf": "315614ddb4e93a87c933be53f24381a8b88b06dbc5a1fe1abb1efc2745033338",
+    "figures/boundary_continuity.png": "826e7743c3aa7c00719b396a357448b3e7f2d0d5a852455f96fdd1092d3b705f",
+    "figures/coverage_by_office_year.pdf": "085bb2b3728a3e245aa60821b39576a80c6ca11844f024d7ce4feed8103b8823",
+    "figures/coverage_by_office_year.png": "d239351a87efdd31dab303f4da14a32aaa80946d9d064a7b0f09e1fac1312048",
+    "figures/coverage_counts.pdf": "1abbcc32eeacc29053416957f78ba4b211f4e90323b021149b543d284b70ec95",
+    "figures/coverage_counts.png": "aeeec3b44c6e4076d59c76c03d93cc8ebb953458dae9521024030622514615db",
+    "figures/external_validity_cfscore.pdf": "520a4c937dff8d5d6afc57d8a987d8872730b9e58ee469f454f7a141fdc2222d",
+    "figures/external_validity_cfscore.png": "37517264a86e70b6cd0202f46e9a2e32af24f0388c2073f445156391a1b4790d",
+    "figures/topics_party_gap.pdf": "d36831edcd0998ed0706c28b76b72a349cc4d2eb67546a152f4e25fca241f3de",
+    "figures/topics_party_gap.png": "9f8755ca2b1e6bb2deddcd36f8caf0b1e95fc21b9cd79513c406868bebe789cf",
+    "figures/topics_welfare_state.pdf": "dc237e5bb22ce6e0f012757f03e6e19248b76ed8ebc561866c6a1b165ed917b5",
+    "figures/topics_welfare_state.png": "6412e81751c268a0178349251941b304b69300b99a0674cb901a8acb35225926",
+    "figures/validation_scatter.pdf": "6bca8cfcb62e63dddae869528adf0f4a09f1d8153fbf62cff0efb269669f1ebe",
+    "figures/validation_scatter.png": "497f8aad7e380a2d5f609d1c614310a37dc529ee1ed4a071808644a4f1b5e134",
+    "figures/welfare_state_series.pdf": "8453b1b34698f77642885d214f5f4ef20a5d53b1267862ab0a27045e92ac6ba2",
+    "figures/welfare_state_series.png": "6168c6ce0da20845aca48d50ef2e0127dbf4920e70d69742a0df79102da8673c"
+  }
+}

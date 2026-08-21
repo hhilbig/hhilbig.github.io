@@ -1,0 +1,993 @@
+party,office,year,topic,share
+D,house,2018,Agriculture and Farmers,0.009767273094767694
+D,house,2020,Agriculture and Farmers,0.0146595349556526
+D,house,2022,Agriculture and Farmers,0.010685735656811388
+D,house,2024,Agriculture and Farmers,0.005126237965031073
+D,senate,2002,Agriculture and Farmers,0.0015306076903873667
+D,senate,2004,Agriculture and Farmers,0.0030925069621432575
+D,senate,2006,Agriculture and Farmers,0.0017610984336393183
+D,senate,2008,Agriculture and Farmers,0.0015834756506785696
+D,senate,2010,Agriculture and Farmers,0.006170491855664294
+D,senate,2012,Agriculture and Farmers,0.01757903937646451
+D,senate,2014,Agriculture and Farmers,0.006413535384645285
+D,senate,2016,Agriculture and Farmers,0.001652259970135615
+D,senate,2018,Agriculture and Farmers,0.01333116424377271
+D,senate,2020,Agriculture and Farmers,0.002728854564651922
+D,senate,2022,Agriculture and Farmers,0.001775614610065309
+D,senate,2024,Agriculture and Farmers,0.004505069495079527
+R,house,2018,Agriculture and Farmers,0.009610235515105283
+R,house,2020,Agriculture and Farmers,0.0164070037064216
+R,house,2022,Agriculture and Farmers,0.014884331091316842
+R,house,2024,Agriculture and Farmers,0.013423717188302637
+R,senate,2002,Agriculture and Farmers,0.0023102342679053624
+R,senate,2004,Agriculture and Farmers,0.0020773877195502505
+R,senate,2006,Agriculture and Farmers,0.020621965910605864
+R,senate,2008,Agriculture and Farmers,0.0024663937207184
+R,senate,2010,Agriculture and Farmers,0.003039295747216352
+R,senate,2012,Agriculture and Farmers,0.0015334955255844956
+R,senate,2014,Agriculture and Farmers,0.00548905707406176
+R,senate,2016,Agriculture and Farmers,0.003167979895285726
+R,senate,2018,Agriculture and Farmers,0.02745688662374114
+R,senate,2020,Agriculture and Farmers,0.023615592263380093
+R,senate,2022,Agriculture and Farmers,0.011491563702742008
+R,senate,2024,Agriculture and Farmers,0.0025901257069947457
+D,house,2018,Centralisation,0.0168386110335823
+D,house,2020,Centralisation,0.015751970805510707
+D,house,2022,Centralisation,0.015102311952874868
+D,house,2024,Centralisation,0.014836198281490708
+D,senate,2002,Centralisation,0.039434789230042164
+D,senate,2004,Centralisation,0.03049999970140487
+D,senate,2006,Centralisation,0.015325916874906314
+D,senate,2008,Centralisation,0.0150854966299177
+D,senate,2010,Centralisation,0.011244921561265699
+D,senate,2012,Centralisation,0.01852761808364085
+D,senate,2014,Centralisation,0.015523216912333966
+D,senate,2016,Centralisation,0.018100191907875405
+D,senate,2018,Centralisation,0.03788208259571717
+D,senate,2020,Centralisation,0.012854017188592139
+D,senate,2022,Centralisation,0.010143477547684592
+D,senate,2024,Centralisation,0.023211690394271067
+R,house,2018,Centralisation,0.036972269742021995
+R,house,2020,Centralisation,0.03207478542882093
+R,house,2022,Centralisation,0.024121276221498556
+R,house,2024,Centralisation,0.021266256773952413
+R,senate,2002,Centralisation,0.014580262861796587
+R,senate,2004,Centralisation,0.01797731670841629
+R,senate,2006,Centralisation,0.028499851244366815
+R,senate,2008,Centralisation,0.04535368184158716
+R,senate,2010,Centralisation,0.019554426867751357
+R,senate,2012,Centralisation,0.026852903909202967
+R,senate,2014,Centralisation,0.042299798010506415
+R,senate,2016,Centralisation,0.048989502062596946
+R,senate,2018,Centralisation,0.026948483551947608
+R,senate,2020,Centralisation,0.01864401821902706
+R,senate,2022,Centralisation,0.025841866923802803
+R,senate,2024,Centralisation,0.020738257024598517
+D,house,2018,Civic Mindedness,0.032756300380848105
+D,house,2020,Civic Mindedness,0.033022212118139015
+D,house,2022,Civic Mindedness,0.026753591984768694
+D,house,2024,Civic Mindedness,0.027426769752889067
+D,senate,2002,Civic Mindedness,0.011137728424448866
+D,senate,2004,Civic Mindedness,0.030080471380332565
+D,senate,2006,Civic Mindedness,0.019391168992313048
+D,senate,2008,Civic Mindedness,0.023553748675868676
+D,senate,2010,Civic Mindedness,0.0082137849054153
+D,senate,2012,Civic Mindedness,0.01636532861913541
+D,senate,2014,Civic Mindedness,0.019580857613619426
+D,senate,2016,Civic Mindedness,0.014715310626275298
+D,senate,2018,Civic Mindedness,0.013932341431962012
+D,senate,2020,Civic Mindedness,0.03451591638704967
+D,senate,2022,Civic Mindedness,0.05950346228775247
+D,senate,2024,Civic Mindedness,0.011064425487921546
+R,house,2018,Civic Mindedness,0.02467562385656501
+R,house,2020,Civic Mindedness,0.027813292796273387
+R,house,2022,Civic Mindedness,0.025616661805403448
+R,house,2024,Civic Mindedness,0.02300600687465488
+R,senate,2002,Civic Mindedness,0.014401575231215151
+R,senate,2004,Civic Mindedness,0.013108487422699737
+R,senate,2006,Civic Mindedness,0.011954922268138594
+R,senate,2008,Civic Mindedness,0.013052771790040262
+R,senate,2010,Civic Mindedness,0.010319404682094878
+R,senate,2012,Civic Mindedness,0.010298952845589678
+R,senate,2014,Civic Mindedness,0.012999943729880078
+R,senate,2016,Civic Mindedness,0.013847280963135887
+R,senate,2018,Civic Mindedness,0.008354652424935697
+R,senate,2020,Civic Mindedness,0.008993661894414497
+R,senate,2022,Civic Mindedness,0.012860298452369
+R,senate,2024,Civic Mindedness,0.014077655062277842
+D,house,2018,Constitutionalism,0.0036888974387458413
+D,house,2020,Constitutionalism,0.003131395193683589
+D,house,2022,Constitutionalism,0.004385120173239515
+D,house,2024,Constitutionalism,0.004484332678752341
+D,senate,2002,Constitutionalism,0.0041826889852178
+D,senate,2004,Constitutionalism,0.017698195624291115
+D,senate,2006,Constitutionalism,0.01045581437136699
+D,senate,2008,Constitutionalism,0.005617182327927126
+D,senate,2010,Constitutionalism,0.010119404088628041
+D,senate,2012,Constitutionalism,0.00906080736799269
+D,senate,2014,Constitutionalism,0.012992885654732774
+D,senate,2016,Constitutionalism,0.01370249393407962
+D,senate,2018,Constitutionalism,0.002973958981818718
+D,senate,2020,Constitutionalism,0.003911651708003303
+D,senate,2022,Constitutionalism,0.007225419533026309
+D,senate,2024,Constitutionalism,0.010156468315843405
+R,house,2018,Constitutionalism,0.01467838382150241
+R,house,2020,Constitutionalism,0.014571555175706383
+R,house,2022,Constitutionalism,0.011274935951821307
+R,house,2024,Constitutionalism,0.011063266002021127
+R,senate,2002,Constitutionalism,0.025889968533125973
+R,senate,2004,Constitutionalism,0.022127676178818646
+R,senate,2006,Constitutionalism,0.01903616893684315
+R,senate,2008,Constitutionalism,0.021736310134803195
+R,senate,2010,Constitutionalism,0.022995896400491253
+R,senate,2012,Constitutionalism,0.0406396733686623
+R,senate,2014,Constitutionalism,0.02466250848844853
+R,senate,2016,Constitutionalism,0.04599818765010191
+R,senate,2018,Constitutionalism,0.0325420269831666
+R,senate,2020,Constitutionalism,0.026353140702134913
+R,senate,2022,Constitutionalism,0.025855928673318773
+R,senate,2024,Constitutionalism,0.013110589814241609
+D,house,2018,Culture,0.0009344886742300283
+D,house,2020,Culture,0.0006834456434712308
+D,house,2022,Culture,0.0007134815150281622
+D,house,2024,Culture,0.0007434128373597901
+D,senate,2002,Culture,0.0006455931266980667
+D,senate,2004,Culture,0.0008707231134859769
+D,senate,2006,Culture,0.0006344819183091762
+D,senate,2008,Culture,0.0006060989419805217
+D,senate,2010,Culture,0.0007957500749929949
+D,senate,2012,Culture,0.0008059565196980263
+D,senate,2014,Culture,0.0008520886065044778
+D,senate,2016,Culture,0.000603975713977063
+D,senate,2018,Culture,0.000559819575755384
+D,senate,2020,Culture,0.0006508214148382484
+D,senate,2022,Culture,0.0008804792276111317
+D,senate,2024,Culture,0.0007559341071228654
+R,house,2018,Culture,0.000829642021440937
+R,house,2020,Culture,0.0008356156255584825
+R,house,2022,Culture,0.0008749885318386205
+R,house,2024,Culture,0.0008732546564958524
+R,senate,2002,Culture,0.00093794749596795
+R,senate,2004,Culture,0.0009987212804037054
+R,senate,2006,Culture,0.0008359322952106062
+R,senate,2008,Culture,0.0008326383832505957
+R,senate,2010,Culture,0.0007778369906718741
+R,senate,2012,Culture,0.0008527419969294594
+R,senate,2014,Culture,0.0009702967781632925
+R,senate,2016,Culture,0.0008558813729013968
+R,senate,2018,Culture,0.0008466365013393857
+R,senate,2020,Culture,0.0008001108349509084
+R,senate,2022,Culture,0.0008867288869724709
+R,senate,2024,Culture,0.0008603379101525772
+D,house,2018,Democracy,0.0946946403604018
+D,house,2020,Democracy,0.08391956795229151
+D,house,2022,Democracy,0.08751491105059454
+D,house,2024,Democracy,0.08755896688554654
+D,senate,2002,Democracy,0.012401888787104234
+D,senate,2004,Democracy,0.15023661176191572
+D,senate,2006,Democracy,0.10887305687846924
+D,senate,2008,Democracy,0.03644756815779855
+D,senate,2010,Democracy,0.041776469804291096
+D,senate,2012,Democracy,0.0606044728460706
+D,senate,2014,Democracy,0.04693936050433932
+D,senate,2016,Democracy,0.06373974941570211
+D,senate,2018,Democracy,0.025867622561093914
+D,senate,2020,Democracy,0.06586834292624205
+D,senate,2022,Democracy,0.10704304251620499
+D,senate,2024,Democracy,0.05801816416625146
+R,house,2018,Democracy,0.0756885141012945
+R,house,2020,Democracy,0.07624811312683068
+R,house,2022,Democracy,0.07924433915085535
+R,house,2024,Democracy,0.0789791573154387
+R,senate,2002,Democracy,0.16382616126213265
+R,senate,2004,Democracy,0.07211728113229056
+R,senate,2006,Democracy,0.09388063826769787
+R,senate,2008,Democracy,0.05927805148759672
+R,senate,2010,Democracy,0.08307893278216465
+R,senate,2012,Democracy,0.08684905126378863
+R,senate,2014,Democracy,0.05758032450832733
+R,senate,2016,Democracy,0.058821533599206235
+R,senate,2018,Democracy,0.07269898941591146
+R,senate,2020,Democracy,0.09688193491699186
+R,senate,2022,Democracy,0.07687909422848992
+R,senate,2024,Democracy,0.04816329071253047
+D,house,2018,Economic Planning,0.029405908367208473
+D,house,2020,Economic Planning,0.02627515833289423
+D,house,2022,Economic Planning,0.0241416270758085
+D,house,2024,Economic Planning,0.02073596832169522
+D,senate,2002,Economic Planning,0.05044433171774396
+D,senate,2004,Economic Planning,0.04473250602496455
+D,senate,2006,Economic Planning,0.05701794259796559
+D,senate,2008,Economic Planning,0.1011163970103365
+D,senate,2010,Economic Planning,0.09919220999762444
+D,senate,2012,Economic Planning,0.08113565549578045
+D,senate,2014,Economic Planning,0.08141847739465857
+D,senate,2016,Economic Planning,0.04584485861243639
+D,senate,2018,Economic Planning,0.02940080828735184
+D,senate,2020,Economic Planning,0.032975261852150044
+D,senate,2022,Economic Planning,0.029645777114648674
+D,senate,2024,Economic Planning,0.03222244262553286
+R,house,2018,Economic Planning,0.05407240933331931
+R,house,2020,Economic Planning,0.04579641259197633
+R,house,2022,Economic Planning,0.04831468857276353
+R,house,2024,Economic Planning,0.04318825944919365
+R,senate,2002,Economic Planning,0.0359599978782816
+R,senate,2004,Economic Planning,0.04405430846393243
+R,senate,2006,Economic Planning,0.03604184143685762
+R,senate,2008,Economic Planning,0.10753362697977545
+R,senate,2010,Economic Planning,0.16159738919686462
+R,senate,2012,Economic Planning,0.23151960579168562
+R,senate,2014,Economic Planning,0.1041243636907481
+R,senate,2016,Economic Planning,0.07391364159891571
+R,senate,2018,Economic Planning,0.0521018993676732
+R,senate,2020,Economic Planning,0.028317459565207224
+R,senate,2022,Economic Planning,0.056513562721440896
+R,senate,2024,Economic Planning,0.05362091364985788
+D,house,2018,Education,0.07260305431274501
+D,house,2020,Education,0.07974307153134368
+D,house,2022,Education,0.07161755290764456
+D,house,2024,Education,0.062077194753534376
+D,senate,2002,Education,0.022201251293702467
+D,senate,2004,Education,0.030171906186703717
+D,senate,2006,Education,0.0310536340237841
+D,senate,2008,Education,0.013529840743031787
+D,senate,2010,Education,0.04789085780772431
+D,senate,2012,Education,0.027000038407549175
+D,senate,2014,Education,0.018031730099866406
+D,senate,2016,Education,0.024192990089594652
+D,senate,2018,Education,0.038113590933847724
+D,senate,2020,Education,0.048112618466435476
+D,senate,2022,Education,0.033529004764595687
+D,senate,2024,Education,0.017369160525089623
+R,house,2018,Education,0.036156721768029594
+R,house,2020,Education,0.03272510902563407
+R,house,2022,Education,0.03564441236765436
+R,house,2024,Education,0.025977036415282585
+R,senate,2002,Education,0.06837394602336826
+R,senate,2004,Education,0.012482092125208394
+R,senate,2006,Education,0.022248079023556768
+R,senate,2008,Education,0.025755252301819853
+R,senate,2010,Education,0.007700065103297237
+R,senate,2012,Education,0.008369604821835196
+R,senate,2014,Education,0.02273820037808437
+R,senate,2016,Education,0.009891358610524042
+R,senate,2018,Education,0.026251798714984467
+R,senate,2020,Education,0.024870990006541267
+R,senate,2022,Education,0.020707728763199117
+R,senate,2024,Education,0.018798887846773346
+D,house,2018,Equality,0.058720962440629736
+D,house,2020,Equality,0.06777523187458537
+D,house,2022,Equality,0.07480138124233537
+D,house,2024,Equality,0.08044821562171135
+D,senate,2002,Equality,0.020076385143803433
+D,senate,2004,Equality,0.018957324115154887
+D,senate,2006,Equality,0.014767196570573475
+D,senate,2008,Equality,0.014596942899732335
+D,senate,2010,Equality,0.016954194266244352
+D,senate,2012,Equality,0.02667197295619514
+D,senate,2014,Equality,0.03878869955568412
+D,senate,2016,Equality,0.06447556821261793
+D,senate,2018,Equality,0.04544339982900619
+D,senate,2020,Equality,0.06610995296909195
+D,senate,2022,Equality,0.06343232178571623
+D,senate,2024,Equality,0.07154428652743332
+R,house,2018,Equality,0.0262695442626291
+R,house,2020,Equality,0.028283134604588443
+R,house,2022,Equality,0.030152680242899937
+R,house,2024,Equality,0.03139522594903795
+R,senate,2002,Equality,0.018247420246949038
+R,senate,2004,Equality,0.023605102790345108
+R,senate,2006,Equality,0.013197387299811288
+R,senate,2008,Equality,0.010468626229814143
+R,senate,2010,Equality,0.01796149200554669
+R,senate,2012,Equality,0.013504193819955266
+R,senate,2014,Equality,0.02052269491797158
+R,senate,2016,Equality,0.014667646344567176
+R,senate,2018,Equality,0.024539102811250987
+R,senate,2020,Equality,0.02224838738464966
+R,senate,2022,Equality,0.027714160501582805
+R,senate,2024,Equality,0.03494516071820563
+D,house,2018,Foreign Special Relationships,0.007634344222115307
+D,house,2020,Foreign Special Relationships,0.006834286465769556
+D,house,2022,Foreign Special Relationships,0.007062171866325129
+D,house,2024,Foreign Special Relationships,0.007303092912942677
+D,senate,2002,Foreign Special Relationships,0.0036279420856866994
+D,senate,2004,Foreign Special Relationships,0.014408211130930132
+D,senate,2006,Foreign Special Relationships,0.009430350990419643
+D,senate,2008,Foreign Special Relationships,0.009529769736487
+D,senate,2010,Foreign Special Relationships,0.006663654799719077
+D,senate,2012,Foreign Special Relationships,0.008024798451584205
+D,senate,2014,Foreign Special Relationships,0.007191024818473452
+D,senate,2016,Foreign Special Relationships,0.007717014913866578
+D,senate,2018,Foreign Special Relationships,0.0040767770429722735
+D,senate,2020,Foreign Special Relationships,0.006417222850841183
+D,senate,2022,Foreign Special Relationships,0.007290292552126559
+D,senate,2024,Foreign Special Relationships,0.007774657975325723
+R,house,2018,Foreign Special Relationships,0.013927375032743515
+R,house,2020,Foreign Special Relationships,0.014361708524153353
+R,house,2022,Foreign Special Relationships,0.016067859537641834
+R,house,2024,Foreign Special Relationships,0.01576723928072221
+R,senate,2002,Foreign Special Relationships,0.02368211421163095
+R,senate,2004,Foreign Special Relationships,0.021405483814754236
+R,senate,2006,Foreign Special Relationships,0.019559302073187495
+R,senate,2008,Foreign Special Relationships,0.014508700908364673
+R,senate,2010,Foreign Special Relationships,0.015107100273583871
+R,senate,2012,Foreign Special Relationships,0.012916012204337956
+R,senate,2014,Foreign Special Relationships,0.017732126480247256
+R,senate,2016,Foreign Special Relationships,0.009907913342716826
+R,senate,2018,Foreign Special Relationships,0.012964280235069882
+R,senate,2020,Foreign Special Relationships,0.014517227640640552
+R,senate,2022,Foreign Special Relationships,0.031727508182243465
+R,senate,2024,Foreign Special Relationships,0.02026982850300312
+D,house,2018,Free Market Economy,0.0054131887302896605
+D,house,2020,Free Market Economy,0.004038459172902463
+D,house,2022,Free Market Economy,0.004985882984620271
+D,house,2024,Free Market Economy,0.005080743010610134
+D,senate,2002,Free Market Economy,0.0029228275722301667
+D,senate,2004,Free Market Economy,0.0039487746831771845
+D,senate,2006,Free Market Economy,0.004344883260398319
+D,senate,2008,Free Market Economy,0.008262428000885039
+D,senate,2010,Free Market Economy,0.01283558664667135
+D,senate,2012,Free Market Economy,0.004785745432525215
+D,senate,2014,Free Market Economy,0.0057153406853751405
+D,senate,2016,Free Market Economy,0.00404331855921347
+D,senate,2018,Free Market Economy,0.00385504781937742
+D,senate,2020,Free Market Economy,0.0028429060145128884
+D,senate,2022,Free Market Economy,0.0042071673355102
+D,senate,2024,Free Market Economy,0.0067438916764271
+R,house,2018,Free Market Economy,0.010240423406700774
+R,house,2020,Free Market Economy,0.009848416475524098
+R,house,2022,Free Market Economy,0.010530892883838882
+R,house,2024,Free Market Economy,0.010434805072801924
+R,senate,2002,Free Market Economy,0.0028561354547071626
+R,senate,2004,Free Market Economy,0.017959938183138815
+R,senate,2006,Free Market Economy,0.00635822881894065
+R,senate,2008,Free Market Economy,0.00574943690715277
+R,senate,2010,Free Market Economy,0.011186211226028897
+R,senate,2012,Free Market Economy,0.007788321589647166
+R,senate,2014,Free Market Economy,0.010246772337391519
+R,senate,2016,Free Market Economy,0.006950263075557071
+R,senate,2018,Free Market Economy,0.010921784209068981
+R,senate,2020,Free Market Economy,0.0063612843720717
+R,senate,2022,Free Market Economy,0.0098050843342299
+R,senate,2024,Free Market Economy,0.009283011479982914
+D,house,2018,Freedom and Human Rights,0.018728472381279223
+D,house,2020,Freedom and Human Rights,0.01746934824097372
+D,house,2022,Freedom and Human Rights,0.028320538034257818
+D,house,2024,Freedom and Human Rights,0.04439600469778269
+D,senate,2002,Freedom and Human Rights,0.0072234227942812
+D,senate,2004,Freedom and Human Rights,0.0154737053874363
+D,senate,2006,Freedom and Human Rights,0.011130793249179252
+D,senate,2008,Freedom and Human Rights,0.004779894776409904
+D,senate,2010,Freedom and Human Rights,0.010407781869822155
+D,senate,2012,Freedom and Human Rights,0.019723739678976643
+D,senate,2014,Freedom and Human Rights,0.014509920658449122
+D,senate,2016,Freedom and Human Rights,0.05330598517108189
+D,senate,2018,Freedom and Human Rights,0.022700413931722983
+D,senate,2020,Freedom and Human Rights,0.02192930065704204
+D,senate,2022,Freedom and Human Rights,0.03284756895749838
+D,senate,2024,Freedom and Human Rights,0.08861331267488591
+R,house,2018,Freedom and Human Rights,0.024969761329973823
+R,house,2020,Freedom and Human Rights,0.0377981630429061
+R,house,2022,Freedom and Human Rights,0.04624151712566881
+R,house,2024,Freedom and Human Rights,0.08092402306348177
+R,senate,2002,Freedom and Human Rights,0.010092400008662213
+R,senate,2004,Freedom and Human Rights,0.03778009424797831
+R,senate,2006,Freedom and Human Rights,0.049430411839527316
+R,senate,2008,Freedom and Human Rights,0.01641411181150474
+R,senate,2010,Freedom and Human Rights,0.014399048197846142
+R,senate,2012,Freedom and Human Rights,0.011622517949753577
+R,senate,2014,Freedom and Human Rights,0.02743867324613383
+R,senate,2016,Freedom and Human Rights,0.03608371290413785
+R,senate,2018,Freedom and Human Rights,0.02127797920661869
+R,senate,2020,Freedom and Human Rights,0.06449829735562221
+R,senate,2022,Freedom and Human Rights,0.08611655733332645
+R,senate,2024,Freedom and Human Rights,0.08851546563934232
+D,house,2018,Governmental and Administrative Efficiency,0.013080014213991896
+D,house,2020,Governmental and Administrative Efficiency,0.013197086914145732
+D,house,2022,Governmental and Administrative Efficiency,0.012934807513936872
+D,house,2024,Governmental and Administrative Efficiency,0.013102248977467357
+D,senate,2002,Governmental and Administrative Efficiency,0.030578792151225335
+D,senate,2004,Governmental and Administrative Efficiency,0.028098958714137555
+D,senate,2006,Governmental and Administrative Efficiency,0.025064731221820645
+D,senate,2008,Governmental and Administrative Efficiency,0.013582023521938739
+D,senate,2010,Governmental and Administrative Efficiency,0.021380469648501828
+D,senate,2012,Governmental and Administrative Efficiency,0.030535876397556155
+D,senate,2014,Governmental and Administrative Efficiency,0.020328929136819558
+D,senate,2016,Governmental and Administrative Efficiency,0.01567342365249204
+D,senate,2018,Governmental and Administrative Efficiency,0.010098433322238965
+D,senate,2020,Governmental and Administrative Efficiency,0.008007033646654414
+D,senate,2022,Governmental and Administrative Efficiency,0.010557499156208182
+D,senate,2024,Governmental and Administrative Efficiency,0.011695809539796027
+R,house,2018,Governmental and Administrative Efficiency,0.037980780989475355
+R,house,2020,Governmental and Administrative Efficiency,0.02901176785476117
+R,house,2022,Governmental and Administrative Efficiency,0.020033310374859538
+R,house,2024,Governmental and Administrative Efficiency,0.024540926004676084
+R,senate,2002,Governmental and Administrative Efficiency,0.023111718961641037
+R,senate,2004,Governmental and Administrative Efficiency,0.028914929724338307
+R,senate,2006,Governmental and Administrative Efficiency,0.023757659342495643
+R,senate,2008,Governmental and Administrative Efficiency,0.036095218890659864
+R,senate,2010,Governmental and Administrative Efficiency,0.032655008824976794
+R,senate,2012,Governmental and Administrative Efficiency,0.03358958970349992
+R,senate,2014,Governmental and Administrative Efficiency,0.041165211699828556
+R,senate,2016,Governmental and Administrative Efficiency,0.03576007083986785
+R,senate,2018,Governmental and Administrative Efficiency,0.02148827155934142
+R,senate,2020,Governmental and Administrative Efficiency,0.02108166458896037
+R,senate,2022,Governmental and Administrative Efficiency,0.02298908295089053
+R,senate,2024,Governmental and Administrative Efficiency,0.02488184791595429
+D,house,2018,Incentives,0.029638807765535152
+D,house,2020,Incentives,0.027869820279740627
+D,house,2022,Incentives,0.027296650294106266
+D,house,2024,Incentives,0.02765005416499986
+D,senate,2002,Incentives,0.29182461707542046
+D,senate,2004,Incentives,0.025545255851396696
+D,senate,2006,Incentives,0.049260517503858306
+D,senate,2008,Incentives,0.0639028125877453
+D,senate,2010,Incentives,0.17733913740951024
+D,senate,2012,Incentives,0.09909334956703507
+D,senate,2014,Incentives,0.06738230509971424
+D,senate,2016,Incentives,0.051352507550372635
+D,senate,2018,Incentives,0.05470058487143256
+D,senate,2020,Incentives,0.04327755450899572
+D,senate,2022,Incentives,0.031959280763672666
+D,senate,2024,Incentives,0.024828577748865304
+R,house,2018,Incentives,0.06151032520948872
+R,house,2020,Incentives,0.055700205584718984
+R,house,2022,Incentives,0.0417010847144112
+R,house,2024,Incentives,0.03425788091082276
+R,senate,2002,Incentives,0.018542847756197023
+R,senate,2004,Incentives,0.10786804340839028
+R,senate,2006,Incentives,0.027385605400461633
+R,senate,2008,Incentives,0.05932113498851033
+R,senate,2010,Incentives,0.091524969942558
+R,senate,2012,Incentives,0.07016310591606913
+R,senate,2014,Incentives,0.049729736991851806
+R,senate,2016,Incentives,0.05486272716181459
+R,senate,2018,Incentives,0.05531800192716683
+R,senate,2020,Incentives,0.025272373234648093
+R,senate,2022,Incentives,0.03422447054761358
+R,senate,2024,Incentives,0.02859849991041199
+D,house,2018,Internationalism,0.008597079077537486
+D,house,2020,Internationalism,0.007360580673311561
+D,house,2022,Internationalism,0.007883682267553904
+D,house,2024,Internationalism,0.007131587653532605
+D,senate,2002,Internationalism,0.019040510124109598
+D,senate,2004,Internationalism,0.0299704865989535
+D,senate,2006,Internationalism,0.012055178922363933
+D,senate,2008,Internationalism,0.01395444733784466
+D,senate,2010,Internationalism,0.016162006924076756
+D,senate,2012,Internationalism,0.009251530981734826
+D,senate,2014,Internationalism,0.012110398361786808
+D,senate,2016,Internationalism,0.01749342460611996
+D,senate,2018,Internationalism,0.005833434050294894
+D,senate,2020,Internationalism,0.009745815028398898
+D,senate,2022,Internationalism,0.013056757191431595
+D,senate,2024,Internationalism,0.012218250888654096
+R,house,2018,Internationalism,0.009868148299352184
+R,house,2020,Internationalism,0.010072772592224367
+R,house,2022,Internationalism,0.01188746991353558
+R,house,2024,Internationalism,0.011461489067711593
+R,senate,2002,Internationalism,0.0292860489666703
+R,senate,2004,Internationalism,0.04357426774689289
+R,senate,2006,Internationalism,0.02129664866812766
+R,senate,2008,Internationalism,0.01677441701925668
+R,senate,2010,Internationalism,0.019266506683296842
+R,senate,2012,Internationalism,0.016523819521442266
+R,senate,2014,Internationalism,0.02087868470643206
+R,senate,2016,Internationalism,0.013490118481887938
+R,senate,2018,Internationalism,0.012998068743985559
+R,senate,2020,Internationalism,0.018463962179940303
+R,senate,2022,Internationalism,0.04089819330756039
+R,senate,2024,Internationalism,0.02290518909174031
+D,house,2018,Labour Groups,0.06965327238631355
+D,house,2020,Labour Groups,0.056916790732325126
+D,house,2022,Labour Groups,0.05932482261507913
+D,house,2024,Labour Groups,0.056152914058626685
+D,senate,2002,Labour Groups,0.016746008395605468
+D,senate,2004,Labour Groups,0.03629710089715772
+D,senate,2006,Labour Groups,0.03132748491894854
+D,senate,2008,Labour Groups,0.05076042800673459
+D,senate,2010,Labour Groups,0.06105881825222575
+D,senate,2012,Labour Groups,0.11697966333438994
+D,senate,2014,Labour Groups,0.11684622831470366
+D,senate,2016,Labour Groups,0.06567586102019257
+D,senate,2018,Labour Groups,0.0799700496812254
+D,senate,2020,Labour Groups,0.07317893732450247
+D,senate,2022,Labour Groups,0.03619285377575845
+D,senate,2024,Labour Groups,0.041657974524014284
+R,house,2018,Labour Groups,0.042365538257572326
+R,house,2020,Labour Groups,0.037240527270320484
+R,house,2022,Labour Groups,0.026250245817263717
+R,house,2024,Labour Groups,0.018624267489846483
+R,senate,2002,Labour Groups,0.03563763116429585
+R,senate,2004,Labour Groups,0.022181161856952965
+R,senate,2006,Labour Groups,0.018176191492964826
+R,senate,2008,Labour Groups,0.01818709512095284
+R,senate,2010,Labour Groups,0.03127102612755607
+R,senate,2012,Labour Groups,0.032492469769542745
+R,senate,2014,Labour Groups,0.034689883658090885
+R,senate,2016,Labour Groups,0.029394063007235304
+R,senate,2018,Labour Groups,0.028570966878868027
+R,senate,2020,Labour Groups,0.02505431696844066
+R,senate,2022,Labour Groups,0.016205576370835605
+R,senate,2024,Labour Groups,0.014503143184516936
+D,house,2018,Law and Order,0.0392873372554336
+D,house,2020,Law and Order,0.03453635054547149
+D,house,2022,Law and Order,0.04340501625929455
+D,house,2024,Law and Order,0.052707699986451584
+D,senate,2002,Law and Order,0.0761843699563967
+D,senate,2004,Law and Order,0.046689219016932376
+D,senate,2006,Law and Order,0.032915777124176315
+D,senate,2008,Law and Order,0.013367389583897027
+D,senate,2010,Law and Order,0.029507874031680648
+D,senate,2012,Law and Order,0.040305800409425996
+D,senate,2014,Law and Order,0.02754406536544258
+D,senate,2016,Law and Order,0.05713560304276378
+D,senate,2018,Law and Order,0.030479598248470696
+D,senate,2020,Law and Order,0.02682799257413292
+D,senate,2022,Law and Order,0.059337858191081054
+D,senate,2024,Law and Order,0.07356162147022786
+R,house,2018,Law and Order,0.05043572317380656
+R,house,2020,Law and Order,0.05809326262677501
+R,house,2022,Law and Order,0.07640586305915832
+R,house,2024,Law and Order,0.08936150756953072
+R,senate,2002,Law and Order,0.0553838971144058
+R,senate,2004,Law and Order,0.056706563647891506
+R,senate,2006,Law and Order,0.12743217511847937
+R,senate,2008,Law and Order,0.04124965104935376
+R,senate,2010,Law and Order,0.024535984777522377
+R,senate,2012,Law and Order,0.020916836954165293
+R,senate,2014,Law and Order,0.03185871050698715
+R,senate,2016,Law and Order,0.0468271252439639
+R,senate,2018,Law and Order,0.06302697189602392
+R,senate,2020,Law and Order,0.08034070290059758
+R,senate,2022,Law and Order,0.08465283907714004
+R,senate,2024,Law and Order,0.11069456480868983
+D,house,2018,Market Regulation,0.016386138515129902
+D,house,2020,Market Regulation,0.0157696485136068
+D,house,2022,Market Regulation,0.017681167432892917
+D,house,2024,Market Regulation,0.015720713357027388
+D,senate,2002,Market Regulation,0.0119773550362377
+D,senate,2004,Market Regulation,0.0070545958026719995
+D,senate,2006,Market Regulation,0.018050669740844186
+D,senate,2008,Market Regulation,0.017874992874860142
+D,senate,2010,Market Regulation,0.04450501264386152
+D,senate,2012,Market Regulation,0.025678409988968066
+D,senate,2014,Market Regulation,0.027313650627072538
+D,senate,2016,Market Regulation,0.03484354027941053
+D,senate,2018,Market Regulation,0.043601129873549895
+D,senate,2020,Market Regulation,0.027189111780641186
+D,senate,2022,Market Regulation,0.01924761204995794
+D,senate,2024,Market Regulation,0.019476006577687974
+R,house,2018,Market Regulation,0.011260524049133535
+R,house,2020,Market Regulation,0.012121450472381558
+R,house,2022,Market Regulation,0.011723308037907955
+R,house,2024,Market Regulation,0.012243136618474608
+R,senate,2002,Market Regulation,0.004239025349383537
+R,senate,2004,Market Regulation,0.01821309803896712
+R,senate,2006,Market Regulation,0.005858103573839613
+R,senate,2008,Market Regulation,0.0111733493942358
+R,senate,2010,Market Regulation,0.02108127094017639
+R,senate,2012,Market Regulation,0.01142724197954764
+R,senate,2014,Market Regulation,0.015618735914682245
+R,senate,2016,Market Regulation,0.007227462175092961
+R,senate,2018,Market Regulation,0.011863583632210958
+R,senate,2020,Market Regulation,0.010492266670303804
+R,senate,2022,Market Regulation,0.011401067957840925
+R,senate,2024,Market Regulation,0.012693878920798924
+D,house,2018,Military,0.028416081587389553
+D,house,2020,Military,0.02004718099810282
+D,house,2022,Military,0.020200618576460678
+D,house,2024,Military,0.01801179669661268
+D,senate,2002,Military,0.014874562456002433
+D,senate,2004,Military,0.025239466622693933
+D,senate,2006,Military,0.03660261141683227
+D,senate,2008,Military,0.03143574785464531
+D,senate,2010,Military,0.011724924859182402
+D,senate,2012,Military,0.01324724970083697
+D,senate,2014,Military,0.009967087500657945
+D,senate,2016,Military,0.052599020233848603
+D,senate,2018,Military,0.009969337926378387
+D,senate,2020,Military,0.025596885152037587
+D,senate,2022,Military,0.023020237651877714
+D,senate,2024,Military,0.0173700418892997
+R,house,2018,Military,0.04759539767786798
+R,house,2020,Military,0.05168306468178898
+R,house,2022,Military,0.05669654268976196
+R,house,2024,Military,0.04945734165761908
+R,senate,2002,Military,0.0443535843952642
+R,senate,2004,Military,0.04137179196887852
+R,senate,2006,Military,0.027644732235464976
+R,senate,2008,Military,0.023925367503048346
+R,senate,2010,Military,0.017605861269381497
+R,senate,2012,Military,0.02557854346172314
+R,senate,2014,Military,0.041448171945471624
+R,senate,2016,Military,0.024816810104176433
+R,senate,2018,Military,0.06782583768157384
+R,senate,2020,Military,0.037263236873845876
+R,senate,2022,Military,0.03967818015990803
+R,senate,2024,Military,0.05600366204366444
+D,house,2018,Multiculturalism,0.01754529957442091
+D,house,2020,Multiculturalism,0.02301201395669942
+D,house,2022,Multiculturalism,0.02301484525147114
+D,house,2024,Multiculturalism,0.021734015623238453
+D,senate,2002,Multiculturalism,0.008621748271332432
+D,senate,2004,Multiculturalism,0.013084600244943569
+D,senate,2006,Multiculturalism,0.013635665795025413
+D,senate,2008,Multiculturalism,0.006399941921556339
+D,senate,2010,Multiculturalism,0.007942617234341944
+D,senate,2012,Multiculturalism,0.011271983754758736
+D,senate,2014,Multiculturalism,0.012333552161738306
+D,senate,2016,Multiculturalism,0.01244240640122726
+D,senate,2018,Multiculturalism,0.012935809980591198
+D,senate,2020,Multiculturalism,0.02226450844559852
+D,senate,2022,Multiculturalism,0.016937649038231927
+D,senate,2024,Multiculturalism,0.027369361728553032
+R,house,2018,Multiculturalism,0.017716815149900086
+R,house,2020,Multiculturalism,0.019326761470005754
+R,house,2022,Multiculturalism,0.02086183103042029
+R,house,2024,Multiculturalism,0.02311508528613289
+R,senate,2002,Multiculturalism,0.025910424676427478
+R,senate,2004,Multiculturalism,0.012032413855408942
+R,senate,2006,Multiculturalism,0.017167392120705036
+R,senate,2008,Multiculturalism,0.017123377284168687
+R,senate,2010,Multiculturalism,0.007586834931085352
+R,senate,2012,Multiculturalism,0.008336073758813747
+R,senate,2014,Multiculturalism,0.013458215862595808
+R,senate,2016,Multiculturalism,0.01623379126954838
+R,senate,2018,Multiculturalism,0.013953163321051818
+R,senate,2020,Multiculturalism,0.015227283854512025
+R,senate,2022,Multiculturalism,0.017240505397908393
+R,senate,2024,Multiculturalism,0.01893446354645599
+D,house,2018,National Way of Life,0.031003153621330246
+D,house,2020,National Way of Life,0.03164064249622283
+D,house,2022,National Way of Life,0.02355574721160796
+D,house,2024,National Way of Life,0.026672320328642557
+D,senate,2002,National Way of Life,0.014160198052926535
+D,senate,2004,National Way of Life,0.03145343329528853
+D,senate,2006,National Way of Life,0.024964169789433673
+D,senate,2008,National Way of Life,0.020584538886007895
+D,senate,2010,National Way of Life,0.014655427746964171
+D,senate,2012,National Way of Life,0.014691130629483979
+D,senate,2014,National Way of Life,0.01807427325299265
+D,senate,2016,National Way of Life,0.02312375775266546
+D,senate,2018,National Way of Life,0.01565194527600111
+D,senate,2020,National Way of Life,0.019745049594917814
+D,senate,2022,National Way of Life,0.0508064790743952
+D,senate,2024,National Way of Life,0.022082255602453117
+R,house,2018,National Way of Life,0.04178693682964299
+R,house,2020,National Way of Life,0.04792843039882504
+R,house,2022,National Way of Life,0.06933902296989351
+R,house,2024,National Way of Life,0.056761795625686
+R,senate,2002,National Way of Life,0.04907342437128731
+R,senate,2004,National Way of Life,0.028725923951004508
+R,senate,2006,National Way of Life,0.05091906945998422
+R,senate,2008,National Way of Life,0.03505427137170423
+R,senate,2010,National Way of Life,0.020710401864435807
+R,senate,2012,National Way of Life,0.023949609847429335
+R,senate,2014,National Way of Life,0.027624614478970733
+R,senate,2016,National Way of Life,0.045241062418278445
+R,senate,2018,National Way of Life,0.032993743951148666
+R,senate,2020,National Way of Life,0.03412808550005714
+R,senate,2022,National Way of Life,0.058151596292709905
+R,senate,2024,National Way of Life,0.037268449453147896
+D,house,2018,Other,0.00035924438614268764
+D,house,2020,Other,0.0003464914968705575
+D,house,2022,Other,0.00034615928931996823
+D,house,2024,Other,0.0003407306885107846
+D,senate,2002,Other,0.0003569756957978334
+D,senate,2004,Other,0.0004344421481129769
+D,senate,2006,Other,0.00037098014763120476
+D,senate,2008,Other,0.00038382504868502174
+D,senate,2010,Other,0.0004225582898894722
+D,senate,2012,Other,0.00041824684722837366
+D,senate,2014,Other,0.00044835245232053336
+D,senate,2016,Other,0.00036226657657228517
+D,senate,2018,Other,0.000336144518136072
+D,senate,2020,Other,0.00033925829020063956
+D,senate,2022,Other,0.0003959917599327955
+D,senate,2024,Other,0.0003235945116782616
+R,house,2018,Other,0.00039154164804721693
+R,house,2020,Other,0.0003900559232753964
+R,house,2022,Other,0.00037855390327059244
+R,house,2024,Other,0.00036247042676051944
+R,senate,2002,Other,0.0004827150199343375
+R,senate,2004,Other,0.0004717421656743143
+R,senate,2006,Other,0.0004578986473645125
+R,senate,2008,Other,0.0004490844367073174
+R,senate,2010,Other,0.0003928700323804889
+R,senate,2012,Other,0.0004562751046520311
+R,senate,2014,Other,0.0004505076645163741
+R,senate,2016,Other,0.0004937553020969936
+R,senate,2018,Other,0.0004320448845027415
+R,senate,2020,Other,0.00043911743233882684
+R,senate,2022,Other,0.00046324023550098754
+R,senate,2024,Other,0.00036928124233333634
+D,house,2018,Peace,0.0015359206752243563
+D,house,2020,Peace,0.0013153062772504997
+D,house,2022,Peace,0.0013784657564067675
+D,house,2024,Peace,0.0016994802115047958
+D,senate,2002,Peace,0.0010453818615437842
+D,senate,2004,Peace,0.002529901732682446
+D,senate,2006,Peace,0.0024391922448424
+D,senate,2008,Peace,0.0017388842744340868
+D,senate,2010,Peace,0.0011750813234867646
+D,senate,2012,Peace,0.001153522919042479
+D,senate,2014,Peace,0.0013829151122595445
+D,senate,2016,Peace,0.0013276613741199665
+D,senate,2018,Peace,0.001863942777395992
+D,senate,2020,Peace,0.001190864148849006
+D,senate,2022,Peace,0.0016762686155786454
+D,senate,2024,Peace,0.0016111819380060463
+R,house,2018,Peace,0.0017359504110415391
+R,house,2020,Peace,0.0020595166102098765
+R,house,2022,Peace,0.001783858281215545
+R,house,2024,Peace,0.0018816162637444271
+R,senate,2002,Peace,0.0032938697576185626
+R,senate,2004,Peace,0.0024466932657243932
+R,senate,2006,Peace,0.002324769213212556
+R,senate,2008,Peace,0.0017415972305391306
+R,senate,2010,Peace,0.0015094431078620564
+R,senate,2012,Peace,0.001587926156617188
+R,senate,2014,Peace,0.001580166434538952
+R,senate,2016,Peace,0.001988918230203244
+R,senate,2018,Peace,0.0016410982647665762
+R,senate,2020,Peace,0.0017088094254219214
+R,senate,2022,Peace,0.002604307729153158
+R,senate,2024,Peace,0.0025189440196761908
+D,house,2018,Political Authority,0.09354024893653466
+D,house,2020,Political Authority,0.06709752853590698
+D,house,2022,Political Authority,0.053941678078889436
+D,house,2024,Political Authority,0.04488757107793322
+D,senate,2002,Political Authority,0.05003922053694663
+D,senate,2004,Political Authority,0.11662127288632139
+D,senate,2006,Political Authority,0.19680396514611515
+D,senate,2008,Political Authority,0.24220116963839344
+D,senate,2010,Political Authority,0.07848572853505917
+D,senate,2012,Political Authority,0.09351410967901623
+D,senate,2014,Political Authority,0.10124312260462075
+D,senate,2016,Political Authority,0.09270232163800837
+D,senate,2018,Political Authority,0.07594131149023339
+D,senate,2020,Political Authority,0.03944469226730144
+D,senate,2022,Political Authority,0.06631899476128997
+D,senate,2024,Political Authority,0.031504015175370874
+R,house,2018,Political Authority,0.12176087155497833
+R,house,2020,Political Authority,0.10007648690021802
+R,house,2022,Political Authority,0.10558274281191218
+R,house,2024,Political Authority,0.09767643968546036
+R,senate,2002,Political Authority,0.09220498279554332
+R,senate,2004,Political Authority,0.16129748257466617
+R,senate,2006,Political Authority,0.09531776122198056
+R,senate,2008,Political Authority,0.22579852938951345
+R,senate,2010,Political Authority,0.2024477617245521
+R,senate,2012,Political Authority,0.1869063359470468
+R,senate,2014,Political Authority,0.19964994453868368
+R,senate,2016,Political Authority,0.1796356643525866
+R,senate,2018,Political Authority,0.19322363675850907
+R,senate,2020,Political Authority,0.13230200722343607
+R,senate,2022,Political Authority,0.09341290110589878
+R,senate,2024,Political Authority,0.0569391860863383
+D,house,2018,Political Corruption,0.010795790231032856
+D,house,2020,Political Corruption,0.009792534834445199
+D,house,2022,Political Corruption,0.006481417687704284
+D,house,2024,Political Corruption,0.006552768999015453
+D,senate,2002,Political Corruption,0.0018021083085234333
+D,senate,2004,Political Corruption,0.007996020548527584
+D,senate,2006,Political Corruption,0.012067863344944387
+D,senate,2008,Political Corruption,0.00500551087574017
+D,senate,2010,Political Corruption,0.050356057084756
+D,senate,2012,Political Corruption,0.007151651259985599
+D,senate,2014,Political Corruption,0.011533337072888249
+D,senate,2016,Political Corruption,0.010755096849085098
+D,senate,2018,Political Corruption,0.0059631759763141305
+D,senate,2020,Political Corruption,0.0060830515981513435
+D,senate,2022,Political Corruption,0.005103826686775282
+D,senate,2024,Political Corruption,0.003386543707590885
+R,house,2018,Political Corruption,0.007606980310076215
+R,house,2020,Political Corruption,0.008511311588411502
+R,house,2022,Political Corruption,0.005876727419068152
+R,house,2024,Political Corruption,0.006355000305462437
+R,senate,2002,Political Corruption,0.009739522594837425
+R,senate,2004,Political Corruption,0.019330521326275225
+R,senate,2006,Political Corruption,0.01599017247332785
+R,senate,2008,Political Corruption,0.003930179577572992
+R,senate,2010,Political Corruption,0.02541493810808701
+R,senate,2012,Political Corruption,0.023958962683533123
+R,senate,2014,Political Corruption,0.009959654465923904
+R,senate,2016,Political Corruption,0.004611778836961542
+R,senate,2018,Political Corruption,0.012469338949367728
+R,senate,2020,Political Corruption,0.009068863636713883
+R,senate,2022,Political Corruption,0.003467916449980625
+R,senate,2024,Political Corruption,0.0025683436960981135
+D,house,2018,Protectionism,0.0028257806719228953
+D,house,2020,Protectionism,0.0024929755845540147
+D,house,2022,Protectionism,0.0024245129619686638
+D,house,2024,Protectionism,0.0021017990427748693
+D,senate,2002,Protectionism,0.002974854250164967
+D,senate,2004,Protectionism,0.0030281800562602466
+D,senate,2006,Protectionism,0.0024663349418111236
+D,senate,2008,Protectionism,0.008361232146653266
+D,senate,2010,Protectionism,0.003591177364360869
+D,senate,2012,Protectionism,0.002932501655699063
+D,senate,2014,Protectionism,0.0034170851299462706
+D,senate,2016,Protectionism,0.0030572181175341
+D,senate,2018,Protectionism,0.003008300067640224
+D,senate,2020,Protectionism,0.0023323636128529824
+D,senate,2022,Protectionism,0.0030378354912883906
+D,senate,2024,Protectionism,0.0029084869791693845
+R,house,2018,Protectionism,0.0038092785779022336
+R,house,2020,Protectionism,0.0036104469696437895
+R,house,2022,Protectionism,0.004082359681821797
+R,house,2024,Protectionism,0.003899559410822201
+R,senate,2002,Protectionism,0.00182693295970695
+R,senate,2004,Protectionism,0.004571029390069486
+R,senate,2006,Protectionism,0.0026312267499050625
+R,senate,2008,Protectionism,0.0032023341230479957
+R,senate,2010,Protectionism,0.004267237213201844
+R,senate,2012,Protectionism,0.0030133715822486433
+R,senate,2014,Protectionism,0.00336588948205347
+R,senate,2016,Protectionism,0.0027567750844771388
+R,senate,2018,Protectionism,0.00432618750763802
+R,senate,2020,Protectionism,0.003174337883719216
+R,senate,2022,Protectionism,0.005056426833730783
+R,senate,2024,Protectionism,0.004890473845215764
+D,house,2018,Social Groups,0.10248381185705531
+D,house,2020,Social Groups,0.09788588593681374
+D,house,2022,Social Groups,0.08185232765599698
+D,house,2024,Social Groups,0.07370685436076922
+D,senate,2002,Social Groups,0.13294666637414895
+D,senate,2004,Social Groups,0.10913193004556089
+D,senate,2006,Social Groups,0.10211635954995547
+D,senate,2008,Social Groups,0.1441308272044236
+D,senate,2010,Social Groups,0.052286223458935736
+D,senate,2012,Social Groups,0.1011109495813309
+D,senate,2014,Social Groups,0.10470655937382267
+D,senate,2016,Social Groups,0.09834985590032572
+D,senate,2018,Social Groups,0.1072477765996012
+D,senate,2020,Social Groups,0.12006587293037463
+D,senate,2022,Social Groups,0.07727325303080765
+D,senate,2024,Social Groups,0.07709758436941924
+R,house,2018,Social Groups,0.09510180334013076
+R,house,2020,Social Groups,0.09546420881582313
+R,house,2022,Social Groups,0.0840720814715938
+R,house,2024,Social Groups,0.08042459763110404
+R,senate,2002,Social Groups,0.12149041903683988
+R,senate,2004,Social Groups,0.04900454697672368
+R,senate,2006,Social Groups,0.09159989960270815
+R,senate,2008,Social Groups,0.07520018698954288
+R,senate,2010,Social Groups,0.04919463597123919
+R,senate,2012,Social Groups,0.03553474127666906
+R,senate,2014,Social Groups,0.05985451026125542
+R,senate,2016,Social Groups,0.11085258770910761
+R,senate,2018,Social Groups,0.07493092882709101
+R,senate,2020,Social Groups,0.0815457613413354
+R,senate,2022,Social Groups,0.05478485949304742
+R,senate,2024,Social Groups,0.07876845371964032
+D,house,2018,Sustainability,0.010619394069766619
+D,house,2020,Sustainability,0.01144821813431503
+D,house,2022,Sustainability,0.015297613980403755
+D,house,2024,Sustainability,0.012983780056854296
+D,senate,2002,Sustainability,0.016125078336281042
+D,senate,2004,Sustainability,0.026598537101806378
+D,senate,2006,Sustainability,0.006107058302008815
+D,senate,2008,Sustainability,0.012898265740050912
+D,senate,2010,Sustainability,0.009406592481803306
+D,senate,2012,Sustainability,0.007480631882704299
+D,senate,2014,Sustainability,0.01779404060649426
+D,senate,2016,Sustainability,0.007791305533287755
+D,senate,2018,Sustainability,0.03441173452360443
+D,senate,2020,Sustainability,0.005296155300451808
+D,senate,2022,Sustainability,0.008320175228855909
+D,senate,2024,Sustainability,0.01870091456443464
+R,house,2018,Sustainability,0.008837053322332719
+R,house,2020,Sustainability,0.00778192388946803
+R,house,2022,Sustainability,0.009225942803296494
+R,house,2024,Sustainability,0.009065178814494583
+R,senate,2002,Sustainability,0.007222951067490975
+R,senate,2004,Sustainability,0.016127246214441993
+R,senate,2006,Sustainability,0.025965650124165875
+R,senate,2008,Sustainability,0.017083397890831138
+R,senate,2010,Sustainability,0.008896300681743411
+R,senate,2012,Sustainability,0.004180674217085847
+R,senate,2014,Sustainability,0.02056298119141868
+R,senate,2016,Sustainability,0.009670616991752687
+R,senate,2018,Sustainability,0.007709092736935491
+R,senate,2020,Sustainability,0.007227369283384772
+R,senate,2022,Sustainability,0.012743561829950604
+R,senate,2024,Sustainability,0.012338894675766281
+D,house,2018,Technology and Infrastructure,0.030545425278307364
+D,house,2020,Technology and Infrastructure,0.025946048529662116
+D,house,2022,Technology and Infrastructure,0.03784507061301067
+D,house,2024,Technology and Infrastructure,0.038825996081887734
+D,senate,2002,Technology and Infrastructure,0.013421345452517034
+D,senate,2004,Technology and Infrastructure,0.017143577287690708
+D,senate,2006,Technology and Infrastructure,0.04733256939321931
+D,senate,2008,Technology and Infrastructure,0.018257779703321292
+D,senate,2010,Technology and Infrastructure,0.07214715229291065
+D,senate,2012,Technology and Infrastructure,0.021856224478190148
+D,senate,2014,Technology and Infrastructure,0.030387119126456117
+D,senate,2016,Technology and Infrastructure,0.016562558773437718
+D,senate,2018,Technology and Infrastructure,0.025987540183852853
+D,senate,2020,Technology and Infrastructure,0.027330666462154794
+D,senate,2022,Technology and Infrastructure,0.038389736217141916
+D,senate,2024,Technology and Infrastructure,0.029932446308410243
+R,house,2018,Technology and Infrastructure,0.01987198360495054
+R,house,2020,Technology and Infrastructure,0.024061613285609823
+R,house,2022,Technology and Infrastructure,0.02771046390236762
+R,house,2024,Technology and Infrastructure,0.026985893761160878
+R,senate,2002,Technology and Infrastructure,0.028057047874850752
+R,senate,2004,Technology and Infrastructure,0.03437222428978617
+R,senate,2006,Technology and Infrastructure,0.051097968484934274
+R,senate,2008,Technology and Infrastructure,0.038055876792905466
+R,senate,2010,Technology and Infrastructure,0.015014361723461546
+R,senate,2012,Technology and Infrastructure,0.008343029473130422
+R,senate,2014,Technology and Infrastructure,0.021653152789908852
+R,senate,2016,Technology and Infrastructure,0.02396553465927379
+R,senate,2018,Technology and Infrastructure,0.019024018829530538
+R,senate,2020,Technology and Infrastructure,0.025896756912477926
+R,senate,2022,Technology and Infrastructure,0.030708255996731108
+R,senate,2024,Technology and Infrastructure,0.03772905783482162
+D,house,2018,Traditional Morality,0.025181137810210828
+D,house,2020,Traditional Morality,0.025436621947517
+D,house,2022,Traditional Morality,0.03283320940341746
+D,house,2024,Traditional Morality,0.042006547305874595
+D,senate,2002,Traditional Morality,0.017566567864084934
+D,senate,2004,Traditional Morality,0.027535406976135615
+D,senate,2006,Traditional Morality,0.014734402647140432
+D,senate,2008,Traditional Morality,0.01309531666220223
+D,senate,2010,Traditional Morality,0.008059687394302368
+D,senate,2012,Traditional Morality,0.02574149419635401
+D,senate,2014,Traditional Morality,0.022794882968900105
+D,senate,2016,Traditional Morality,0.025111978225106565
+D,senate,2018,Traditional Morality,0.018911447512068226
+D,senate,2020,Traditional Morality,0.024534473690711295
+D,senate,2022,Traditional Morality,0.0352626030027693
+D,senate,2024,Traditional Morality,0.04604587235930169
+R,house,2018,Traditional Morality,0.0331500183299086
+R,house,2020,Traditional Morality,0.03832314178484926
+R,house,2022,Traditional Morality,0.039360882821890084
+R,house,2024,Traditional Morality,0.04227357097478282
+R,senate,2002,Traditional Morality,0.033328309376119074
+R,senate,2004,Traditional Morality,0.03221327496176489
+R,senate,2006,Traditional Morality,0.03735326904417606
+R,senate,2008,Traditional Morality,0.02502344469114071
+R,senate,2010,Traditional Morality,0.013797351870062436
+R,senate,2012,Traditional Morality,0.021159490855996367
+R,senate,2014,Traditional Morality,0.03147394432660459
+R,senate,2016,Traditional Morality,0.026888994363526566
+R,senate,2018,Traditional Morality,0.022438920043946868
+R,senate,2020,Traditional Morality,0.03858893754691611
+R,senate,2022,Traditional Morality,0.047349027640482044
+R,senate,2024,Traditional Morality,0.05691333555078742
+D,house,2018,Welfare State,0.11731992064987548
+D,house,2020,Welfare State,0.17458459132581938
+D,house,2022,Welfare State,0.17621788070616834
+D,house,2024,Welfare State,0.17779398360892842
+D,senate,2002,Welfare State,0.1038841829493868
+D,senate,2004,Welfare State,0.08537667810078417
+D,senate,2006,Welfare State,0.08749812968770258
+D,senate,2008,Welfare State,0.08735602257981087
+D,senate,2010,Welfare State,0.06752834534608591
+D,senate,2012,Welfare State,0.08730049950064482
+D,senate,2014,Welfare State,0.1264349578426796
+D,senate,2016,Welfare State,0.10154647534657231
+D,senate,2018,Welfare State,0.2249512758865705
+D,senate,2020,Welfare State,0.21863284664362012
+D,senate,2022,Welfare State,0.14558146008050332
+D,senate,2024,Welfare State,0.20624995614588146
+R,house,2018,Welfare State,0.0591234250730644
+R,house,2020,Welfare State,0.06177974115629452
+R,house,2022,Welfare State,0.04405912481314858
+R,house,2024,Welfare State,0.0549539944543203
+R,senate,2002,Welfare State,0.0356564832857417
+R,senate,2004,Welfare State,0.034883154568610845
+R,senate,2006,Welfare State,0.03595907761095665
+R,senate,2008,Welfare State,0.027461883759878757
+R,senate,2010,Welfare State,0.04511013473286144
+R,senate,2012,Welfare State,0.019134826703813692
+R,senate,2014,Welfare State,0.028172523440219595
+R,senate,2016,Welfare State,0.04218724234849958
+R,senate,2018,Welfare State,0.038861603560631376
+R,senate,2020,Welfare State,0.0966220413873168
+R,senate,2022,Welfare State,0.03756790791939798
+R,senate,2024,Welfare State,0.09550680638597972

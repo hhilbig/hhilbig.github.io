@@ -1,0 +1,428 @@
+<h1 id="codebook-u.s.-candidate-campaign-websites-20022024">Codebook:
+U.S. candidate campaign websites, 2002–2024</h1>
+<h2 id="keys-and-missing-values">Keys and missing values</h2>
+<p><code>candidate_cycle_id</code>, which combines the canonical FEC
+candidate ID and election year, links all five files. A
+<code>cand_id</code> can appear in more than one year. Empty CSV cells
+and Parquet nulls denote missing values. An empty archived-text string
+means that extraction returned no text.</p>
+<h2 id="raw_corpus.parquet"><code>raw_corpus.parquet</code></h2>
+<p>One row is one archived page at one snapshot date. The file has
+799,058 rows.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>candidate_cycle_id</code></td>
+<td>Canonical candidate-year identifier</td>
+</tr>
+<tr class="even">
+<td><code>cand_id</code></td>
+<td>Canonical FEC candidate identifier</td>
+</tr>
+<tr class="odd">
+<td><code>candidate_icpsr</code></td>
+<td>Display name in <code>Last, First</code> form</td>
+</tr>
+<tr class="even">
+<td><code>name_key</code></td>
+<td>Lowercase normalized name used for compatibility only</td>
+</tr>
+<tr class="odd">
+<td><code>bonica_rid</code></td>
+<td>DIME recipient identifier; missing when unmatched</td>
+</tr>
+<tr class="even">
+<td><code>state</code></td>
+<td>Two-letter postal abbreviation</td>
+</tr>
+<tr class="odd">
+<td><code>district</code></td>
+<td>House district; missing for Senate</td>
+</tr>
+<tr class="even">
+<td><code>district_id</code></td>
+<td>Two-letter state plus two-digit House district; missing for
+Senate</td>
+</tr>
+<tr class="odd">
+<td><code>office</code></td>
+<td><code>house</code> or <code>senate</code></td>
+</tr>
+<tr class="even">
+<td><code>year</code></td>
+<td>Election year</td>
+</tr>
+<tr class="odd">
+<td><code>party</code></td>
+<td><code>democrat</code> or <code>republican</code></td>
+</tr>
+<tr class="even">
+<td><code>cand_election_yr</code></td>
+<td>Election year recorded in the FEC candidate master file</td>
+</tr>
+<tr class="odd">
+<td><code>cand_status</code></td>
+<td>FEC candidate-status code; descriptive, not a release filter</td>
+</tr>
+<tr class="even">
+<td><code>universe_source</code></td>
+<td><code>same_year_fec</code> or <code>ballot_override</code></td>
+</tr>
+<tr class="odd">
+<td><code>on_ballot</code></td>
+<td>Whether the candidate matches a major-party general-election
+return</td>
+</tr>
+<tr class="even">
+<td><code>stage</code></td>
+<td><code>2</code> for general-election candidates; missing
+otherwise</td>
+</tr>
+<tr class="odd">
+<td><code>data_source</code></td>
+<td><code>general_wayback</code> for ballot candidates;
+<code>election_year_wayback</code> otherwise</td>
+</tr>
+<tr class="even">
+<td><code>candidate_year_stage</code></td>
+<td>ICPSR-compatible candidate/year/stage key; missing off ballot</td>
+</tr>
+<tr class="odd">
+<td><code>date</code></td>
+<td>Internet Archive snapshot timestamp</td>
+</tr>
+<tr class="even">
+<td><code>urlkey</code></td>
+<td>Archived page URL or normalized source URL</td>
+</tr>
+<tr class="odd">
+<td><code>snap_url</code></td>
+<td>Internet Archive snapshot URL</td>
+</tr>
+<tr class="even">
+<td><code>page_type</code></td>
+<td>Page classification such as homepage, issues, biography, or
+other</td>
+</tr>
+<tr class="odd">
+<td><code>n_char</code></td>
+<td>Extracted character count for the page</td>
+</tr>
+<tr class="even">
+<td><code>n_words</code></td>
+<td>Extracted word count for the page</td>
+</tr>
+<tr class="odd">
+<td><code>n_tags</code></td>
+<td>Number of <code>#+#</code>-delimited visible-text components before
+the ICPSR-compatible text filter</td>
+</tr>
+<tr class="even">
+<td><code>n_clean_tags</code></td>
+<td>Number of those components retained by the ICPSR-compatible text
+filter</td>
+</tr>
+<tr class="odd">
+<td><code>n_snap</code></td>
+<td>Number of distinct snapshot dates available for the
+candidate-year</td>
+</tr>
+<tr class="even">
+<td><code>text_snap_content</code></td>
+<td>Extracted page text</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="panel_candidate_year.csv"><code>panel_candidate_year.csv</code></h2>
+<p>One row is one captured candidate-year. The file has 7,353 rows and
+selects the snapshot date with the greatest total extracted text.</p>
+<p>The file repeats the identity and population fields defined
+above.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>source_cand_id</code></td>
+<td>FEC ID attached to the original capture when it differs from the
+reviewed canonical ID</td>
+</tr>
+<tr class="even">
+<td><code>sel_date</code></td>
+<td>Selected Internet Archive snapshot timestamp</td>
+</tr>
+<tr class="odd">
+<td><code>n_snapshots_available</code></td>
+<td>Distinct snapshot dates observed for the candidate-year</td>
+</tr>
+<tr class="even">
+<td><code>n_pages</code></td>
+<td>Pages included from the selected snapshot</td>
+</tr>
+<tr class="odd">
+<td><code>page_types</code></td>
+<td>Semicolon-separated page types present</td>
+</tr>
+<tr class="even">
+<td><code>urlkey</code></td>
+<td>Campaign-site URL represented by the selected snapshot</td>
+</tr>
+<tr class="odd">
+<td><code>text</code></td>
+<td>Selected pages concatenated with <code>#+#</code> separators</td>
+</tr>
+<tr class="even">
+<td><code>n_char</code></td>
+<td>Total extracted characters in <code>text</code></td>
+</tr>
+<tr class="odd">
+<td><code>n_words</code></td>
+<td>Total extracted words in <code>text</code></td>
+</tr>
+<tr class="even">
+<td><code>text_quality</code></td>
+<td><code>usable</code>, <code>thin</code>, or <code>empty</code>, based
+on documented length and placeholder rules</td>
+</tr>
+</tbody>
+</table>
+<h2 id="panel_icpsr_compat.csv"><code>panel_icpsr_compat.csv</code></h2>
+<p>One row is one captured candidate-year. The file has 7,353 rows and
+repeats the panel’s identity fields. <code>icpsr_compatible</code> is
+identical to <code>on_ballot</code>.</p>
+<p>The remaining fields form repeated measurement families:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field or prefix</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>candidate_icpsr</code></td>
+<td>Candidate name in ICPSR-compatible display form</td>
+</tr>
+<tr class="even">
+<td><code>name_key</code></td>
+<td>ICPSR-compatible normalized name</td>
+</tr>
+<tr class="odd">
+<td><code>district_id</code></td>
+<td>State and two-digit House district; missing for Senate</td>
+</tr>
+<tr class="even">
+<td><code>general_votes</code></td>
+<td>Candidate votes in the matched general-election return; missing off
+ballot</td>
+</tr>
+<tr class="odd">
+<td><code>icpsr_n_char*</code>, <code>icpsr_n_words*</code></td>
+<td>Mean extracted character and word counts</td>
+</tr>
+<tr class="even">
+<td><code>icpsr_n_tags*</code>, <code>icpsr_n_clean_tags*</code></td>
+<td>Mean visible-text component counts before and after the
+ICPSR-compatible text filter</td>
+</tr>
+<tr class="odd">
+<td><code>icpsr_ttr_approx*</code>, <code>icpsr_mattr_approx*</code>,
+<code>icpsr_entropy_approx*</code></td>
+<td>Approximate lexical-diversity measures</td>
+</tr>
+<tr class="even">
+<td><code>icpsr_n_valid_snap*</code>,
+<code>icpsr_n_valid_pages*</code></td>
+<td>Valid snapshot and page counts</td>
+</tr>
+<tr class="odd">
+<td><code>icpsr_max_pages_1day</code>,
+<code>icpsr_share_pages_runaway</code>,
+<code>icpsr_runaway_flag</code></td>
+<td>Diagnostics for unusually dense single-day crawls</td>
+</tr>
+<tr class="even">
+<td><code>icpsr_topic_&lt;topic&gt;</code></td>
+<td>Share assigned to the named topic across all valid pages</td>
+</tr>
+<tr class="odd">
+<td><code>icpsr_topic_&lt;topic&gt;_home</code></td>
+<td>Homepage-only share assigned to the named topic</td>
+</tr>
+<tr class="even">
+<td>fields ending <code>_home</code></td>
+<td>Homepage-only version of the base measure</td>
+</tr>
+<tr class="odd">
+<td>fields ending <code>_preelec</code></td>
+<td>Version restricted to snapshots on or before Election Day</td>
+</tr>
+<tr class="even">
+<td><code>icpsr_first_snap_day</code>,
+<code>icpsr_last_snap_day</code></td>
+<td>First and last valid snapshot dates</td>
+</tr>
+<tr class="odd">
+<td><code>icpsr_snap_span_days</code></td>
+<td>Days between first and last valid snapshots</td>
+</tr>
+</tbody>
+</table>
+<p>Topic shares are proportions and are missing when no valid text
+supports the measure. Counts are nonnegative. Lexical-diversity measures
+are missing when the required text is absent.</p>
+<h2
+id="candidate_crosswalk.csv"><code>candidate_crosswalk.csv</code></h2>
+<p>One row is one captured candidate-year. The file has 7,353 rows and
+adds these links to the shared identity fields:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>district_i</code></td>
+<td>Numeric House district used during matching</td>
+</tr>
+<tr class="even">
+<td><code>fec_raw_name</code></td>
+<td>Candidate name as recorded in the source FEC file</td>
+</tr>
+<tr class="odd">
+<td><code>cand_ici</code></td>
+<td>FEC incumbent/challenger/open-seat code</td>
+</tr>
+<tr class="even">
+<td><code>bonica_rid</code></td>
+<td>DIME recipient identifier</td>
+</tr>
+<tr class="odd">
+<td><code>ICPSR</code>, <code>NID</code></td>
+<td>DIME/ICPSR identity fields; missing when unmatched</td>
+</tr>
+<tr class="even">
+<td><code>cfscore</code>, <code>cfscore_dyn</code></td>
+<td>Static and cycle-specific DIME campaign-finance scores</td>
+</tr>
+<tr class="odd">
+<td><code>dwnom1</code>, <code>dwnom2</code></td>
+<td>DIME-linked DW-NOMINATE dimensions; missing for
+non-officeholders</td>
+</tr>
+<tr class="even">
+<td><code>seat</code>, <code>dime_district</code>,
+<code>dime_ico</code></td>
+<td>DIME seat, district, and incumbent-status fields</td>
+</tr>
+<tr class="odd">
+<td><code>lname</code>, <code>fname</code></td>
+<td>DIME normalized name components</td>
+</tr>
+<tr class="even">
+<td><code>candidate_icpsr</code>, <code>name_key</code>,
+<code>party_full</code>, <code>district_id</code></td>
+<td>ICPSR-compatible display fields</td>
+</tr>
+<tr class="odd">
+<td><code>general_votes</code></td>
+<td>Votes in the matched general-election return; missing off
+ballot</td>
+</tr>
+</tbody>
+</table>
+<h2 id="release_roster.csv"><code>release_roster.csv</code></h2>
+<p>One row is one in-scope candidate-year with a URL attempt. The file
+has 9,848 rows and is the denominator for collection coverage.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>candidate_cycle_id</code>, <code>cand_id</code>,
+<code>cand_election_yr</code>, <code>cand_status</code></td>
+<td>Canonical FEC identity and metadata</td>
+</tr>
+<tr class="even">
+<td><code>candidate</code>, <code>state</code>, <code>district</code>,
+<code>office</code>, <code>year</code>, <code>party</code></td>
+<td>Candidate and contest fields</td>
+</tr>
+<tr class="odd">
+<td><code>universe_source</code></td>
+<td>Same-year FEC record or reviewed ballot override</td>
+</tr>
+<tr class="even">
+<td><code>website_url</code></td>
+<td>URL recorded for the collection attempt</td>
+</tr>
+<tr class="odd">
+<td><code>url_status</code></td>
+<td><code>valid</code>, <code>valid_manual_override</code>,
+<code>missing_or_invalid</code>, or
+<code>invalid_capture_source</code></td>
+</tr>
+<tr class="even">
+<td><code>has_url</code></td>
+<td>Whether the current URL cleaner accepts the recorded URL</td>
+</tr>
+<tr class="odd">
+<td><code>captured</code></td>
+<td>Whether the candidate-year appears in the released corpus</td>
+</tr>
+<tr class="even">
+<td><code>capture_status</code></td>
+<td><code>captured</code>, <code>not_captured</code>, or
+<code>invalid_capture_excluded</code></td>
+</tr>
+<tr class="odd">
+<td><code>on_ballot</code></td>
+<td>General-election ballot match</td>
+</tr>
+<tr class="even">
+<td><code>general_votes</code></td>
+<td>General-election votes; missing off ballot</td>
+</tr>
+<tr class="odd">
+<td><code>stage</code>, <code>data_source</code></td>
+<td>Population labels defined above</td>
+</tr>
+</tbody>
+</table>
