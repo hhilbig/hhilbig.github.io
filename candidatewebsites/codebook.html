@@ -1,10 +1,11 @@
-<h1 id="codebook-u.s.-candidate-campaign-websites-20022024">Codebook:
-U.S. candidate campaign websites, 2002–2024</h1>
+<h1
+id="codebook-u.s.-house-20182024-and-senate-20022024-candidate-websites">Codebook:
+U.S. House (2018–2024) and Senate (2002–2024) candidate websites</h1>
 <h2 id="keys-and-missing-values">Keys and missing values</h2>
 <p><code>candidate_cycle_id</code>, which combines the canonical FEC
 candidate ID and election year, links all five files. A
 <code>cand_id</code> can appear in more than one year. Empty CSV cells
-and Parquet nulls denote missing values. An empty archived-text string
+and Parquet nulls denote missing values. An empty archived text string
 means that extraction returned no text.</p>
 <h2 id="raw_corpus.parquet"><code>raw_corpus.parquet</code></h2>
 <p>One row is one archived page at one snapshot date. The file has
@@ -72,7 +73,7 @@ Senate</td>
 </tr>
 <tr class="odd">
 <td><code>cand_status</code></td>
-<td>FEC candidate-status code; descriptive, not a release filter</td>
+<td>FEC candidate status code; descriptive, not a release filter</td>
 </tr>
 <tr class="even">
 <td><code>universe_source</code></td>
@@ -80,12 +81,12 @@ Senate</td>
 </tr>
 <tr class="odd">
 <td><code>on_ballot</code></td>
-<td>Whether the candidate matches a major-party general-election
-return</td>
+<td>Whether the candidate matches a Democratic or Republican general
+election return</td>
 </tr>
 <tr class="even">
 <td><code>stage</code></td>
-<td><code>2</code> for general-election candidates; missing
+<td><code>2</code> for candidates in general elections; missing
 otherwise</td>
 </tr>
 <tr class="odd">
@@ -95,7 +96,8 @@ otherwise</td>
 </tr>
 <tr class="even">
 <td><code>candidate_year_stage</code></td>
-<td>ICPSR-compatible candidate/year/stage key; missing off ballot</td>
+<td>Candidate/year/stage key compatible with ICPSR 226001; missing off
+ballot</td>
 </tr>
 <tr class="odd">
 <td><code>date</code></td>
@@ -124,12 +126,12 @@ other</td>
 </tr>
 <tr class="odd">
 <td><code>n_tags</code></td>
-<td>Number of <code>#+#</code>-delimited visible-text components before
-the ICPSR-compatible text filter</td>
+<td>Number of visible text components delimited by <code>#+#</code>
+before the ICPSR 226001 text filter</td>
 </tr>
 <tr class="even">
 <td><code>n_clean_tags</code></td>
-<td>Number of those components retained by the ICPSR-compatible text
+<td>Number of those components retained by the ICPSR 226001 text
 filter</td>
 </tr>
 <tr class="odd">
@@ -184,7 +186,7 @@ reviewed canonical ID</td>
 </tr>
 <tr class="even">
 <td><code>urlkey</code></td>
-<td>Campaign-site URL represented by the selected snapshot</td>
+<td>Campaign website URL represented by the selected snapshot</td>
 </tr>
 <tr class="odd">
 <td><code>text</code></td>
@@ -224,11 +226,11 @@ identical to <code>on_ballot</code>.</p>
 <tbody>
 <tr class="odd">
 <td><code>candidate_icpsr</code></td>
-<td>Candidate name in ICPSR-compatible display form</td>
+<td>Candidate name in a display form compatible with ICPSR 226001</td>
 </tr>
 <tr class="even">
 <td><code>name_key</code></td>
-<td>ICPSR-compatible normalized name</td>
+<td>Normalized name compatible with ICPSR 226001</td>
 </tr>
 <tr class="odd">
 <td><code>district_id</code></td>
@@ -236,7 +238,7 @@ identical to <code>on_ballot</code>.</p>
 </tr>
 <tr class="even">
 <td><code>general_votes</code></td>
-<td>Candidate votes in the matched general-election return; missing off
+<td>Candidate votes in the matched general election return; missing off
 ballot</td>
 </tr>
 <tr class="odd">
@@ -245,13 +247,13 @@ ballot</td>
 </tr>
 <tr class="even">
 <td><code>icpsr_n_tags*</code>, <code>icpsr_n_clean_tags*</code></td>
-<td>Mean visible-text component counts before and after the
-ICPSR-compatible text filter</td>
+<td>Mean visible text component counts before and after the ICPSR 226001
+text filter</td>
 </tr>
 <tr class="odd">
 <td><code>icpsr_ttr_approx*</code>, <code>icpsr_mattr_approx*</code>,
 <code>icpsr_entropy_approx*</code></td>
-<td>Approximate lexical-diversity measures</td>
+<td>Approximate lexical diversity measures</td>
 </tr>
 <tr class="even">
 <td><code>icpsr_n_valid_snap*</code>,
@@ -262,7 +264,7 @@ ICPSR-compatible text filter</td>
 <td><code>icpsr_max_pages_1day</code>,
 <code>icpsr_share_pages_runaway</code>,
 <code>icpsr_runaway_flag</code></td>
-<td>Diagnostics for unusually dense single-day crawls</td>
+<td>Diagnostics for unusually dense crawls within one day</td>
 </tr>
 <tr class="even">
 <td><code>icpsr_topic_&lt;topic&gt;</code></td>
@@ -270,11 +272,11 @@ ICPSR-compatible text filter</td>
 </tr>
 <tr class="odd">
 <td><code>icpsr_topic_&lt;topic&gt;_home</code></td>
-<td>Homepage-only share assigned to the named topic</td>
+<td>Share assigned to the named topic using only the homepage</td>
 </tr>
 <tr class="even">
 <td>fields ending <code>_home</code></td>
-<td>Homepage-only version of the base measure</td>
+<td>Version of the base measure using only the homepage</td>
 </tr>
 <tr class="odd">
 <td>fields ending <code>_preelec</code></td>
@@ -291,9 +293,10 @@ ICPSR-compatible text filter</td>
 </tr>
 </tbody>
 </table>
-<p>Topic shares are proportions and are missing when no valid text
-supports the measure. Counts are nonnegative. Lexical-diversity measures
-are missing when the required text is absent.</p>
+<p>Topic shares are proportions that measure emphasis, not policy
+position. They are missing when no valid text supports the measure.
+Counts are nonnegative. Lexical diversity measures are missing when the
+required text is absent.</p>
 <h2
 id="candidate_crosswalk.csv"><code>candidate_crosswalk.csv</code></h2>
 <p>One row is one captured candidate-year. The file has 7,353 rows and
@@ -320,7 +323,7 @@ adds these links to the shared identity fields:</p>
 </tr>
 <tr class="odd">
 <td><code>cand_ici</code></td>
-<td>FEC incumbent/challenger/open-seat code</td>
+<td>FEC incumbent/challenger/open seat code</td>
 </tr>
 <tr class="even">
 <td><code>bonica_rid</code></td>
@@ -332,17 +335,17 @@ adds these links to the shared identity fields:</p>
 </tr>
 <tr class="even">
 <td><code>cfscore</code>, <code>cfscore_dyn</code></td>
-<td>Static and cycle-specific DIME campaign-finance scores</td>
+<td>Static and cycle-specific DIME campaign finance scores</td>
 </tr>
 <tr class="odd">
 <td><code>dwnom1</code>, <code>dwnom2</code></td>
-<td>DIME-linked DW-NOMINATE dimensions; missing for
-non-officeholders</td>
+<td>DW-NOMINATE dimensions linked through DIME; missing for candidates
+who have not held office</td>
 </tr>
 <tr class="even">
 <td><code>seat</code>, <code>dime_district</code>,
 <code>dime_ico</code></td>
-<td>DIME seat, district, and incumbent-status fields</td>
+<td>DIME seat, district, and incumbency fields</td>
 </tr>
 <tr class="odd">
 <td><code>lname</code>, <code>fname</code></td>
@@ -351,17 +354,17 @@ non-officeholders</td>
 <tr class="even">
 <td><code>candidate_icpsr</code>, <code>name_key</code>,
 <code>party_full</code>, <code>district_id</code></td>
-<td>ICPSR-compatible display fields</td>
+<td>Display fields compatible with ICPSR 226001</td>
 </tr>
 <tr class="odd">
 <td><code>general_votes</code></td>
-<td>Votes in the matched general-election return; missing off
+<td>Votes in the matched general election return; missing off
 ballot</td>
 </tr>
 </tbody>
 </table>
 <h2 id="release_roster.csv"><code>release_roster.csv</code></h2>
-<p>One row is one in-scope candidate-year with a URL attempt. The file
+<p>One row is one included candidate-year with a URL attempt. The file
 has 9,848 rows and is the denominator for collection coverage.</p>
 <table>
 <colgroup>
@@ -387,7 +390,7 @@ has 9,848 rows and is the denominator for collection coverage.</p>
 </tr>
 <tr class="odd">
 <td><code>universe_source</code></td>
-<td>Same-year FEC record or reviewed ballot override</td>
+<td>FEC record for the same year or reviewed ballot override</td>
 </tr>
 <tr class="even">
 <td><code>website_url</code></td>
@@ -414,11 +417,11 @@ has 9,848 rows and is the denominator for collection coverage.</p>
 </tr>
 <tr class="odd">
 <td><code>on_ballot</code></td>
-<td>General-election ballot match</td>
+<td>Match to a general election ballot</td>
 </tr>
 <tr class="even">
 <td><code>general_votes</code></td>
-<td>General-election votes; missing off ballot</td>
+<td>Votes in the general election; missing off ballot</td>
 </tr>
 <tr class="odd">
 <td><code>stage</code>, <code>data_source</code></td>
