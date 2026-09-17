@@ -18,7 +18,7 @@
     <header class="profile-header">
       <div class="profile-intro">
         <h1>Codebook</h1>
-        <p class="title">CLARA: Communication of Local German Party Associations, 2015&ndash;2025 &middot; Version 1.0.0<br>
+        <p class="title">CLARA: Communication of Local German Party Associations, 2015&ndash;2026 &middot; Version 1.1.0<br>
           <a href="./">&larr; back to the dataset page</a></p>
       </div>
     </header>
@@ -201,8 +201,8 @@ outside Bavaria, and CSU in Bavaria.</td>
 <td><code>n_usable_years</code></td>
 <td>integer</td>
 <td>How many of the chapter's years have
-<code>observability_status = extractable_and_usable</code>. Ranges 0–11,
-since the panel spans the eleven years 2015–2025.</td>
+<code>observability_status = extractable_and_usable</code>. Ranges 0–12,
+since the panel spans the twelve years 2015–2026.</td>
 </tr>
 </tbody>
 </table>
@@ -210,7 +210,7 @@ since the panel spans the eleven years 2015–2025.</td>
 id="chapter_year_panelcsv-one-row-per-chapter--year"><code>chapter_year_panel.csv</code>
 (one row per chapter × year)</h2>
 <p>The panel is rectangular: every one of the 2,635 chapters has a row
-in every year from 2015 to 2025, including years in which nothing was
+in every year from 2015 to 2026, including years in which nothing was
 observed. A missing chapter-year in an analysis is therefore always a
 filter you applied rather than a row the release omits. Identifiers and
 geography (<code>chapter_id</code>, <code>party</code>,
@@ -240,8 +240,11 @@ from that year), <code>crawl_succeeded_but_no_extractable_pages</code>
 <code>crawl_succeeded_but_below_usable_threshold</code> (pages were
 parsed but fell short of the minimum-content threshold),
 <code>crawl_not_attempted</code> (snapshots exist in the archive but
-were never fetched), and <code>no_known_website</code> (no URL was ever
-found for the chapter).</td>
+were never fetched), <code>crawl_failed</code> (pages of the
+chapter-year exist but none was fetched successfully; in 2026 this
+covers sites that block automated access), and
+<code>no_known_website</code> (no URL was ever found for the
+chapter).</td>
 </tr>
 <tr class="even">
 <td><code>has_wayback_coverage</code></td>
@@ -249,7 +252,11 @@ found for the chapter).</td>
 the same year. This is an exact recode of
 <code>observability_status</code>, not separate information: it is 0 for
 exactly the two statuses <code>no_archive_coverage</code> and
-<code>no_known_website</code>.</td>
+<code>no_known_website</code>. The column keeps its archive meaning in
+2026: a chapter-year can be observed there without any snapshot, from
+the live crawl alone (274 rows), in which case this column is 0 while
+the feature columns rest on live pages.
+<code>chapter_year_provenance.csv</code> shows the split.</td>
 </tr>
 <tr class="odd">
 <td><code>usable_content_threshold_met</code></td>
@@ -259,7 +266,7 @@ exactly the two statuses <code>no_archive_coverage</code> and
 <tr class="even">
 <td><code>is_quarantined</code></td>
 <td>1 if the chapter failed the roster-integrity check. Defined at the
-chapter level, so it is constant across a chapter's eleven rows (see the
+chapter level, so it is constant across a chapter's twelve rows (see the
 roster).</td>
 </tr>
 <tr class="odd">
@@ -298,7 +305,7 @@ the extractor. Blank: nothing researcher-usable was recovered, or the
 row lies outside the analysis scope
 (<code>analysis_scope_included = 0</code>), where this column is not
 populated. Together <code>full</code> and <code>feature_level</code>
-give the release denominator, 17,989 chapter-years, or 70.5% of the
+give the release denominator, 20,050 chapter-years, or 72.0% of the
 analysis scope.</td>
 </tr>
 <tr class="even">
@@ -359,7 +366,9 @@ value is missing, not zero.</p>
 <tr class="even">
 <td><code>official_count</code></td>
 <td>integer</td>
-<td>Number of named officials extracted from the chapter's pages.</td>
+<td>Number of named officials extracted from the chapter's pages. Counts
+everyone listed, including mandate-holders who are not chapter officers;
+see the caveat on <code>official_count</code> below.</td>
 </tr>
 <tr class="odd">
 <td><code>issue_block_count</code></td>
@@ -377,14 +386,14 @@ topics.</td>
 <tr class="odd">
 <td><code>facebook_present</code></td>
 <td>0/1</td>
-<td>A chapter-specific Facebook account is present (national party
-accounts excluded).</td>
+<td>A chapter-specific Facebook account is present (national or shared
+party accounts and share-button links excluded).</td>
 </tr>
 <tr class="even">
 <td><code>instagram_present</code></td>
 <td>0/1</td>
-<td>A chapter-specific Instagram account is present (national party
-accounts excluded).</td>
+<td>A chapter-specific Instagram account is present (national or shared
+party accounts and share-button links excluded).</td>
 </tr>
 <tr class="odd">
 <td><code>twitter_x_present</code></td>
@@ -838,6 +847,26 @@ Fraktion roster, for example, has no treasurer or secretary to list and
 mixes in council members, so it scores low on
 <code>board_completeness</code> for a structural reason rather than a
 substantive one.</li>
+<li><strong><code>official_count</code> counts everyone the page lists,
+including mandate-holders.</strong> It is a plain count of extracted
+officials with no filter on role, so it includes members of the
+Bundestag, Landtag and European Parliament who appear on a chapter's
+page without holding any office in that chapter. 9,629 of 162,454
+officials records carry such a role (5.9%), and at least one appears in
+28.7% of the chapter-years that have any officials at all; the commonest
+role strings are <code>MdL</code>, <code>MdB</code>,
+<code>Landtagsabgeordneter</code> and
+<code>Bundestagsabgeordneter</code>. <code>Kreistagsabgeordneter</code>
+and <code>Bürgermeister</code> also occur and are genuinely local
+officeholders, so where the line falls depends on the question being
+asked. Filter on <code>role</code> when the quantity of interest is the
+size of the chapter's own board. Two neighbouring measures are
+unaffected: <code>chair_female</code> and <code>board_listed</code> are
+restricted to chair and board roles and never count these people.
+<code>female_share</code> is also close to unaffected, though for a
+coincidental reason rather than by design: mandate-holders are 32.9%
+female against 34.4% for the remaining officials, so excluding them
+moves the overall share by 0.09 percentage points.</li>
 <li><strong><code>chair_female</code></strong> means "at least one chair
 is female," not "the chair is female." Chapters with a co-chair
 structure (Doppelspitze, two people sharing the chair) therefore get two
@@ -854,25 +883,28 @@ for reproducibility and comparison.</li>
 measures. Whether content is observed at all tracks how many pages the
 archive happened to capture: chapter-years where content is observed
 average about 100 archived pages, while those where it is not average
-about 20. Usable coverage also rises over time, from about 35% in 2015
-to about 73% in 2025, and it differs across parties. A trend or a party
-gap in any feature can therefore be a trend or gap in archiving.
-Condition longitudinal and cross-party comparisons on
+about 20. Usable coverage also rises over time, from about 43% in 2015
+to about 77% in 2025 and 83% in 2026, and it differs across parties. A
+trend or a party gap in any feature can therefore be a trend or gap in
+archiving. Condition longitudinal and cross-party comparisons on
 <code>observability_status</code> rather than only noting it.</li>
 <li><strong><code>photo_share</code></strong> operationalizes
 <strong>personalization</strong> of the chapter's web presence in the
 sense used in the German candidate-website literature (Zittel &amp;
 Schweitzer): how far the site presents identifiable individuals rather
 than only the organization.</li>
-<li><strong>Social-presence flags</strong> exclude national party
-accounts (e.g. facebook.com/CSU) via a handle filter. CSU has the
-<em>lowest</em> observed rate on every platform despite high page
-coverage. That is a joint product of the filter and CSU's heavy use of
-party-provided national templates, both of which suppress
-chapter-specific handles rather than inflate them, so low CSU social
-rates are expected and not an artifact to correct. A flag means a link
-was present on an archived snapshot, not that the account was active
-that year, since dead links persist in footers.</li>
+<li><strong>Social-presence flags</strong> exclude accounts that are not
+the chapter's own via a handle filter: national and shared party
+accounts (facebook.com/CSU, twitter.com/afd_bayern), and share-button
+links such as facebook.com/sharer.php or twitter.com/intent/tweet, which
+are interface elements rather than accounts. CSU has the <em>lowest</em>
+observed rate on every platform despite high page coverage. That is a
+joint product of the filter and CSU's heavy use of party-provided
+national templates, both of which suppress chapter-specific handles
+rather than inflate them, so low CSU social rates are expected and not
+an artifact to correct. A flag means a link was present on an archived
+snapshot, not that the account was active that year, since dead links
+persist in footers.</li>
 <li><strong><code>n_social_platforms</code></strong> is the
 deterministic sum of the six platform flags. Entering it alongside those
 flags produces perfect collinearity, and its variation is dominated by
@@ -896,7 +928,7 @@ deduplicated article records. Every article was classified by the same
 locally hosted open-weight model into a topic family, an article type,
 and a geographic focus; the human validation of those labels is reported
 in the quality section of the README. The file holds one row per
-chapter-year with at least one archived article, 14,733 rows in all. A
+chapter-year with at least one archived article, 16,922 rows in all. A
 chapter-year absent from this file had no article to summarize.</p>
 <table>
 <thead>
@@ -947,7 +979,7 @@ tracks the electoral calendar, peaking in 2017, 2019, 2021, 2024, and
 <h2
 id="chapter_year_news_topiccsv-long-format-news-topics"><code>chapter_year_news_topic.csv</code>
 (long format, news topics)</h2>
-<p>Per-family article counts per chapter-year (90,668 rows), mirroring
+<p>Per-family article counts per chapter-year (105,895 rows), mirroring
 <code>chapter_year_topic.csv</code> but built from classified news
 articles: <code>chapter_id</code>, <code>year</code>,
 <code>topic_family</code>, <code>n</code>, <code>cap_major_topic</code>.
@@ -959,7 +991,7 @@ the one to use for issue-attention dynamics. Articles labeled
 id="chapter_year_news_topic_geocsv-long-format-news-topics-by-geographic-focus"><code>chapter_year_news_topic_geo.csv</code>
 (long format, news topics by geographic focus)</h2>
 <p>The same article counts as <code>chapter_year_news_topic.csv</code>,
-split by the geographic focus of each article (111,749 rows):
+split by the geographic focus of each article (130,410 rows):
 <code>chapter_id</code>, <code>year</code>, <code>topic_family</code>,
 <code>geo_focus</code>, <code>n</code>, <code>cap_major_topic</code>.
 Topic family and geographic focus are labeled on the same article, so
@@ -1051,6 +1083,12 @@ strings.</td>
 <td>Successful pages by function.</td>
 </tr>
 <tr class="even">
+<td><code>n_wayback_source_pages</code>,
+<code>n_live_source_pages</code></td>
+<td>The same successful pages split by arm. Live pages exist only in
+2026; the two columns sum to <code>n_source_pages</code>.</td>
+</tr>
+<tr class="odd">
 <td><code>selection_mode</code></td>
 <td>Which rule chose the snapshots to fetch for this chapter-year.
 <code>structural_priority</code> picks archived URLs by page function,
@@ -1060,23 +1098,23 @@ one flat page cap. Blank: the chapter-year's pages were fetched in crawl
 rounds that applied a flat page cap, before this per-round record was
 kept.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>selected_total</code></td>
 <td>Snapshots selected for fetching under that rule.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>url_cap_hit</code></td>
 <td>1 if the per-chapter-year URL cap bound the selection, meaning
 further archived URLs were available but not fetched.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>archive_hint_urls_added</code></td>
 <td>Extra archived URLs fetched beyond those discovered on the live
 site. These come from the archive itself and partly offset survivorship
 bias, since a page that disappeared before discovery ran can still be
 present in the archive.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>n_extraction_attempts</code>,
 <code>n_extraction_ok</code></td>
 <td>Extraction attempts and successes over those pages.</td>
@@ -1168,7 +1206,7 @@ a county in its own right for the 2017 and 2021 elections before being
 merged into the Wartburgkreis. Rows for counties outside the frame find
 no match when the file is joined to the panel.</p>
 
-    </main>
+</main>
   </div>
 </body>
 </html>

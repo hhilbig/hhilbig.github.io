@@ -16,20 +16,20 @@
   <meta charset="utf-8">
   <title>CLARA - Communication of Local German Party Associations - Hanno Hilbig</title>
   <meta name="description"
-    content="CLARA: a chapter-year panel dataset of the web presence of 2,635 local German party organizations, 2015-2025, built from Wayback Machine archives. By Hanno Hilbig.">
+    content="CLARA: a chapter-year panel dataset of the web presence of 2,635 local German party organizations, 2015-2026, built from Wayback Machine archives and a 2026 live crawl. By Hanno Hilbig.">
   <meta name="author" content="Hanno Hilbig">
   <link rel="canonical" href="https://www.hannohilbig.com/localparties/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="CLARA: Communication of Local German Party Associations, Recorded Annually">
-  <meta property="og:description" content="A chapter-year panel of the observable web presence of local German party organizations (CDU, CSU, SPD, Grüne, Linke, AfD, FDP), 2015-2025.">
+  <meta property="og:description" content="A chapter-year panel of the observable web presence of local German party organizations (CDU, CSU, SPD, Grüne, Linke, AfD, FDP), 2015-2026.">
   <meta property="og:url" content="https://www.hannohilbig.com/localparties/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CLARA: Communication of Local German Party Associations, Recorded Annually">
-  <meta name="twitter:description" content="A chapter-year panel of the observable web presence of local German party organizations, 2015-2025.">
+  <meta name="twitter:description" content="A chapter-year panel of the observable web presence of local German party organizations, 2015-2026.">
 
   <link rel="stylesheet" href="../stylesheets/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +50,7 @@
       <div class="profile-intro">
         <h1>CLARA</h1>
         <p class="title">Communication of Local German Party Associations, Recorded Annually<br>
-          A chapter-year panel dataset, 2015&ndash;2025 &middot; Version 1.0.0 &middot;
+          A chapter-year panel dataset, 2015&ndash;2026 &middot; Version 1.1.0 &middot;
           <a href="../">Hanno Hilbig</a>, University of California, Davis</p>
         <div class="profile-links">
           <a href="https://doi.org/10.7910/DVN/2KJSCO">Download data (Harvard Dataverse)</a>
@@ -68,18 +68,21 @@
         Formats differ across chapters, pages disappear, and many sites were not
         archived consistently. CLARA uses archived versions of these websites to
         build an annual panel of 2,635 local chapters of the seven main German
-        parties from 2015 to 2025, for a total of 28,985 chapter-years. The unit
+        parties from 2015 to 2026, for a total of 31,620 chapter-years. The unit
         is the Kreisverband, the county-level organization of each party.</p>
 
       <h2>How the data were built</h2>
       <p>I reconstruct each chapter's website separately for each year using
         Internet Archive snapshots. The release draws on about 1.03 million
-        archived pages. A locally hosted open-weight language model extracts
-        structured variables from these pages. No commercial model was used to
-        produce the released data.</p>
+        archived pages. The 2026 wave combines archived snapshots with a live
+        crawl of the same websites conducted in August and September 2026,
+        which adds roughly 89,000 pages. A locally
+        hosted open-weight language model extracts structured variables from
+        these pages. No commercial model was used to produce the released
+        data.</p>
       <p>For news pages, duplicate archived versions are collapsed to one record
-        per article. The resulting file contains 237,399 articles dated between
-        2015 and 2025. Each article is classified by policy topic, function,
+        per article. The resulting file contains 278,638 articles dated between
+        2015 and 2026. Each article is classified by policy topic, function,
         and geographic focus. The
         <a href="data_report.pdf">data report</a> documents the sampling frame,
         website discovery, and extraction procedure.</p>
@@ -103,8 +106,8 @@
       </ul>
 
       <h2>Coverage and limitations</h2>
-      <p>Coverage is not random. Of the 25,509 chapter-years in the recommended
-        analysis scope, 17,989 are usable. About one quarter have no Internet
+      <p>Coverage is not random. Of the 27,828 chapter-years in the recommended
+        analysis scope, 20,050 are usable. About 23 percent have no Internet
         Archive snapshot for the relevant year; those observations cannot be
         recovered. The panel includes source and coverage indicators, so users
         can impose stricter coverage requirements. When an archived page of the
@@ -121,7 +124,8 @@
         websites disappeared before then are absent from the dataset,
         especially in the earlier years. Within the roster, a chapter is
         observed in a given year only if the Internet Archive captured its
-        website that year.</p>
+        website that year. In 2026 the live crawl observes every site that
+        answered, so that year is the most complete in the panel.</p>
 
       <p>These gaps matter most for news counts. A low count can mean that a
         chapter posted little, that the Internet Archive captured little, or
@@ -132,10 +136,10 @@
       <h2>Validation</h2>
       <p>I manually compared extracted records with their source pages in five
         stratified samples. In the sample drawn directly from the released
-        records, 45 of 48 records were confirmed. As a separate check, a second
-        open-weight model from a different model family evaluated a new sample
-        against the source pages. The deposit reports the results of both
-        checks.</p>
+        records, 45 of the 46 decidable records were confirmed. As a separate
+        check, a second open-weight model from a different model family
+        evaluated a new sample against the source pages. The deposit reports
+        the results of both checks.</p>
 
       <p>The classifier does not receive the year as an input. Nevertheless, the
         share of articles classified as election campaigning rises in federal and
@@ -164,7 +168,7 @@
           maximum.</figcaption>
       </figure>
 
-      <p>Parties differ as well. In every year from 2015 to 2025, migration
+      <p>Parties differ as well. In every year from 2015 to 2026, migration
         accounts for a larger share of AfD news topics than of any other
         party's.</p>
 
@@ -184,7 +188,7 @@
         Bundestag electoral districts. It also contains the codebook, data
         report, coverage diagnostics, validation summaries, and minimal R and
         Python load scripts. The core panel is mirrored here as
-        <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (13 MB). The
+        <a href="chapter_year_panel.csv">chapter_year_panel.csv</a> (15 MB). The
         Harvard Dataverse deposit is the citable version.</p>
       <p>The public release excludes person-level records and page text. The
         records are personal data under the GDPR; the text was written by the
@@ -195,7 +199,7 @@
 
       <h2>Citation</h2>
       <pre>Hilbig, Hanno (2026). CLARA: Communication of Local German
-Party Associations, Recorded Annually (2015-2025). Version 1.0.0.
+Party Associations, Recorded Annually (2015-2026). Version 1.1.0.
 Harvard Dataverse. https://doi.org/10.7910/DVN/2KJSCO</pre>
 
       <footer>
