@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='504.00pt' height='331.20pt' viewBox='0 0 504.00 331.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1MDQuMDB8MC4wMHwzMzEuMjA='>
+    <rect x='0.00' y='0.00' width='504.00' height='331.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwzMzEuMjA=)'>
+<rect x='0.00' y='0.00' width='504.00' height='331.20' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDAuMjF8NDkwLjA1fDcuOTd8Mjk5Ljk1'>
+    <rect x='40.21' y='7.97' width='449.85' height='291.98' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDAuMjF8NDkwLjA1fDcuOTd8Mjk5Ljk1)'>
+<rect x='40.21' y='7.97' width='449.85' height='291.98' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='40.21' y1='217.55' x2='490.05' y2='217.55' style='stroke-width: 1.07; stroke: #2F6F9F; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<text x='469.60' y='243.42' text-anchor='end' style='font-size: 8.54px;fill: #2F6F9F; font-family: "Arial";' textLength='202.69px' lengthAdjust='spacingAndGlyphs'>Best open model on one GPU (Llama 3.1 70B), 0.675</text>
+<circle cx='469.60' cy='21.24' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
+<circle cx='403.30' cy='107.46' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
+<circle cx='370.13' cy='129.83' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='264.60' cy='155.96' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
+<circle cx='317.38' cy='177.72' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='163.31' cy='184.93' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
+<circle cx='425.69' cy='198.07' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='174.96' cy='240.80' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='138.84' cy='264.73' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='243.98' cy='277.01' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='60.65' cy='286.68' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<line x1='464.34' y1='20.72' x2='468.21' y2='21.10' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='410.00' y1='102.60' x2='404.24' y2='106.78' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='363.46' y1='134.67' x2='369.19' y2='130.52' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='271.31' y1='151.10' x2='265.55' y2='155.28' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='310.68' y1='182.58' x2='316.44' y2='178.40' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='170.03' y1='180.05' x2='164.26' y2='184.25' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='418.94' y1='202.97' x2='424.75' y2='198.75' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='172.71' y1='242.31' x2='173.97' y2='241.46' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='141.11' y1='263.22' x2='139.83' y2='264.08' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='250.72' y1='272.11' x2='244.92' y2='276.32' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='65.95' y1='289.40' x2='61.76' y2='287.25' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<text x='434.06' y='23.77' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='56.95px' lengthAdjust='spacingAndGlyphs'>Claude Opus 5</text>
+<text x='418.24' y='100.80' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='63.61px' lengthAdjust='spacingAndGlyphs'>Claude Sonnet 5</text>
+<text x='355.19' y='142.59' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Sol</text>
+<text x='279.59' y='149.30' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='64.53px' lengthAdjust='spacingAndGlyphs'>Gemini 3.8 Flash</text>
+<text x='302.43' y='190.50' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='53.47px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Terra</text>
+<text x='178.29' y='178.25' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='81.14px' lengthAdjust='spacingAndGlyphs'>Gemini 3.1 Flash-Lite</text>
+<text x='410.65' y='210.88' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-6 Astra</text>
+<text x='165.52' y='250.22' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='53.17px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Luna</text>
+<text x='148.33' y='261.42' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='75.92px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4 Flash</text>
+<text x='258.98' y='270.31' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='68.33px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4 Pro</text>
+<text x='83.89' y='294.18' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='32.28px' lengthAdjust='spacingAndGlyphs'>Jev 1.13</text>
+<rect x='40.21' y='7.97' width='449.85' height='291.98' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwzMzEuMjA=)'>
+<text x='38.01' y='293.04' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.66</text>
+<text x='38.01' y='194.24' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.68</text>
+<text x='38.01' y='95.44' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.70</text>
+<text x='46.77' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.03</text>
+<text x='138.08' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.10</text>
+<text x='221.40' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.30</text>
+<text x='312.70' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$1</text>
+<text x='396.02' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$3</text>
+<text x='487.33' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='14.67px' lengthAdjust='spacingAndGlyphs'>$10</text>
+<text x='265.13' y='320.91' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='272.25px' lengthAdjust='spacingAndGlyphs'>Cost per 1,000 texts at standard prices (USD, log scale)</text>
+<text transform='translate(15.85,153.96) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='122.97px' lengthAdjust='spacingAndGlyphs'>Mean F1 across 33 tasks</text>
+</g>
+</g>
+</svg>
