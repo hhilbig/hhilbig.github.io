@@ -9,33 +9,9 @@
   \jobmarketfalse
 \fi
 
-% UCLA-specific ordering approved September 18, 2026.
-\newif\ifucla
-\ifdefined\uclaversion\uclatrue\else\uclafalse\fi
-
-% JHU uses the policy-application layout, with its own interests and ordering.
-\newif\ifjhu
-\ifdefined\jhuversion\jhutrue\uclatrue\else\jhufalse\fi
-
-% HKS (Energy and Climate Change search) variant, October 9, 2026.
-\newif\ifhks
-\ifdefined\hksversion\hkstrue\else\hksfalse\fi
-% JHU and HKS list the California Policy Lab report first.
-\newif\ifcplfirst
-\ifjhu\cplfirsttrue\else\ifhks\cplfirsttrue\else\cplfirstfalse\fi\fi
-
 % Define \meritversion in a wrapper for personnel-review-specific wording.
-% Zurich (Politics of Inequality) variant, October 2026. \publistversion
-% prints only the publication, working-paper, policy and data sections.
-\newif\ifuzh
-\ifdefined\uzhversion\uzhtrue\else\uzhfalse\fi
-% Chicago (climate politics) uses the HKS content with tighter vertical margins
-% to stay at five pages, October 26, 2026.
-\newif\ifchicago
-\ifdefined\chicagoversion\chicagotrue\else\chicagofalse\fi
-\newif\ifpublist
-\ifdefined\publistversion\publisttrue\else\publistfalse\fi
-\newcommand{\publistend}{\end{document}}
+% The search-specific variants (UCLA, Goldman, JHU, HKS, Zurich, Chicago) were
+% retired October 26, 2026; see archive/job_market_2026/README.md.
 
 \newif\ifmerit
 \ifdefined\meritversion
@@ -59,7 +35,6 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{etaremune}
 \usepackage{array}
-
 
 % Comment the following lines to use the default Computer Modern font
 % instead of the Palatino font provided by the mathpazo package.
@@ -90,7 +65,6 @@
   top=1in,
   bottom=0.9in
 }
-\ifchicago\newgeometry{left=1.0in, right=1.0in, top=0.9in, bottom=0.8in}\fi
 
 % Customize page headers
 \pagestyle{myheadings}
@@ -116,27 +90,17 @@
   \end{list}
 }
 
-
 \newcommand{\CVTeaching}{%
 \vspace*{-0.1cm}
 \section*{Teaching Experience}
 \ifjobmarket
 \textit{University of California, Davis}
 \begin{itemize}
-  \ifucla
-  \ifjhu
-  \item Urban Public Policy (undergraduate), Winter 2025
-  \item Political Economy (undergraduate), Winter 2024, Fall 2024, Winter 2026
-  \else
-  \item Political Economy (undergraduate), Winter 2024, Fall 2024, Winter 2026
-  \item Urban Public Policy (undergraduate), Winter 2025
-  \fi
-  \fi
   \item Quantitative Research Methods (graduate), Fall 2023, Fall 2024, Fall 2025
   \item Empirical Methods in Political Science (graduate), Winter 2024
   \item Modeling Politics: Game Theory and Political Economy (graduate), Winter 2025
-  \ifucla\else\item Political Economy (undergraduate), Winter 2024, Fall 2024, Winter 2026\fi
-  \ifucla\else\item Urban Public Policy (undergraduate), Winter 2025\fi
+  \item Political Economy (undergraduate), Winter 2024, Fall 2024, Winter 2026
+  \item Urban Public Policy (undergraduate), Winter 2025
   \item Advanced Quantitative Methods \& Data Science (undergraduate), Fall 2025
 \end{itemize}
 
@@ -192,7 +156,6 @@ Department of Political Science
   \fontsize{9.5}{11.2}\selectfont
 \fi
 
-\ifpublist\else
 \section*{Employment}
 \begin{itemize}
   \setlength\itemsep{0.3em}
@@ -205,8 +168,6 @@ Department of Political Science
 \end{itemize}
 \vspace*{-0.1cm}
 \section*{Education}
-
-
 
 \begin{itemize}
   \setlength\itemsep{0em}
@@ -222,35 +183,13 @@ Department of Political Science
   \item B.A., \emph{Economics} \& \emph{North American Studies}, Freie Universität Berlin, 2013
 \end{itemize}
 
-\ifdefined\goldmanversion
 \vspace*{-0.1cm}
-\section*{Research Interests}
-Comparative political economy, public policy, bureaucratic responsiveness, and causal inference.
-\fi
-
-\vspace*{-0.1cm}
-\ifjhu
-\vspace*{-0.1cm}
-\section*{Research Interests}
-Local and regional policy, housing politics, climate adaptation, comparative political economy, and causal inference.
-\fi
-\ifhks
-\vspace*{-0.1cm}
-\section*{Research Interests}
-Politics of the energy transition, climate adaptation, comparative political economy, and causal inference.
-\fi
-\ifuzh
-\vspace*{-0.1cm}
-\section*{Research Interests}
-Politics of inequality, regional inequality and political behavior, comparative political economy, and causal inference.
-\fi
-\fi
 
 \section*{Publications}
 \begin{etaremune}
   \setlength\emergencystretch{1em}
   \setlength\itemsep{0.18em}
-  \ifjobmarket\ifmerit\else\ifhks\setlength\itemsep{0.25em}\else\setlength\itemsep{0.4em}\fi\fi\fi
+  \ifjobmarket\ifmerit\else\setlength\itemsep{0.4em}\fi\fi
   % Reserved for the next merit review, per Ben Highton's September 8 advice.
   \ifmerit\else
   \item \href{https://osf.io/preprints/osf/hgc2z}{Biased Party Nominations as a Source of Women's Electoral Underperformance} (with Pia Raffler and Thomas Fujiwara). Forthcoming, \textit{American Journal of Political Science}.\ifjobmarket \\
@@ -270,7 +209,7 @@ Politics of inequality, regional inequality and political behavior, comparative 
   \item \href{https://doi.org/10.1017/S0003055423000862}{Wealth of Tongues: Why Peripheral Regions Vote for the Radical Right in Germany} (with Daniel Bischof and Daniel Ziblatt). 2024. \textit{American Political Science Review}, 118(3): 1480--1496.
   \item \href{https://doi.org/10.1017/S0007123424000243}{Local Newspaper Decline and Political Polarization: Evidence from a Multi-Party Setting} (with Fabio Ellger, Sascha Riaz, and Philipp Tillmann). 2024. \textit{British Journal of Political Science}, 54(4): 1256--1275.
   \item \href{https://journals.sagepub.com/doi/abs/10.1177/00104140231178733}{Refugee Labor Market Access Increases Support for Immigration} (with Anselm Hager and Sascha Riaz). 2024. \textit{Comparative Political Studies}, 57(5): 749--777.
-  \item \href{https://www.tandfonline.com/doi/full/10.1080/1369183X.2023.2173159}{Local News Monopolies Increase Misperceptions about Immigration.} (with Sascha Riaz). 2023. \textit{Journal of Ethnic and Migration Studies}, 49(17): 4536--4558.
+  \item \href{https://www.tandfonline.com/doi/full/10.1080/1369183X.2023.2173159}{Local News Monopolies Increase Misperceptions about Immigration} (with Sascha Riaz). 2023. \textit{Journal of Ethnic and Migration Studies}, 49(17): 4536--4558.
   \item \href{https://www.journals.uchicago.edu/doi/10.1086/720307}{Freedom of Movement Restrictions Inhibit the Psychological Integration of Refugees} (with Sascha Riaz). 2022. \textit{Journal of Politics}, 84(4): 2288--2293.
   \item \href{https://www.cambridge.org/core/journals/british-journal-of-political-science/article/locked-out-of-college-when-admissions-bureaucrats-do-and-do-not-discriminate/47318737B56F71B2C9F00C279812759C}{Locked Out of College: When Admissions Bureaucrats Do and Do Not Discriminate} (with Jacob Brown). 2022. \textit{British Journal of Political Science}, 52(3): 1436--1446.
   \item \href{https://onlinelibrary.wiley.com/doi/abs/10.1111/ajps.12516}{Does Public Opinion Affect Political Speech?} (with Anselm Hager). 2020. \textit{American Journal of Political Science}, 64(4): 921--937.
@@ -282,82 +221,51 @@ Politics of inequality, regional inequality and political behavior, comparative 
 	% Decision 2026-08-04: do not add the book project to the CV for now.
 	\begin{enumerate}
 			\setlength\itemsep{0.15em}
-            \ifjobmarket\ifmerit\else\ifhks\setlength\itemsep{0.25em}\else\setlength\itemsep{0.4em}\fi\fi\fi
-            \ifjhu
-			\item Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkj\ae r). (draft available upon request)
-			\item \href{https://osf.io/preprints/socarxiv/2g4x7}{Voter Responses to Climate Adaptation in High-Risk Communities} (with Christian Baehr and António Valentim). R\&R, \textit{American Journal of Political Science}.
-			\item \href{https://osf.io/preprints/socarxiv/6h8cq}{Place-Based Policies, Local Responses, and Electoral Behavior} (with Vincent Heddesheimer and Andreas Wiedemann).
-			\item Industrial Policy and the Politics of Delivery: Evidence from WWII War Plants. (draft available upon request)
-			\item \href{https://osf.io/preprints/socarxiv/4zjac}{Long-run Political Change after the Great Recession} (with Vincent Heddesheimer).
-			\item \href{https://osf.io/preprints/osf/276kz_v2}{Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban} (with Jacob Brown and Hunter Rendleman). R\&R, \textit{Perspectives on Politics}.
-			\item \href{https://doi.org/10.31235/osf.io/ck7aj_v2}{Salient Shock, Imperceptible Impacts: Germans' Immigration Attitudes and the 2022--2023 Energy Price Spike} (with Niloufar Davis, W. M. Halm, and Daniel J. Hopkins).
-			\item Electoral Responses to Local Cooperations with Radical-Right Parties (with Philipp Heyna, Violeta I. Haas, and Tim Wappenhans). (draft available upon request)
-			\item \href{https://osf.io/preprints/osf/6s8tn_v4}{Foreign Policy Debates Shape Refugees' Psychological Integration} (with Florian Sichart and Georgiy Syunyaev).
-			\item \href{https://doi.org/10.48550/arXiv.2605.19275}{Open-Weight LLMs Are Often Competitive with Commercial APIs for Political Science Text Classification}.
-            \else
-            \ifdefined\goldmanversion
-			\item \href{https://osf.io/preprints/osf/276kz_v2}{Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban} (with Jacob Brown and Hunter Rendleman). R\&R, \textit{Perspectives on Politics}.
-            \fi
-			\ifucla\item Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkj\ae r). (draft available upon request)\fi
+            \ifjobmarket\ifmerit\else\setlength\itemsep{0.4em}\fi\fi
             \item \href{https://osf.io/preprints/socarxiv/2g4x7}{Voter Responses to Climate Adaptation in High-Risk Communities} (with Christian Baehr and António Valentim). R\&R, \textit{American Journal of Political Science}.
 			\item \href{https://osf.io/preprints/socarxiv/6h8cq}{Place-Based Policies, Local Responses, and Electoral Behavior} (with Vincent Heddesheimer and Andreas Wiedemann).
 			\item \href{https://osf.io/preprints/socarxiv/4zjac}{Long-run Political Change after the Great Recession} (with Vincent Heddesheimer).
 			\item \href{https://osf.io/preprints/osf/6s8tn_v4}{Foreign Policy Debates Shape Refugees' Psychological Integration} (with Florian Sichart and Georgiy Syunyaev).
-            \ifdefined\goldmanversion\else
 			\item \href{https://osf.io/preprints/osf/276kz_v2}{Bureaucratic Inertia or Legal Responsiveness? College Admissions Officers' Behavior Before and After the Affirmative Action Ban} (with Jacob Brown and Hunter Rendleman). R\&R, \textit{Perspectives on Politics}.
-            \fi
 			\item \href{https://doi.org/10.31235/osf.io/ck7aj_v2}{Salient Shock, Imperceptible Impacts: Germans' Immigration Attitudes and the 2022--2023 Energy Price Spike} (with Niloufar Davis, W. M. Halm, and Daniel J. Hopkins).
 			\item \href{https://doi.org/10.48550/arXiv.2605.19275}{Open-Weight LLMs Are Often Competitive with Commercial APIs for Political Science Text Classification}.
-			\ifucla\else\item Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkj\ae r). (draft available upon request)\fi
+			\item Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkj\ae r). (draft available upon request)
 			\item Electoral Responses to Local Cooperations with Radical-Right Parties (with Philipp Heyna, Violeta I. Haas, and Tim Wappenhans). (draft available upon request)
 			\ifjobmarket
 			\item Industrial Policy and the Politics of Delivery: Evidence from WWII War Plants. (draft available upon request)
 			\fi
-            \fi
 		\end{enumerate}
 
   \ifjobmarket\ifmerit\enlargethispage{5\baselineskip}\fi\fi
   \vspace*{-0.2cm}
-  \ifucla\section*{Policy Reports and Public Engagement}\else\section*{Public Engagement and Policy Reports}\fi
+  \section*{Public Engagement and Policy Reports}
   \begin{enumerate}
-  \ifcplfirst
-  \item \href{https://capolicylab.org/navigating-californias-wildfire-insurance-challenge-community-demographics-and-the-fair-plan/}{Navigating California's Wildfire Insurance Challenge: Community Demographics and the FAIR Plan} (with L. Hen and M. Macaraeg). 2025. California Policy Lab, University of California.
-  \fi
-  \ifucla\else\item \href{https://www.popularbydesign.org/p/why-do-mainstream-parties-lose-either}{Why Do Mainstream Parties Lose Either Way on Accommodating the Far Right?} 2026. Guest essay, \textit{Popular by Design}.\fi
+  \item \href{https://www.popularbydesign.org/p/why-do-mainstream-parties-lose-either}{Why Do Mainstream Parties Lose Either Way on Accommodating the Far Right?} 2026. Guest essay, \textit{Popular by Design}.
 	  \item \href{https://www.bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/Study_Can_Regional_Policy_Stabilize_Structural_Transformation.pdf}{Can Regional Policy Stabilize Structural Transformation? Evidence on the Political Effects of Regional Development Policy in Germany} (with V. Heddesheimer, D. Posch, and J. S\"udekum). 2026. Bertelsmann Foundation. \href{https://www.bertelsmann-stiftung.de/de/publikationen/publikation/did/regionalpolitik-als-stabilitaetsanker-im-strukturwandel}{German-language version}.\ifjobmarket \\
 	  \textit{Media coverage:} \href{https://www.spiegel.de/wirtschaft/foerderpolitik-in-deutschland-wie-subventionen-den-afd-zuspruch-daempfen-a-fd739e9b-8ce8-427b-aa33-bf86fbfd71bc}{Der Spiegel}, \href{https://www.faz.net/aktuell/wirtschaft/mit-gezielten-subventionen-gegen-die-afd-accg-200859446.html}{Frankfurter Allgemeine Zeitung}, and \href{https://www.profil.at/dasfruehstueck/wie-100-euro-stimmen-fuer-afd-und-fpoe-verhindern-koennen/403162232}{profil}.\fi
   \ifjobmarket
   \item \href{https://www.socialeurope.eu/targeted-infrastructure-spending-slows-afd-gains-in-germanys-industrial-heartlands}{Targeted Infrastructure Spending Slows AfD Gains in Germany's Industrial Heartlands} (with Vincent Heddesheimer, Daniel Posch, and Jens S\"udekum). 2026. Coauthored article, \textit{Social Europe}.
   \fi
-  \ifcplfirst\else
   \item \href{https://capolicylab.org/navigating-californias-wildfire-insurance-challenge-community-demographics-and-the-fair-plan/}{Navigating California's Wildfire Insurance Challenge: Community Demographics and the FAIR Plan} (with L. Hen and M. Macaraeg). 2025. California Policy Lab, University of California.
-  \fi
-  \ifucla\item \href{https://www.popularbydesign.org/p/why-do-mainstream-parties-lose-either}{Why Do Mainstream Parties Lose Either Way on Accommodating the Far Right?} 2026. Guest essay, \textit{Popular by Design}.\fi
   \end{enumerate}
 
-\newcommand{\CVcandidate}{\href{https://doi.org/10.7910/DVN/BZ2JRS}{U.S. House (2018--2024) and Senate (2002--2024) Candidate Websites}. Version 2.0. Harvard Dataverse, 2026.\ifucla\ DOI: \href{https://doi.org/10.7910/DVN/BZ2JRS}{10.7910/DVN/BZ2JRS}.\fi}
-\newcommand{\CVclara}{\href{https://doi.org/10.7910/DVN/2KJSCO}{CLARA: Communication of Local German Party Associations, Recorded Annually (2015--2025)}. Chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles.\ifucla\ DOI: \href{https://doi.org/10.7910/DVN/2KJSCO}{10.7910/DVN/2KJSCO}.\fi}
+\newcommand{\CVcandidate}{\href{https://doi.org/10.7910/DVN/BZ2JRS}{U.S. House (2018--2024) and Senate (2002--2024) Candidate Websites}. Version 2.0. Harvard Dataverse, 2026.}
+\newcommand{\CVclara}{\href{https://doi.org/10.7910/DVN/2KJSCO}{CLARA: Communication of Local German Party Associations, Recorded Annually (2015--2025)}. Chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles.}
 \newcommand{\CVsoftware}{%
 \section*{Software \& Data}
 \begin{itemize}
-  \ifucla\else\item \CVcandidate\fi
+  \item \CVcandidate
   \ifjobmarket\else
   \item \CVclara
   \fi
   \item \href{https://www.german-elections.com}{GERDA dataset and data portal}, \textit{Scientific Data} 12:618 (2025). DOI: 10.1038/s41597-025-04811-5. \\[-0.2ex]
   \hspace*{1.2em}\href{https://cran.r-project.org/package=gerda}{R package (CRAN)}, Maintainer. DOI: 10.32614/CRAN.package.gerda. \\[-0.2ex]
   \hspace*{1.2em}\href{https://pypi.org/project/gerda/}{Python package (PyPI)}, Author and Maintainer, 2026.
-  \ifucla
-  \item \CVclara
-  \item \CVcandidate
-  \fi
   \item \href{https://github.com/hhilbig/broadband}{German broadband coverage data}, municipality-level panel of broadband coverage from 2005--2021 standardized to 2021 municipal boundaries.
 \end{itemize}
 }
-\ifjhu\vspace*{-0.1cm}\CVsoftware\fi
-\ifpublist\vspace*{-0.1cm}\CVsoftware\expandafter\publistend\fi
+
 \vspace*{-0.1cm}
-\ifucla\CVTeaching\fi
 
 \section*{Grants and Fellowships}
 \begin{itemize}
@@ -403,10 +311,10 @@ Politics of inequality, regional inequality and political behavior, comparative 
   \item Before 2023: APSA, MPSA, EPSA, NEWEPS, EuroWEPS, Asian PolMeth, Barcelona Politics \& History Conference, Nuffield Junior Workshop
 \end{itemize}
 
-\ifucla\else\CVTeaching\fi
+\CVTeaching
 
 \vspace*{-0.1cm}
-\ifjhu\else\CVsoftware\fi
+\CVsoftware
 
 \ifjobmarket
 \vspace*{-0.1cm}
@@ -433,7 +341,6 @@ Politics of inequality, regional inequality and political behavior, comparative 
   \item Graduate Student Affiliate, Institute for Quantitative Social Science, Harvard University, 2017--2022
   \fi
 \end{itemize}
-
 
 % \\item Visiting Researcher, Institutions and Political Inequality Group, WZB Berlin, (2020--2022)
 
@@ -467,7 +374,6 @@ German (native), English (fluent), French (basic knowledge), Spanish (basic know
 U.S. permanent resident
 \fi
 \fi
-
 
 %\section*{Professional Association Memberships}
 %American Political Science Association, Midwest Political Science Association, European Political Science Association
