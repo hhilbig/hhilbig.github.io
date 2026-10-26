@@ -25,6 +25,18 @@
 \ifjhu\cplfirsttrue\else\ifhks\cplfirsttrue\else\cplfirstfalse\fi\fi
 
 % Define \meritversion in a wrapper for personnel-review-specific wording.
+% Zurich (Politics of Inequality) variant, October 2026. \publistversion
+% prints only the publication, working-paper, policy and data sections.
+\newif\ifuzh
+\ifdefined\uzhversion\uzhtrue\else\uzhfalse\fi
+% Chicago (climate politics) uses the HKS content with tighter vertical margins
+% to stay at five pages, October 26, 2026.
+\newif\ifchicago
+\ifdefined\chicagoversion\chicagotrue\else\chicagofalse\fi
+\newif\ifpublist
+\ifdefined\publistversion\publisttrue\else\publistfalse\fi
+\newcommand{\publistend}{\end{document}}
+
 \newif\ifmerit
 \ifdefined\meritversion
   \merittrue
@@ -78,6 +90,7 @@
   top=1in,
   bottom=0.9in
 }
+\ifchicago\newgeometry{left=1.0in, right=1.0in, top=0.9in, bottom=0.8in}\fi
 
 % Customize page headers
 \pagestyle{myheadings}
@@ -179,6 +192,7 @@ Department of Political Science
   \fontsize{9.5}{11.2}\selectfont
 \fi
 
+\ifpublist\else
 \section*{Employment}
 \begin{itemize}
   \setlength\itemsep{0.3em}
@@ -224,6 +238,12 @@ Local and regional policy, housing politics, climate adaptation, comparative pol
 \vspace*{-0.1cm}
 \section*{Research Interests}
 Politics of the energy transition, climate adaptation, comparative political economy, and causal inference.
+\fi
+\ifuzh
+\vspace*{-0.1cm}
+\section*{Research Interests}
+Politics of inequality, regional inequality and political behavior, comparative political economy, and causal inference.
+\fi
 \fi
 
 \section*{Publications}
@@ -335,6 +355,7 @@ Politics of the energy transition, climate adaptation, comparative political eco
 \end{itemize}
 }
 \ifjhu\vspace*{-0.1cm}\CVsoftware\fi
+\ifpublist\vspace*{-0.1cm}\CVsoftware\expandafter\publistend\fi
 \vspace*{-0.1cm}
 \ifucla\CVTeaching\fi
 
