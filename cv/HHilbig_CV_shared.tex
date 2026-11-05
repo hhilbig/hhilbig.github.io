@@ -59,12 +59,17 @@
   pdfpagemode = UseNone
 }
 
+\ifjobmarket
 \geometry{
   body={6.5in, 10in},
   left=1.0in,
   top=1in,
   bottom=0.9in
 }
+\else
+% Public CV uses one-inch margins without forced page extensions (2026-11-05).
+\geometry{margin=1in}
+\fi
 
 % Customize page headers
 \pagestyle{myheadings}
@@ -286,7 +291,6 @@ Department of Political Science
   \fi
 \end{itemize}
 
-\ifjobmarket\else\enlargethispage{4\baselineskip}\fi
 \vspace*{-0.1cm}
 \section*{Invited Talks}
 % Decision 2026-08-19: the Hertie School seminar was canceled; do not list it.
@@ -327,6 +331,8 @@ Department of Political Science
 \end{itemize}
 \fi
 
+% Public CV omits affiliations (decision 2026-11-05).
+\ifjobmarket
 \vspace*{-0.1cm}
 \section*{Affiliations}
 \begin{itemize}
@@ -340,6 +346,7 @@ Department of Political Science
   \item Graduate Student Affiliate, Institute for Quantitative Social Science, Harvard University, 2017--2022
   \fi
 \end{itemize}
+\fi
 
 % \\item Visiting Researcher, Institutions and Political Inequality Group, WZB Berlin, (2020--2022)
 
@@ -390,11 +397,11 @@ U.S. permanent resident
 %\item English (Fluent), German (Native), French (Basic Knowledge), Spanish (Basic Knowledge)
 %\end{itemize}
 
+% Public CV omits references (decision 2026-11-05).
+\ifjobmarket
 \ifmerit\else
 \vspace*{-0.1cm}
-\ifjobmarket\else\enlargethispage{5\baselineskip}\fi
 \section*{References}
-\ifjobmarket
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.48\linewidth}@{\hspace{0.04\linewidth}}>{\raggedright\arraybackslash}p{0.48\linewidth}@{}}
 Pia Raffler & Daniel Ziblatt \\
 Assistant Professor of Government & Eaton Professor of the Science of Government \\
@@ -405,8 +412,6 @@ Harold Hitchings Burbank Professor of Political Economy & Staff Data Scientist\\
 Harvard University & Google\\
 \href{mailto:iversen@fas.harvard.edu}{iversen@fas.harvard.edu} & \href{mailto:mblackwell@gmail.com}{mblackwell@gmail.com} \\
 \end{tabular}
-\else
-Available upon request.
 \fi
 \fi
 
