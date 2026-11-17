@@ -4,11 +4,22 @@
 CLAUDE.md
 .claude/
 nomination_additions.md
-# Award-nomination CV variant (contains personal data; keep local-only)
-cv/HHilbig_CV_nomination.*
+# CV: only the public PDF is published. All sources (shared .tex with
+# referee emails and internal comments, merit/job-market/nomination
+# variants, job-search archive, Makefile, resumes) stay local-only.
+/cv/*
+!/cv/HHilbig_CV.pdf
 
-# Generated job-market CV (build locally with `make -C cv job-market`)
-cv/HHilbig_CV_job_market.pdf
+# Internal tooling (served by GitHub Pages if committed)
+/scripts/
+
+# Private UC Davis merit/appraisal records and review outputs (local-only)
+/merit_statement/
+/cv/HHilbig_CV_merit.pdf
+
+# Scratch and build output (contains resumes and review drafts)
+/tmp/
+/output/
 
 # Paper status check report (output of /check-papers)
 paper_status_report.md
@@ -31,8 +42,6 @@ node_modules/
 # ignore jekyll build directory
 /_site
 
-# Temporarily keep the candidate websites data page offline.
-/candidatewebsites/
 
 # ignore OS generated files
 ehthumbs.db
