@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDK4V4S60M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JDK4V4S60M');
+  </script>
+
+  <meta charset="utf-8">
+  <title>German Bundestag Candidate Websites (2017, 2021, 2025) - Hanno Hilbig</title>
+  <meta name="description"
+    content="A candidate-year panel of the campaign websites of candidates for the German Bundestag in 2017, 2021 and 2025, built from Internet Archive captures. By Hanno Hilbig and Vincent Heddesheimer.">
+  <meta name="author" content="Hanno Hilbig, Vincent Heddesheimer">
+  <link rel="canonical" href="https://www.hannohilbig.com/bundestagcandidates/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="German Bundestag Candidate Websites (2017, 2021, 2025)">
+  <meta property="og:description" content="A candidate-year panel of what Bundestag candidates published on their own campaign websites in 2017, 2021 and 2025.">
+  <meta property="og:url" content="https://www.hannohilbig.com/bundestagcandidates/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="German Bundestag Candidate Websites (2017, 2021, 2025)">
+  <meta name="twitter:description" content="A candidate-year panel of what Bundestag candidates published on their own campaign websites in 2017, 2021 and 2025.">
+
+  <link rel="stylesheet" href="../stylesheets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* page-local additions on top of the site stylesheet */
+    .figure { margin: 1.4rem 0; }
+    .figure img { border: 1px solid var(--border); border-radius: 6px; }
+    .figure figcaption { color: var(--muted); font-size: 0.88em; margin-top: 0.4rem; }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="profile-header">
+      <div class="profile-intro">
+        <h1>German Bundestag Candidate Websites</h1>
+        <p class="title">A candidate-year panel, 2017, 2021 and 2025 &middot; Version 1.0.0 &middot;
+          <a href="../">Hanno Hilbig</a> and Vincent Heddesheimer</p>
+        <div class="profile-links">
+          <a href="https://doi.org/10.7910/DVN/VKMK22">Download data (Harvard Dataverse)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <p>This dataset compiles website data for 8,600 candidate-years of
+        candidates in the German federal elections of 2017, 2021 and 2025. 2,410 of
+        these candidate-years have usable website content. The data are based on
+        archived versions of the candidates' own campaign websites, since many of
+        these sites go offline shortly after the election. For questions and
+        comments, please email
+        <a href="mailto:hhilbig@ucdavis.edu">hhilbig@ucdavis.edu</a>.</p>
+
+      <h2>How the data were built</h2>
+      <p>To construct the panel, we combine data from different sources. The
+        candidate rosters are taken from Abgeordnetenwatch, which lists every
+        candidate for a given Bundestag election. To find the candidates'
+        websites, we draw on Wikidata. Since Wikidata does not list a website for
+        many candidates, especially from smaller parties, we also try addresses
+        based on the candidate's name. These guessed sites are only included if
+        their pages show that the site in fact belongs to the candidate. For all
+        sites, we then collect every archived page from the Wayback Machine up to
+        election day. Page types, topics and campaign style are coded with
+        open-weight models that we run on our own computers and on a university
+        computing cluster, and features such as donation links are detected with
+        simple rules.</p>
+
+      <h2>What the data contain</h2>
+      <p>For each candidate and election, the data includes (i) attention to 19
+        policy topics from the Comparative Agendas Project, measured as the share
+        of a candidate's issue pages on each topic, (ii) five measures of campaign
+        style (local focus, constituency service, personal presentation, criticism
+        of opponents, and campaign content), (iii) the share of news, program,
+        biography and contact pages, and (iv) indicators for whether the site has
+        a donation link, a membership form, a newsletter or a volunteer sign-up.
+        In addition, we add party, state, constituency, list position, incumbency
+        and election results. Since every candidate has an Abgeordnetenwatch
+        person ID, candidates can be followed across the three elections.</p>
+
+      <h2>Coverage and limitations</h2>
+      <p>In total, 2,410 of the 8,600 candidate-years, or about 28%, have usable
+        website content. This number is low because a site has to (i) have been
+        archived by the Wayback Machine and (ii) still be resolvable in 2026 to be
+        included. Given that the websites of losing candidates often go offline
+        shortly after the election, coverage is lowest in 2017. Coverage also
+        differs by incumbency and party. Incumbents make up 19% of all candidates,
+        but about 56% of the candidate-years with usable content. Coverage is also
+        much higher for candidates from the CDU, CSU and SPD than for candidates
+        from the smaller parties, where it ranges from 14% to 56% (see figure
+        below). The data contains the full roster, and each measure has a status
+        variable that records why it is missing for a given candidate.</p>
+
+      <figure class="figure">
+        <img src="01_coverage_by_party.png" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="Line chart: share of each party's candidates with a usable archived website in 2017, 2021 and 2025. CDU, CSU and SPD are highest; the smaller parties are well below.">
+        <figcaption>Share of each party's candidates whose archived website
+          yields usable content, by election.</figcaption>
+      </figure>
+
+      <p>We note two further limitations. First, when compared to our hand-coded
+        pages, the models tend to assign topics and style features too often. We
+        would therefore mostly use the shares to compare groups of candidates, and
+        not interpret their absolute levels. Second, for 2025 we only observe the
+        115 days before the election, compared to about 270 days in 2017 and 2021.
+        The codebook discusses which measures can be compared across elections,
+        and which cannot.</p>
+
+      <h2>Validation</h2>
+      <p>To validate the coded variables, we hand-coded a sample of 232 pages,
+        using the same definitions as the models. For all released variables, the
+        point estimate of agreement between the models and our hand-coding is
+        above the threshold that we had set before looking at the results. That
+        being said, for some variables the sample is small, and we cannot rule out
+        that agreement is in fact below the threshold. The gold labels, the
+        sampling design and all agreement statistics are included in the
+        deposit.</p>
+
+      <h2>Exemplary descriptive applications</h2>
+      <p>Below, we show some examples of how the data can be used. First, the data
+        shows that parties differ in the topics that their candidates emphasize.
+        In 2025, FDP candidates devote about half of their issue pages to the
+        economy, while AfD candidates devote 27% to immigration and Green
+        candidates 25% to the environment.</p>
+
+      <figure class="figure">
+        <img src="02_topics_by_party_2025.png" width="2400" height="1980" loading="lazy" decoding="async"
+             alt="Dot plot: for each of 19 topics, the party means in 2025, with the parties at the two ends labeled. FDP leads on the economy, AfD on civil rights, immigration and law and crime, the Greens on the environment.">
+        <figcaption>Share of a candidate's issue pages on each topic, party
+          mean, 2025. Labeled dots are the highest and lowest party.</figcaption>
+      </figure>
+
+      <p>Second, there are large differences within parties. Among AfD candidates
+        in 2025, the share of issue pages on immigration ranges from almost zero to
+        more than 70%. Party-level data such as manifestos cannot capture this
+        variation.</p>
+
+      <figure class="figure">
+        <img src="03_immigration_within_party_2025.png" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="Dot plot: share of issue pages on immigration in 2025, one dot per candidate, by party, with the party mean as a diamond. The AfD spread runs from near zero to above 70 percent.">
+        <figcaption>Share of issue pages on immigration in 2025, one dot per
+          candidate with at least five issue pages; the diamond is the party
+          mean.</figcaption>
+      </figure>
+
+      <p>Third, the data can be used to study changes over time. For the CDU/CSU,
+        SPD and AfD, attention to immigration fell between 2017 and 2021 and
+        increased again by 2025. Attention to the environment, in contrast, peaks
+        in 2021. We find the same pattern if we only use candidates who ran in two
+        consecutive elections, which suggests that it is not driven by changes in
+        which candidates have websites.</p>
+
+      <figure class="figure">
+        <img src="05_immigration_environment_over_time.png" width="2700" height="1350" loading="lazy" decoding="async"
+             alt="Two line charts by party for 2017, 2021 and 2025: immigration dips in 2021 for most parties, the environment peaks in 2021.">
+        <figcaption>Share of candidates' issue pages on immigration and on the
+          environment, party mean by election.</figcaption>
+      </figure>
+
+      <p>Finally, incumbents and challengers use their websites differently.
+        Challengers' sites contain about 2.5 times as much campaign content as
+        incumbents' sites, while incumbents report on constituency work almost
+        three times as often.</p>
+
+      <figure class="figure">
+        <img src="07_incumbents_vs_challengers.png" width="2400" height="1350" loading="lazy" decoding="async"
+             alt="Dot plot of five campaign-style features for incumbents and challengers, 2017 to 2025, with 95 percent intervals. Challengers are higher on campaign content and local focus, incumbents on constituency service.">
+        <figcaption>Share of a candidate's pages with each feature, pooled over
+          the three elections, mean and 95 percent interval.</figcaption>
+      </figure>
+
+      <h2>Data and documentation</h2>
+      <p>The Dataverse deposit includes the candidate-year panel, a version of the
+        panel based on the whole election year, a long-format topic file, a
+        provenance file, the page-level codes, coverage diagnostics, the gold
+        labels and validation results, the codebook, as well as R and Python
+        scripts to load the data. We only release derived variables, and not the
+        text or URLs of the pages. Researchers who need the text for their own work
+        can contact us. Data and documentation are licensed under CC-BY-4.0. The
+        dataset can be combined with <a href="../localparties/">CLARA</a>, which
+        uses the same topic scheme for local party chapters.</p>
+
+      <h2>Citation</h2>
+      <pre>Hilbig, Hanno, and Vincent Heddesheimer (2026). German Bundestag
+Candidate Websites (2017, 2021, 2025). Version 1.0.0.
+Harvard Dataverse. https://doi.org/10.7910/DVN/VKMK22</pre>
+
+      <footer>
+        Built from Abgeordnetenwatch, Wikidata, and the Internet Archive Wayback
+        Machine.
+        <br><a href="../">&larr; back to hannohilbig.com</a>
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>
