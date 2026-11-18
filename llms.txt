@@ -6,9 +6,9 @@
 
 - Email: hhilbig@ucdavis.edu
 - Website: https://www.hannohilbig.com
-- Google Scholar: https://scholar.google.com/citations?user=2A9Hz2IAAAAJ
+- Google Scholar: https://scholar.google.com/citations?user=JzQv9FMAAAAJ
 - GitHub: https://github.com/hhilbig
-- LinkedIn: https://www.linkedin.com/in/hanno-hilbig
+- LinkedIn: https://www.linkedin.com/in/hhilbig
 
 ## Research Interests
 
@@ -20,7 +20,6 @@ Hanno's research examines how structural economic transformations affect politic
 
 - Biased Party Nominations as a Source of Women's Electoral Underperformance (with Pia Raffler and Thomas Fujiwara). American Journal of Political Science.
 - The Green Transition and Political Polarization Along Occupational Lines (with Vincent Heddesheimer and Erik Voeten). American Political Science Review.
-- The Gendered Persistence of Authoritarian Indoctrination (with Nourhan A. Elsayed, Sascha Riaz, and Daniel Ziblatt). British Journal of Political Science, 55: e124.
 - Estimating Controlled Direct Effects with Panel Data (with Matthew Blackwell, Adam Glynn, and Connor Phillips). Journal of the Royal Statistical Society: Series A.
 - Do Autocrats Respond to Citizen Demands? Petitions and Housing Construction in the GDR (with Hans Lueders and Sascha Riaz). Comparative Political Studies.
 - How Budget Tradeoffs Undermine Electoral Incentives to Build Public Housing (with Andreas Wiedemann). American Journal of Political Science, 70(1): 202-220.
@@ -28,6 +27,7 @@ Hanno's research examines how structural economic transformations affect politic
 
 ### 2025
 
+- The Gendered Persistence of Authoritarian Indoctrination (with Nourhan A. Elsayed, Sascha Riaz, and Daniel Ziblatt). British Journal of Political Science, 55: e124.
 - GERDA: The German Election Database (with Vincent Heddesheimer, Florian Sichart, and Andreas Wiedemann). Scientific Data, 12: 618.
 
 ### 2024
@@ -65,6 +65,15 @@ Hanno's research examines how structural economic transformations affect politic
 - Reindustrialization and Political Change (with Vincent Heddesheimer and Marc Sabatier Hvidkjær)
 - Electoral Responses to Local Cooperations with Radical-Right Parties (with Philipp Heyna, Violeta I. Haas, and Tim Wappenhans)
 - Salient Shock, Imperceptible Impacts: Germans' Immigration Attitudes and the 2022-2023 Energy Price Spike (with Niloufar Davis, W. M. Halm, and Daniel J. Hopkins)
+- Open-Weight LLMs Are Often Competitive with Commercial APIs for Political Science Text Classification. arXiv: https://doi.org/10.48550/arXiv.2605.19275
+- Industrial Policy and the Politics of Delivery: Evidence from WWII War Plants (draft available upon request)
+
+## Public Engagement and Policy Reports
+
+- Why Do Mainstream Parties Lose Either Way on Accommodating the Far Right? 2026. Guest essay, Popular by Design. https://www.popularbydesign.org/p/why-do-mainstream-parties-lose-either
+- Can Regional Policy Stabilize Structural Transformation? Evidence on the Political Effects of Regional Development Policy in Germany (with Vincent Heddesheimer, Daniel Posch, and Jens Südekum). 2026. Bertelsmann Foundation.
+- Targeted Infrastructure Spending Slows AfD Gains in Germany's Industrial Heartlands (with Vincent Heddesheimer, Daniel Posch, and Jens Südekum). 2026. Social Europe.
+- Navigating California's Wildfire Insurance Challenge: Community Demographics and the FAIR Plan (with L. Hen and M. Macaraeg). 2025. California Policy Lab, University of California.
 
 ## Active Projects
 
@@ -80,6 +89,7 @@ Hanno's research examines how structural economic transformations affect politic
 
 - U.S. House (2018-2024) and Senate (2002-2024) Candidate Websites: Archived campaign-website text for 7,353 candidate-years and 799,058 Wayback Machine pages. Available at https://www.hannohilbig.com/candidatewebsites/
 - German Bundestag Candidate Websites (2017, 2021, 2025), with Vincent Heddesheimer: A candidate-year panel of 8,600 Bundestag candidates' campaign websites, with topic attention, campaign style and mobilization tools for 2,410 candidate-years. Available at https://www.hannohilbig.com/bundestagcandidates/
-- CLARA: A chapter-year panel of 2,635 local German party organizations and 237,399 archived news articles from 2015-2025. Available at https://www.hannohilbig.com/localparties/
+- CLARA: Communication of Local German Party Associations, Recorded Annually (2015-2026): A chapter-year panel of 2,635 local German party organizations, including leadership, issue emphasis, and 278,638 archived news articles. Available at https://www.hannohilbig.com/localparties/
 - GERDA (German Election Database): Harmonized German election results for municipalities, counties, and constituencies. Data: https://www.german-elections.com/; R package: https://github.com/hhilbig/gerda; Python package: https://github.com/hhilbig/gerda-py
 - German Municipal Broadband Availability: A municipality-level panel covering 2005-2021, standardized to 2021 boundaries. Available at https://github.com/hhilbig/broadband
+- Political Science LLM Benchmark: Matched evaluation of open-weight and commercial language models on 33 political science text-coding tasks, with cost and generation speed. Available at https://www.hannohilbig.com/llm-benchmark/
