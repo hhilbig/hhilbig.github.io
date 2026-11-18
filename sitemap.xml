@@ -22,4 +22,12 @@
     <loc>https://www.hannohilbig.com/llm-benchmark/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.hannohilbig.com/candidatewebsites/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hannohilbig.com/bundestagcandidates/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
