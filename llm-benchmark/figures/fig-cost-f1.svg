@@ -35,87 +35,55 @@
 </defs>
 <g clip-path='url(#cpNDAuMjF8NDkwLjA1fDcuOTd8Mjk5Ljk1)'>
 <rect x='40.21' y='7.97' width='449.85' height='291.98' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<line x1='40.21' y1='204.09' x2='490.05' y2='204.09' style='stroke-width: 1.07; stroke: #2F6F9F; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
-<text x='469.60' y='228.61' text-anchor='end' style='font-size: 8.54px;fill: #2F6F9F; font-family: "Arial";' textLength='202.69px' lengthAdjust='spacingAndGlyphs'>Best open model on one GPU (Llama 3.1 70B), 0.675</text>
-<circle cx='469.60' cy='21.24' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='407.25' cy='101.55' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='376.05' cy='122.39' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='276.81' cy='146.73' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='326.45' cy='166.99' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='181.55' cy='173.71' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='428.31' cy='185.94' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='192.50' cy='225.74' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='158.54' cy='248.04' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='257.41' cy='259.47' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='85.00' cy='268.48' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='427.59' cy='78.32' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='377.15' cy='136.29' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='163.15' cy='286.68' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='337.22' cy='163.36' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='118.64' cy='241.66' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='357.27' cy='106.43' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='439.13' cy='244.78' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='119.38' cy='240.98' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
-<circle cx='321.51' cy='152.54' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='60.65' cy='260.69' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<circle cx='253.95' cy='262.76' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
-<line x1='464.36' y1='20.73' x2='468.21' y2='21.11' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='413.94' y1='96.69' x2='408.19' y2='100.87' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='381.34' y1='116.59' x2='376.77' y2='121.60' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='269.78' y1='141.86' x2='275.84' y2='146.06' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='317.94' y1='173.20' x2='325.51' y2='167.67' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='188.23' y1='168.86' x2='182.49' y2='173.02' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='421.54' y1='190.86' x2='427.36' y2='186.62' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='185.77' y1='230.64' x2='191.56' y2='226.43' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='165.65' y1='252.93' x2='159.51' y2='248.70' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='264.17' y1='254.56' x2='258.35' y2='258.78' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='80.74' y1='276.01' x2='84.52' y2='269.34' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='434.28' y1='73.46' x2='428.53' y2='77.63' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='382.52' y1='140.48' x2='378.05' y2='137.00' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='157.77' y1='289.43' x2='162.04' y2='287.25' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='342.97' y1='161.06' x2='338.42' y2='162.88' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='113.94' y1='244.94' x2='117.68' y2='242.33' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='350.51' y1='101.51' x2='356.33' y2='105.74' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='432.43' y1='249.65' x2='438.19' y2='245.47' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='122.46' y1='236.05' x2='119.91' y2='240.13' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='325.69' y1='147.63' x2='322.20' y2='151.74' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='249.30' y1='267.71' x2='253.21' y2='263.54' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<text x='434.08' y='23.79' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='56.95px' lengthAdjust='spacingAndGlyphs'>Claude Opus 5</text>
-<text x='422.20' y='94.89' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='63.61px' lengthAdjust='spacingAndGlyphs'>Claude Sonnet 5</text>
-<text x='406.39' y='117.40' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Sol</text>
-<text x='256.68' y='140.06' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='64.53px' lengthAdjust='spacingAndGlyphs'>Gemini 3.8 Flash</text>
-<text x='307.88' y='181.11' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='53.47px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Terra</text>
-<text x='196.50' y='167.06' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='81.14px' lengthAdjust='spacingAndGlyphs'>Gemini 3.1 Flash-Lite</text>
-<text x='413.25' y='198.77' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-6 Astra</text>
-<text x='177.52' y='238.55' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='53.17px' lengthAdjust='spacingAndGlyphs'>GPT-5.6 Luna</text>
-<text x='180.32' y='260.84' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='75.92px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4 Flash</text>
-<text x='272.44' y='252.76' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='68.33px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4 Pro</text>
-<text x='62.80' y='281.24' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='32.28px' lengthAdjust='spacingAndGlyphs'>Jev 1.13</text>
-<text x='442.54' y='71.66' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='64.08px' lengthAdjust='spacingAndGlyphs'>Claude Opus 5.5</text>
-<text x='419.69' y='145.85' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='70.73px' lengthAdjust='spacingAndGlyphs'>Claude Sonnet 5.5</text>
-<text x='123.23' y='294.19' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='65.48px' lengthAdjust='spacingAndGlyphs'>Claude Haiku 5.5</text>
-<text x='368.02' y='163.49' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-6.1 Sol</text>
-<text x='105.86' y='252.85' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.05px' lengthAdjust='spacingAndGlyphs'>GPT-6 Luna</text>
-<text x='342.22' y='99.71' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='58.84px' lengthAdjust='spacingAndGlyphs'>Gemini 4 Argon</text>
-<text x='424.16' y='257.56' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='32.75px' lengthAdjust='spacingAndGlyphs'>Grok 4.7</text>
-<text x='122.75' y='234.25' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='33.22px' lengthAdjust='spacingAndGlyphs'>GLM-5.3</text>
-<text x='326.51' y='145.83' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='52.17px' lengthAdjust='spacingAndGlyphs'>Kimi K3.1 Pro</text>
-<text x='89.24' y='263.53' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='83.05px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4.1 Flash</text>
-<text x='248.07' y='275.62' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='36.55px' lengthAdjust='spacingAndGlyphs'>Beam 1.0</text>
+<line x1='40.21' y1='60.27' x2='490.05' y2='60.27' style='stroke-width: 1.07; stroke: #2F6F9F; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<text x='60.65' y='84.26' style='font-size: 8.54px;fill: #2F6F9F; font-family: "Arial";' textLength='202.67px' lengthAdjust='spacingAndGlyphs'>Best open model on one GPU (Gemma 4 31B), 0.694</text>
+<circle cx='110.80' cy='286.68' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='469.60' cy='92.90' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='443.03' cy='28.16' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='445.74' cy='114.27' r='3.13' style='stroke-width: 1.13; stroke: #1D4F77;' />
+<circle cx='377.52' cy='156.40' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='60.65' cy='208.68' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='238.09' cy='168.11' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='353.98' cy='56.24' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='444.06' cy='21.24' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='300.23' cy='55.65' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='110.55' cy='161.37' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<circle cx='388.52' cy='54.62' r='3.13' style='stroke-width: 1.13; stroke: none; fill: #1D4F77;' />
+<line x1='117.54' y1='281.78' x2='111.74' y2='286.00' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='462.89' y1='88.02' x2='468.66' y2='92.21' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='437.63' y1='31.99' x2='442.08' y2='28.84' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='450.76' y1='109.38' x2='446.53' y2='113.51' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='370.81' y1='161.27' x2='376.58' y2='157.08' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='65.83' y1='208.68' x2='62.07' y2='208.68' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='231.32' y1='173.03' x2='237.14' y2='168.80' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='347.26' y1='61.12' x2='353.03' y2='56.93' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='293.53' y1='50.79' x2='299.28' y2='54.96' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='103.80' y1='166.27' x2='109.60' y2='162.06' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='393.92' y1='50.79' x2='389.47' y2='53.94' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<text x='125.80' y='279.98' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='65.48px' lengthAdjust='spacingAndGlyphs'>Claude Haiku 5.5</text>
+<text x='454.61' y='86.22' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='56.95px' lengthAdjust='spacingAndGlyphs'>Claude Opus 5</text>
+<text x='429.63' y='39.91' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='64.08px' lengthAdjust='spacingAndGlyphs'>Claude Opus 5.5</text>
+<text x='452.48' y='107.58' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='63.61px' lengthAdjust='spacingAndGlyphs'>Claude Sonnet 5</text>
+<text x='362.54' y='169.18' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='70.73px' lengthAdjust='spacingAndGlyphs'>Claude Sonnet 5.5</text>
+<text x='109.15' y='211.73' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='83.05px' lengthAdjust='spacingAndGlyphs'>DeepSeek V4.1 Flash</text>
+<text x='223.03' y='180.94' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='81.14px' lengthAdjust='spacingAndGlyphs'>Gemini 3.1 Flash-Lite</text>
+<text x='339.01' y='69.03' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='64.53px' lengthAdjust='spacingAndGlyphs'>Gemini 3.8 Flash</text>
+<text x='454.87' y='19.84' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='58.84px' lengthAdjust='spacingAndGlyphs'>Gemini 4 Argon</text>
+<text x='285.24' y='48.99' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='33.22px' lengthAdjust='spacingAndGlyphs'>GLM-5.3</text>
+<text x='95.54' y='174.19' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.05px' lengthAdjust='spacingAndGlyphs'>GPT-6 Luna</text>
+<text x='401.92' y='48.99' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.50px' lengthAdjust='spacingAndGlyphs'>GPT-6.1 Sol</text>
 <rect x='40.21' y='7.97' width='449.85' height='291.98' style='stroke-width: 1.07; stroke: #B3B3B3;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwzMzEuMjA=)'>
-<text x='38.01' y='274.62' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.66</text>
-<text x='38.01' y='182.59' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.68</text>
-<text x='38.01' y='90.57' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.70</text>
-<text x='71.95' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.03</text>
-<text x='157.82' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.10</text>
-<text x='236.18' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.30</text>
-<text x='322.05' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$1</text>
-<text x='400.40' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$3</text>
-<text x='486.27' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='14.67px' lengthAdjust='spacingAndGlyphs'>$10</text>
+<text x='38.01' y='214.59' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.66</text>
+<text x='38.01' y='125.22' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.68</text>
+<text x='38.01' y='35.85' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.70</text>
+<text x='141.52' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.10</text>
+<text x='242.52' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$0.30</text>
+<text x='353.20' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$1</text>
+<text x='454.20' y='308.44' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>$3</text>
 <text x='265.13' y='320.91' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='272.25px' lengthAdjust='spacingAndGlyphs'>Cost per 1,000 texts at standard prices (USD, log scale)</text>
-<text transform='translate(15.85,153.96) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='122.97px' lengthAdjust='spacingAndGlyphs'>Mean F1 across 33 tasks</text>
+<text transform='translate(15.85,153.96) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='122.97px' lengthAdjust='spacingAndGlyphs'>Mean F1 across 46 tasks</text>
 </g>
 </g>
 </svg>

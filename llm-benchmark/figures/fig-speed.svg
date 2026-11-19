@@ -26,100 +26,97 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMTYuODA=)'>
-<rect x='-0.000000000000064' y='-0.000000000000057' width='648.00' height='316.80' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<rect x='0.00' y='-0.000000000000057' width='648.00' height='316.80' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpNDAuMjF8MzI4LjQ5fDI2LjAwfDI4NS41NQ=='>
-    <rect x='40.21' y='26.00' width='288.28' height='259.55' />
+  <clipPath id='cpNDUuMTB8MzMwLjkzfDI2LjAwfDI4NS41NQ=='>
+    <rect x='45.10' y='26.00' width='285.84' height='259.55' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNDAuMjF8MzI4LjQ5fDI2LjAwfDI4NS41NQ==)'>
-<rect x='40.21' y='26.00' width='288.28' height='259.55' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<circle cx='239.81' cy='56.59' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='53.31' cy='176.06' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='166.92' cy='130.29' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='315.39' cy='48.02' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='99.75' cy='273.76' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='82.52' cy='177.44' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<line x1='234.82' y1='61.64' x2='239.01' y2='57.40' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='58.80' y1='171.06' x2='54.16' y2='175.29' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='161.94' y1='135.31' x2='166.12' y2='131.10' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='310.30' y1='42.73' x2='314.60' y2='47.20' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='77.81' y1='182.51' x2='81.75' y2='178.27' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<text x='228.83' y='69.55' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.05px' lengthAdjust='spacingAndGlyphs'>Gemma 4 31B</text>
-<text x='88.44' y='169.26' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='84.95px' lengthAdjust='spacingAndGlyphs'>Qwen3 30B-A3B 2507</text>
-<text x='155.92' y='143.22' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='70.70px' lengthAdjust='spacingAndGlyphs'>Qwen3.6 35B-A3B</text>
-<text x='282.64' y='43.86' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='51.73px' lengthAdjust='spacingAndGlyphs'>Qwen3.6 27B</text>
-<text x='74.43' y='279.79' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='56.94px' lengthAdjust='spacingAndGlyphs'>GLM-4.7-Flash</text>
-<text x='73.94' y='190.42' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.95px' lengthAdjust='spacingAndGlyphs'>Mistral Small 4</text>
-<rect x='40.21' y='26.00' width='288.28' height='259.55' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<g clip-path='url(#cpNDUuMTB8MzMwLjkzfDI2LjAwfDI4NS41NQ==)'>
+<rect x='45.10' y='26.00' width='285.84' height='259.55' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<circle cx='286.50' cy='37.80' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='99.16' cy='273.76' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='73.66' cy='183.98' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='58.09' cy='234.19' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='134.23' cy='167.24' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='222.03' cy='180.48' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='317.94' cy='81.23' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='134.56' cy='169.59' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='317.91' cy='121.96' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<line x1='104.12' y1='268.70' x2='99.96' y2='272.94' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='77.46' y1='189.05' x2='74.33' y2='184.88' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='63.05' y1='234.18' x2='59.28' y2='234.19' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='129.24' y1='162.15' x2='133.43' y2='166.43' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='226.96' y1='175.45' x2='222.82' y2='179.67' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='312.84' y1='81.24' x2='316.75' y2='81.23' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='139.89' y1='174.64' x2='135.38' y2='170.38' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='312.82' y1='121.96' x2='316.72' y2='121.96' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<text x='297.65' y='37.88' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.05px' lengthAdjust='spacingAndGlyphs'>Gemma 4 31B</text>
+<text x='110.09' y='266.90' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='56.94px' lengthAdjust='spacingAndGlyphs'>GLM-4.7-Flash</text>
+<text x='78.85' y='196.97' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.95px' lengthAdjust='spacingAndGlyphs'>Mistral Small 4</text>
+<text x='107.33' y='237.24' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='84.95px' lengthAdjust='spacingAndGlyphs'>Qwen3 30B-A3B 2507</text>
+<text x='123.27' y='160.35' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='70.70px' lengthAdjust='spacingAndGlyphs'>Qwen3.5 35B-A3B</text>
+<text x='232.89' y='173.65' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='46.98px' lengthAdjust='spacingAndGlyphs'>Qwen3.5 9B</text>
+<text x='285.18' y='84.30' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='51.73px' lengthAdjust='spacingAndGlyphs'>Qwen3.6 27B</text>
+<text x='153.69' y='182.55' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='70.70px' lengthAdjust='spacingAndGlyphs'>Qwen3.6 35B-A3B</text>
+<text x='285.15' y='125.01' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='51.73px' lengthAdjust='spacingAndGlyphs'>Qwen3.8 27B</text>
+<rect x='45.10' y='26.00' width='285.84' height='259.55' style='stroke-width: 1.07; stroke: #B3B3B3;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMTYuODA=)'>
 </g>
 <defs>
-  <clipPath id='cpMzQ1Ljc3fDYzNC4wNXwyNi4wMHwyODUuNTU='>
-    <rect x='345.77' y='26.00' width='288.28' height='259.55' />
+  <clipPath id='cpMzQ4LjIxfDYzNC4wNXwyNi4wMHwyODUuNTU='>
+    <rect x='348.21' y='26.00' width='285.84' height='259.55' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzQ1Ljc3fDYzNC4wNXwyNi4wMHwyODUuNTU=)'>
-<rect x='345.77' y='26.00' width='288.28' height='259.55' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<circle cx='608.49' cy='37.80' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='358.87' cy='70.01' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='553.31' cy='109.52' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='620.95' cy='110.32' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='560.91' cy='112.63' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='452.86' cy='132.05' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<circle cx='569.80' cy='161.73' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
-<line x1='603.43' y1='37.79' x2='607.29' y2='37.80' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='364.04' y1='70.00' x2='360.08' y2='70.01' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='534.25' y1='96.16' x2='552.36' y2='108.85' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='614.56' y1='104.47' x2='620.11' y2='109.55' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='565.94' y1='117.72' x2='561.71' y2='113.44' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='457.83' y1='127.03' x2='453.66' y2='131.25' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<line x1='565.02' y1='163.95' x2='568.73' y2='162.23' style='stroke-width: 1.07; stroke: #B3B3B3;' />
-<text x='574.10' y='40.84' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.06px' lengthAdjust='spacingAndGlyphs'>Llama 3.3 70B</text>
-<text x='393.37' y='73.06' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.05px' lengthAdjust='spacingAndGlyphs'>Gemma 3 27B</text>
-<text x='490.20' y='98.63' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='84.48px' lengthAdjust='spacingAndGlyphs'>Qwen 2.5 32B Instruct</text>
-<text x='586.05' y='102.67' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='84.48px' lengthAdjust='spacingAndGlyphs'>Qwen 2.5 72B Instruct</text>
-<text x='571.95' y='125.63' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='44.61px' lengthAdjust='spacingAndGlyphs'>Qwen3 32B</text>
-<text x='463.81' y='125.23' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='80.64px' lengthAdjust='spacingAndGlyphs'>Mistral Small 3.1 24B</text>
-<text x='503.93' y='167.38' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='118.58px' lengthAdjust='spacingAndGlyphs'>DeepSeek-R1 Distill Qwen 32B</text>
-<rect x='345.77' y='26.00' width='288.28' height='259.55' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<g clip-path='url(#cpMzQ4LjIxfDYzNC4wNXwyNi4wMHwyODUuNTU=)'>
+<rect x='348.21' y='26.00' width='285.84' height='259.55' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<circle cx='361.21' cy='259.78' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='621.06' cy='162.72' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<circle cx='442.31' cy='152.36' r='2.92' style='stroke-width: 0.71; stroke: #2F6F9F; fill: #2F6F9F;' />
+<line x1='366.07' y1='259.78' x2='362.40' y2='259.78' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='616.20' y1='162.72' x2='619.86' y2='162.72' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<line x1='437.40' y1='157.36' x2='441.52' y2='153.17' style='stroke-width: 1.07; stroke: #B3B3B3;' />
+<text x='395.39' y='262.84' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.05px' lengthAdjust='spacingAndGlyphs'>Gemma 3 12B</text>
+<text x='586.87' y='165.78' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='55.06px' lengthAdjust='spacingAndGlyphs'>Llama 3.3 70B</text>
+<text x='431.43' y='165.27' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='83.97px' lengthAdjust='spacingAndGlyphs'>Qwen3-Next 80B-A3B</text>
+<rect x='348.21' y='26.00' width='285.84' height='259.55' style='stroke-width: 1.07; stroke: #B3B3B3;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMTYuODA=)'>
 </g>
 <defs>
-  <clipPath id='cpNDAuMjF8MzI4LjQ5fDcuOTd8MjYuMDA='>
-    <rect x='40.21' y='7.97' width='288.28' height='18.03' />
+  <clipPath id='cpNDUuMTB8MzMwLjkzfDcuOTd8MjYuMDA='>
+    <rect x='45.10' y='7.97' width='285.84' height='18.03' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNDAuMjF8MzI4LjQ5fDcuOTd8MjYuMDA=)'>
-<text x='44.59' y='20.57' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='247.33px' lengthAdjust='spacingAndGlyphs'>August runs: 15,925 texts, no limit on texts at a time</text>
+<g clip-path='url(#cpNDUuMTB8MzMwLjkzfDcuOTd8MjYuMDA=)'>
+<text x='49.48' y='20.57' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='226.78px' lengthAdjust='spacingAndGlyphs'>Group 1: 22,913 texts, no limit on texts at a time</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMTYuODA=)'>
 </g>
 <defs>
-  <clipPath id='cpMzQ1Ljc3fDYzNC4wNXw3Ljk3fDI2LjAw'>
-    <rect x='345.77' y='7.97' width='288.28' height='18.03' />
+  <clipPath id='cpMzQ4LjIxfDYzNC4wNXw3Ljk3fDI2LjAw'>
+    <rect x='348.21' y='7.97' width='285.84' height='18.03' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzQ1Ljc3fDYzNC4wNXw3Ljk3fDI2LjAw)'>
-<text x='350.15' y='20.57' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='219.58px' lengthAdjust='spacingAndGlyphs'>September runs: 2,142 texts, 16 texts at a time</text>
+<g clip-path='url(#cpMzQ4LjIxfDYzNC4wNXw3Ljk3fDI2LjAw)'>
+<text x='352.60' y='20.57' style='font-size: 10.00px; font-weight: bold; font-family: "Arial";' textLength='187.34px' lengthAdjust='spacingAndGlyphs'>Group 2: 22,913 texts, 16 texts at a time</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzMTYuODA=)'>
-<text x='67.42' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.005</text>
-<text x='128.72' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.01</text>
-<text x='225.88' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.03</text>
-<text x='271.05' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.05</text>
-<text x='399.80' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.04</text>
-<text x='468.30' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.05</text>
-<text x='571.60' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.07</text>
-<text x='38.01' y='283.00' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.60</text>
-<text x='38.01' y='212.86' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.62</text>
-<text x='38.01' y='142.72' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.64</text>
-<text x='38.01' y='72.58' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.66</text>
-<text x='337.13' y='306.51' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='192.12px' lengthAdjust='spacingAndGlyphs'>Generation seconds per text (log scale)</text>
-<text transform='translate(15.85,155.78) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='122.97px' lengthAdjust='spacingAndGlyphs'>Mean F1 across 33 tasks</text>
+<text x='108.88' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.03</text>
+<text x='168.22' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.05</text>
+<text x='248.75' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='402.02' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>0.05</text>
+<text x='515.47' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='628.92' y='294.04' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.2</text>
+<text x='42.91' y='279.49' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.575</text>
+<text x='42.91' y='229.31' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.600</text>
+<text x='42.91' y='179.12' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.625</text>
+<text x='42.91' y='128.94' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.650</text>
+<text x='42.91' y='78.75' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>0.675</text>
+<text x='339.57' y='306.51' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='192.12px' lengthAdjust='spacingAndGlyphs'>Generation seconds per text (log scale)</text>
+<text transform='translate(15.85,155.78) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='122.97px' lengthAdjust='spacingAndGlyphs'>Mean F1 across 46 tasks</text>
 </g>
 </g>
 </svg>
