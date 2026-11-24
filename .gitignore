@@ -64,3 +64,6 @@ Thumbs.db
 *.exe
 *.o
 *.so
+
+# Archived local-only material (not published)
+/archive/
